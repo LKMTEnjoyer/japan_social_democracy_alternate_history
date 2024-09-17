@@ -16,9 +16,9 @@ if (Q.inflation) {
 
 Resources available: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+JSP position: [? if jsp_toleration : toleration ?][? if jsp_in_government : in government ?][? if jsp_toleration == 0 and jsp_in_government == 0 and jsp_caretaker == 0 : opposition ?][? if jsp_caretaker : caretaker government ?]
 
-[? if spd_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if jsp_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -28,30 +28,24 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+House of Representatives Composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]%
+JSP: [+ jsp_r +]%
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]%
+LDP: [+ ldp_r +]%
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]%
+JCP: [+ jcp_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]%
+LFP: [+ lfp_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
-Others: [+ other_r +]%
+Other: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if jsp_in_government = 1 : Budget: [+ budget +] ?]
 
 Inflation: [+ inflation_2 +]%
 
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+Unemployment: [+ unemployed_2 +]% 
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
@@ -63,19 +57,15 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 = Inter-party Relations
 
 
-Z: [+ z_relation : relationships +]
+JCP: [+ ldp_relation : relationships +]
 
-DDP: [+ ddp_relation : relationships +]
+LDP: [+ jcp_relation : relationships +]
 
-DVP: [+ dvp_relation : relationships +]
+LFP: [+ lfp_relation : relationships +]
 
-KPD: [+ kpd_relation : relationships +]
+Others: [+ other_relation : relationships +]
 
-DNVP: [+ dnvp_relation : relationships +]
-
-NSDAP: [+ nsdap_relation : relationships +]
-
-= Internal Factions of the SPD
+= Internal Factions of the JSP
 
 Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
@@ -124,34 +114,28 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+JSP: [+ jsp_votes +]%
 
-Z + BVP: [+ z_votes +]%
+LDP: [+ ldp_votes +]%
 
-KPD: [+ kpd_votes +]%
+JCP: [+ jcp_votes +]%
 
-DDP: [+ ddp_votes +]%
+LFP: [+ lfp_votes +]%
 
-DVP: [+ dvp_votes +]%
-
-DNVP: [+ dnvp_votes +]%
-
-NSDAP: [+ nsdap_votes +]%
-
-Others: [+ other_votes +]%
+Others: [+ others_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, DDP: [+ workers_ddp_normalized +]%, DVP: [+ workers_dvp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: JSP: [+ workers_jsp_normalized +]%, LDP: [+ workers_ldp_normalized +]%, JCP: [+ workers_jcp_normalized +]%, LFP: [+ workers_lfp_normalized +]%, Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, DDP: [+ new_middle_ddp_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: JSP: [+ new_middle_jsp_normalized +]%, LDP: [+ new_middle_ldp_normalized +]%, JCP: [+ new_middle_jcp_normalized +]%, LFP: [+ new_middle_lfp_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_z_normalized +]%, KPD: [+ old_middle_kpd_normalized +]%, DDP: [+ old_middle_ddp_normalized +]%, DVP: [+ old_middle_dvp_normalized +]%; DNVP: [+ old_middle_dnvp_normalized +]%, NSDAP: [+ old_middle_nsdap_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: JSP: [+ old_middle_jsp_normalized +]%, LDP: [+ old_middle_ldp_normalized +]%, JCP: [+ old_middle_jcp_normalized +]%, LFP: [+ old_middle_lfp_normalized +]%, Others: [+ old_middle_other_normalized +]%
 
-Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, DDP: [+ rural_ddp_normalized +]%, DVP: [+ rural_dvp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: JSP: [+ rural_jsp_normalized +]%, LDP: [+ rural_ldp_normalized +]%, JCP: [+ rural_jcp_normalized +]%, LFP: [+ rural_lfp_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: SPD: [+ unemployed_spd_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, DDP: [+ unemployed_ddp_normalized +]%, DVP: [+ unemployed_dvp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: JSP: [+ unemployed_jsp_normalized +]%, LDP: [+ unemployed_ldp_normalized +]%, JCP: [+ unemployed_jcp_normalized +]%, LFP: [+ unemployed_lfp_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: SPD: [+ catholics_spd_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, DDP: [+ catholics_ddp_normalized +]%, DVP: [+ catholics_dvp_normalized +]%; DNVP: [+ catholics_dnvp_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: JSP: [+ catholics_jsp_normalized +]%, LDP: [+ catholics_ldp_normalized +]%, JCP: [+ catholics_jcp_normalized +]%, LFP: [+ catholics_lfp_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 Support for the Republic: [+ pro_republic +]%
