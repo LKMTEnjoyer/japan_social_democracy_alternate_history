@@ -98,8 +98,10 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.ldp_relation = 50;
-Q.jcp_relation = 25;
+Q.ldp_relation = 25;
+Q.lfp_relation = 50;
+Q.other_relation = 35;
+Q.jcp_relation = 55;
 
 Q.ldp_leader = "Hatoyama";
 Q.jcp_leader = "Nosaka";
@@ -234,6 +236,7 @@ Q.chancellor_party = 'LDP';
 Q.jsp_in_government = 0;
 Q.ldp_in_government = 1;
 Q.jcp_in_government = 0;
+Q.lfp_in_government = 0;
 Q.other_in_government = 0;
 
 // Weimar coalition = SPD + Z + DDP
@@ -249,8 +252,8 @@ Q.in_left_front = 0;
 Q.in_emergency_government = 0;
 Q.in_jsp_majority = 0;
 Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a otherity government
-Q.in_otherity_government = 0;
+// if the SPD is ruling as part of a minority government
+Q.in_minority_government = 0;
 // national unity governmet
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
@@ -261,8 +264,8 @@ Q.kpd_coalition_dissent = 0;
 // does the SPD tolerate the government even if it is not a participant?
 Q.jsp_toleration = 0;
 
-// is the current government a presidential otherity government?
-Q.otherity_government = 0;
+// is the current government a presidential minority government?
+Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
 
@@ -434,7 +437,7 @@ This is a game of alternate history. While historical accuracy is a major concer
 - @1955_hard: Begin (hard difficulty)
 
 @1955_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; ldp_relation = 29; jcp_relation = 54; other_relation = 49;
+on-arrival: difficulty = -1; resources = 4; dues = 3; ldp_relation = 29; jcp_relation = 54; other_relation = 35;
 go-to: 1955_main
 
 @1955_hard
