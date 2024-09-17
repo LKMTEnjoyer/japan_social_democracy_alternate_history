@@ -28,7 +28,7 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-House of Representatives Composition:
+House of Representatives:
 
 # 1928: 30, 1930: 25, 1932: 22
 JSP: [+ jsp_r +]%
