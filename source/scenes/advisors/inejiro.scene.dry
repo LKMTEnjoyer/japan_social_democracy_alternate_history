@@ -1,0 +1,12 @@
+title: Asanuma Inejirō
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/Inejirō.png
+view-if: inejiro_advisor = 1
+new-page: true 
+
+= Asanuma Inejirō
+
+Asanuma Inejirō
+  
+- @root: Return to main
