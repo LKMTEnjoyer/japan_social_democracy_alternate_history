@@ -56,7 +56,6 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Inter-party Relations
 
-
 JCP: [+ ldp_relation : relationships +]
 
 LDP: [+ jcp_relation : relationships +]
@@ -77,6 +76,19 @@ Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_d
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
+= International Relations
+
+United States: [+ us_relation : relationships +]
+
+Soviet Union: [+ soviet_relation : relationships +]
+
+China: [+ china_relation : relationships +]
+
+South Korea: [+ south_korea_relation : relationships +]
+
+Taiwan: [+ taiwan_relation : relationships +]
+
+North Korea: [+ north_korea_relation : relationships +]
 
 @paramilitaries
 
