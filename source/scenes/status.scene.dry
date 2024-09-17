@@ -67,7 +67,6 @@ Others: [+ other_relation : relationships +]
 = Internal Factions of the JSP
 
 Socialist Associations:
-
 strength: [+ left_org_strength : strength +], dissent: [+ left_org_dissent : dissent +]
 
 Left:
