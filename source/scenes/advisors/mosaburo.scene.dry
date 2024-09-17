@@ -1,1 +1,13 @@
+title: Suzuki Mosaburō
+is-pinned-card: true
+tags: advisor, reformist
+card-image: img/portraits/Mosaburō.png
+view-if: mosaburo_advisor = 1
+new-page: true 
+
+= Suzuki Mosaburō
+
+Baade is one of the few agricultural experts in the SPD, and an unorthodox economist.
+
+- @root: Return to main
 
