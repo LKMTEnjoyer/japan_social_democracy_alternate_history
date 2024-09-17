@@ -66,15 +66,15 @@ Others: [+ other_relation : relationships +]
 
 = Internal Factions of the JSP
 
+Socialist Associations strength: [+ left_org_strength : strength +], dissent: [+ left_org_dissent : dissent +]
+
 Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-Center strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+Centre strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-Labor strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+Right strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
-Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+Reconstructionist strength: [+ reconstructionist_strength : strength +], dissent: [+ reconstructionist_dissent : dissent +] 
 
 = International Relations
 
