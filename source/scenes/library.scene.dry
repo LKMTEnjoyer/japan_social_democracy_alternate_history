@@ -264,7 +264,7 @@ data = [
         "seats": Math.round(Q.lfp_r*5),
     },
     {
-        "id": "LDP",
+        "id": "ldp",
         "legend": "LDP",
         "name": "LDP",
         "seats": Math.round(Q.ldp_r*5),
