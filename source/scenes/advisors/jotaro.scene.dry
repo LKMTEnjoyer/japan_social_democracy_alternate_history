@@ -1,7 +1,7 @@
 title: Kawakami Jōtarō 
 is-pinned-card: true
 tags: advisor, reformist
-card-image: img/portraits/jotaro.jpg
+card-image: img/portraits/jotaro.png
 view-if: jotaro = 1
 new-page: true 
 
