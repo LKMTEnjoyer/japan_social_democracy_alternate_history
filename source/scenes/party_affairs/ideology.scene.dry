@@ -61,7 +61,7 @@ if (Q.ideology && Q.ideology != "reformist") {
 go-to: changed if changed = 1
 on-departure: ideology = "reformist"; reconstructionists_strength += 10; democratization += 1; reconstructionists_dissent -= 5; ldp_relation += 4; other_relation += 4; jcp_relation -= 8
 
-The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+The reconstructionist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of cooperation with the LDP.
 
 @changed
 on-arrival: left_dissent += 5; left_org_dissent += 5; center_dissent += 5; right_dissent += 5; reconstructionist_dissent += 5
