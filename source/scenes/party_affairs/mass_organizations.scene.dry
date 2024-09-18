@@ -32,9 +32,9 @@ go-to: media
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; unions_strength += 1; unemployed_jsp += 3*(1 - dissent); workers_jsp += 4*(1 - dissent); left_strength += 5; left_dissent -= 5;
+on-arrival: resources -= 1; unions_strength += 1; unemployed_jsp += 3*(1 - dissent); workers_jsp += 4*(1 - dissent); left_strength += 5; left_dissent -= 5; left_org_strength += 5; left_org_dissent -= 5;
 
-We have increased funding to the Sōhyō union confederation. Since they align to the left, it strengthens them.
+We have increased funding to the Sōhyō union confederation. Since they align to the left and the Socialist Associations, it strengthens them.
 
 @culture
 choose-if: resources > 0
@@ -50,7 +50,7 @@ It is not enough for the SPD to solely be a political party. The Worker Singer's
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; left_strength += 5; reconstructionist_strength += 5; radicalization += 1;
+on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; left_strength += 5; left_org_strength += 5; radicalization += 1;
 
 Our new youth members flock to the left wing of the party and the Socialist Organization.
 
