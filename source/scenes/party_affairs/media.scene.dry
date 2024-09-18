@@ -14,6 +14,9 @@ The JSP runs a veritable media empire, with many newspapers throughout every Jap
 - @campaign
 - @ideological
 - @radio
+- @tv
+- @tv_2
+- @tv_3
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 
@@ -47,7 +50,7 @@ on-arrival: radio += 1; resources -= 1; new_middle_jsp += 5*(1 - dissent); old_m
 
 Our new radio network has a mix of popular and political programming, and is proving a success.
 
-@television
+@tv
 title: Why not fund a television channel?
 subtitle: -2 resources
 choose-if: resources >= 2
@@ -57,8 +60,8 @@ on-arrival: television += 1; resources -= 2; new_middle_jsp += 4*(1 - dissent); 
 
 Our new television channel allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with other popular content. Since most proletarians cannot afford televisions right now, we are reaching the middle class, a fact of which our comrades are painfully aware. 
 
-@radio_2
-title: We must keep on building up our radio network.
+@tv_2
+title: We must keep on building up our television channel.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
@@ -67,8 +70,8 @@ on-arrival: television += 1; resources -= 1; new_middle_jsp += 5*(1 - dissent); 
 
 Our new television channel has a mix of popular and political programming, and is proving a success.
 
-@radio_3
-title: We must keep on building up our radio network.
+@tv_3
+title: We must keep on building up our television channel.
 subtitle: It is now financially self-sufficient, and does not require any more resources.
 view-if: television > 3
 on-arrival: television += 1; new_middle_jsp += 5*(1 - dissent); old_middle_jsp += 4*(1 - dissent); workers_jsp += 4*(1 - dissent); rural_jsp += 3*(1 - dissent); unemployed_jsp += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
