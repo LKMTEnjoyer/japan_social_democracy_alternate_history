@@ -12,7 +12,7 @@ max-visits: 5
 placeholder
 
 - @newspapers: Fund more newspapers and journalists.
-- @welfare: Fund more mutual aid and welfare programs.
+- @unions: Fund Sōhyō, a labor federation that provides a large part of our support.
 - @culture: Fund sports leagues, educational, and cultural programs.
 - @youth: We have the reputation of being a party for old men. Support the youth organizations.
 - @nothing: Do not increase funding for any program.
@@ -28,13 +28,13 @@ go-to: media
 # TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
 
 
-@welfare
+@unions
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; workers_aid += 1; unemployed_jsp += 5*(1 - dissent);
+on-arrival: resources -= 1; unions_strength += 1; unemployed_jsp += 3*(1 - dissent); workers_jsp += 4*(1 - dissent); left_strength += 5; left_dissent -= 5;
 
-We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
+We have increased funding to the Sōhyō union confederation. Since they align to the left, it strengthens them.
 
 @culture
 choose-if: resources > 0
