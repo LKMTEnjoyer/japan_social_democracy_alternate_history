@@ -52,7 +52,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; left_strength += 5; reconstructionist_strength += 5; radicalization += 1;
 
-Our new youth members flock to the left or neorevisionist wings of the party, and also bring new radicalism to the Reichsbanner.
+Our new youth members flock to the left wing of the party and the Socialist Organization.
 
 @nothing
 
