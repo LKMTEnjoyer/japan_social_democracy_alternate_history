@@ -1,7 +1,7 @@
 title: Constitutional Reform
 new-page: true
 is-card: true
-view-if: spd_in_government = 1 and justice_minister_party = "SPD" and judiciary_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front))
+view-if: spd_in_government = 1 and justice_minister_party = "SPD" and judiciary_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_weimar_coalition) or (in_jsp_majority) or (in_left_front) or (in_popular_front))
 frequency: 25
 on-arrival: month_actions += 1; constitutional_reform_timer += 12; pass_threshold = 0.51; pass_threshold = 0.6 if pro_republic < 65;
 card-image: img/portraits/RadbruchGustav.jpg
@@ -36,8 +36,8 @@ Q.reform_support = Q.spd_normalized;
 if (Q.z_relation > 30) {
     Q.reform_support += Q.z_normalized;
 }
-if (Q.kpd_relation > 50 && Q.kpd_normalized >= 0.1) {
-    Q.reform_support += Q.kpd_normalized;
+if (Q.jcp_relation > 50 && Q.jcp_normalized >= 0.1) {
+    Q.reform_support += Q.jcp_normalized;
 }
 if (Q.nsdap_normalized >= 0.2 ) {
     Q.reform_support += Q.nsdap_normalized;
@@ -48,7 +48,7 @@ if (Q.nsdap_normalized >= 0.2 ) {
 
 Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. 
 
-The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
+The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform. ?] [? if jcp_relation > 50 and jcp_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
 
 The SPD Left opposes this change, as they believe that it is anti-democratic.
 
@@ -96,7 +96,7 @@ We have successfully passed a constitutional amendment to ban votes of no confid
 @presidential_powers
 subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexecution* on state governments.
 on-arrival: {!
-Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.kpd_normalized;
+Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.jcp_normalized;
 if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {
     Q.reform_support += Q.z_normalized;
 } else if (Q.president == "Braun") {

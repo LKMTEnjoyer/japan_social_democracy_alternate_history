@@ -72,15 +72,15 @@ for (var c of Q.classes) {
 // Die Rote Fahne - join the KPD in the May Day march.
 // Mehrheitspartei - form an SPD majority government in the Reichstag.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
-if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
+if (Q.new_middle_jsp_normalized && Q.new_middle_jsp_normalized >= 50) {
     this.achieve('panik_im_mittelstand');
 }
 // Bauernrevolution - have over 50% rural support.
-if (Q.rural_spd_normalized && Q.rural_spd_normalized >= 50) {
+if (Q.rural_jsp_normalized && Q.rural_jsp_normalized >= 50) {
     this.achieve('bauernrevolution');
 }
 // Räterepublik - begin the transformation to a socialist economy.
-if (Q.spd_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
+if (Q.jsp_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
     this.achieve('raterepublik');
 }
 // Polykrise - survive both a fascist coup and a capital strike.
@@ -187,9 +187,9 @@ go-to: eg_menu
 
 Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is. 
 
-@spd_victorious
+@jsp_victorious
 title: SPD still in government
-view-if: spd_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0
+view-if: jsp_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
