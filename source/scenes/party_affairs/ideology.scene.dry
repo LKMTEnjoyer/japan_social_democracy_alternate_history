@@ -19,7 +19,7 @@ The JSP is torn between many different ideological currents. What should be our 
 - @reconstructionists: Reconstructionists
 - @easy_discard
 
-@left_org
+@left
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left") {
     Q.changed = 1;
