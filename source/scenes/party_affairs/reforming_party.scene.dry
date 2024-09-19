@@ -35,6 +35,16 @@ on-arrival: peoples_party_support += 1; reconstructionist_strength += 5; left_st
 
 Within our party, we are pushing forward proposals for a people's party against the Left and Center.
 
+
+
+
+
+
+
+
+
+
+
 @support_peoples_party
 choose-if: (reconstructionist_strength + right_strength >= left_strength + center_strength + left_org_strength) and peoples_party_support >= 4
 unavailable-subtitle: The opposition is too strong.
