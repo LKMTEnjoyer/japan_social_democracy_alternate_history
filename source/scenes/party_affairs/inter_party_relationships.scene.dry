@@ -12,7 +12,7 @@ max-visits: 12
 The JSP cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the SPD, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
 - @communist: Strengthen our bonds with the Communist Party.
-- @labour_farmer
+- @labour_farmer: Strengthen our bonds with the Laborer-Farmer Party.
 - @ldp: Improve our relations with the Liberal-Democratic Party.
 - @lfp_unity: We can finally unite with the Laborer-Farmer Party!
 - @jsp_alone: The JSP can stand alone for now.
@@ -36,7 +36,6 @@ on-arrival: jcp_relation += 8*(1 - dissent);
 The JCP is one of our allies, and they have consistently agreed to withdraw their candidates to avoid splitting the socialist vote. After the formation of the first socialist coalition in Japan, they are much more amenable to us.
 
 @labour_farmer
-title: Strengthen our bonds with the Laborer-Farmer Party.
 subtitle: We may be able to merge with the LFP if we have good enough relations. -1 resources
 view-if: lfp_united = 0
 choose-if: resources >= 1
