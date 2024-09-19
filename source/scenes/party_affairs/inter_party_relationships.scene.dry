@@ -9,86 +9,65 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The SPD cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the SPD, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The JSP cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the SPD, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
-- @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
-- @center: Strengthen our bonds with the Catholic Center Party.
-- @kpd: Work towards repairing relationships with the Communist Party.
-- @spd_alone: The SPD can stand alone for now.
+- @communist: Strengthen our bonds with the Communist Party.
+- @lfp: Strengthen our bonds with the Laborer-Farmer Party.
+- @ldp: Improve our relations with the Liberal-Democratic Party.
+- @lfp_unity: We can finally unite with the Laborer-Farmer Party!
+- @jsp_alone: The JSP can stand alone for now.
 - @easy_discard
 
-
-@kpd
+@communist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0; kpd_2 if kpd_coalition_success = 1
+on-arrival: resources -= 1;
+go-to: jcp_1 if jcp_coalition_success = 0; jcp_2 if jcp_coalition_success = 1
 
-@kpd_1
-on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; dvp_relation -= 3
+@jcp_1
+on-arrival: jcp_relation += 6*(1 - dissent)
 
-The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
+The JCP is one of our allies, and they have consistently agreed to withdraw their candidates to avoid splitting the socialist vote.
 
-@kpd_2
-on-arrival: kpd_relation += 8*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; dvp_relation -= 3
+@jcp_2
+on-arrival: jcp_relation += 8*(1 - dissent)
 
-After the success of the coalition government with the KPD, they are much more amenable to us.
+The JCP is one of our allies, and they have consistently agreed to withdraw their candidates to avoid splitting the socialist vote. After the formation of the first socialist coalition in Japan, they are much more amenable to us.
 
-@kpd_blutmai
-on-arrival: kpd_relation += 3*(1 - dissent)
-
-After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
-
-@center
-subtitle: -1 resources
+@lfp
+subtitle: We may be able to merge with the LFP if we have good enough relations. -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
-go-to: center_op if z_in_government = 1 and spd_in_government = 0 and chancellor != "Brüning"; center_coalition if spd_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
+on-arrival: resources -= 1;
+go-to: lfp_unfriendly if (reconstructionist_strength + right_strength >= left_strength + center_strength); lfp_friendly if (reconstructionist_strength + right_strength < left_strength + center_strength);
 
-@center_op
-on-arrival: z_relation += 5*(1 - dissent)
+@lfp_unfriendly
+on-arrival: lfp_relation += 4*(1 - dissent)
 
-We are currently in opposition to the Center-led government, but that does not preclude the general building of feelings of good will.
+With the right wing of our party currently dominating, improving relations with the LFP has gotten harder.
 
-@center_coalition
-on-arrival: z_relation += 8*(1 - dissent)
+@lfp_friendly
+on-arrival: lfp_relation += 8*(1 - dissent)
 
-We are currently coalition partners with them, so improving relations comes naturally.
+The left wing of our party supports cooperation with the LFP, and perhaps eventually uniting our parties.
 
-@center_bruning
-on-arrival: z_relation += 5*(1 - dissent)
+@lfp
+subtitle: Their members will join our party. -2 resources
+view-if: lfp_relation >= 45
+choose-if: resources >= 2
+unavailable-subtitle: [? if resources < 2 : Not enough resources. ?][? if lfp_relation < 60 : We do not have good enough relations. ?]
+on-arrival: resources -= 2; left_strength += 15; left_dissent -= 10; left_org_strength += 10; left_org_dissent -= 5; 
 
-The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
+We have finally merged our parties
 
-@liberals
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent)
-go-to: dvp_stresemann if stresemann_dead = 0; dvp_loss if stresemann_dead = 1 and year <= 1930; dvp_moribound if year > 1930
+@ldp
+subtitle: This will be opposed by the left and the center. -1 resources
+choose-if: resources >= 1 and (reconstructionist_strength + right_strength >= left_strength + center_strength)
+unavailable-subtitle: [? if resources < 1 : Not enough resources. ?][? if (reconstructionist_strength + right_strength < left_strength + center_strength) : The opposition is too strong. ?]
+on-arrival: resources -= 1; ldp_relation += 5*(1 - dissent); left_dissent += 5; left_org_dissent += 5; center_dissent += 5; reconstructionist_strength += 5; reconstructionist_dissent -= 5;
 
-The DDP has been one of our closest allies through the course of the Republic.
-
-@dvp_stresemann
-on-arrival: dvp_relation += 8*(1 - dissent)
-
-Gustav Stresemann, the leader of the DVP is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
-
-@dvp_loss
-on-arrival: dvp_relation += 5*(1 - dissent)
-
-With the death of Gustav Stresemann, the DVP is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
-
-However, given the influence of the DVP among the other right-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
-
-@dvp_moribound
-on-arrival: dvp_relation += 5*(1 - dissent)
-
-The liberal parties (both the DDP and DVP) are electorally moribund, so perhaps our efforts are best spent elsewhere.
-
-However, given the influence of the DVP among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+Improving relations with the LDP is very controversial in our party, given that they are our main opposition and a staunchly conservative and capitalist party. On the other hand, it is popular with the Reconstructionist wing of our party.
 
 @spd_alone
 
