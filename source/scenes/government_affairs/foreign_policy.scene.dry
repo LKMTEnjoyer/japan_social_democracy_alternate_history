@@ -28,16 +28,16 @@ What should our foreign policy priority be?
 - @easy_discard
 
 @improve_west
-title: Improve our relations with the Western Allies.
-on-arrival: west_relation += 2; reparations_negotiation += 1
+title: Improve our relations with the USA.
+on-arrival: us_relation += 8; reparations_negotiation += 1; left_dissent += 3; left_org_dissent += 5; center_dissent += 2;
 
-The key to peace in Europe is a rapproachment between France and Germany. We are taking steps towards that rapproachment. [? if young_plan_seen == 0 : This is difficult to do when France is occupying a major portion of Germany's territory, but we are working on that part. ?]
+We improve relations with the United States. This is opposed by the left-wing of the party.
 
 @improve_east
 title: Improve our relations with our eastern neighbors.
-on-arrival: east_relation += 2;
+on-arrival: soviet_relation += 2; right_dissent += 3; reconstructionist_dissent += 5;
 
-We also aim to improve relations with our eastern neighbors, Poland and Czechoslovakia, who are righfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
+We also aim to improve relations with the Soviet Union. This is opposed by the right-wing of the party.
 
 @improve_soviet
 title: Improve our relations with the Soviet Union.
@@ -74,7 +74,7 @@ The Soviets are slightly upset, but they seemed to expect this answer.
 
 
 @kpd
-on-arrival: kpd_relation += 8*(1-dissent); communist_coalition += 1 if kpd_foreign_seen == 0; kpd_foreign_seen = 1
+on-arrival: jcp_relation += 8*(1-dissent); communist_coalition += 1 if jcp_foreign_seen == 0; jcp_foreign_seen = 1
 
 We also mention the KPD in our conversations with the Soviet ambassador. They claim that the KPD is entirely independent of the Soviet government, and that the conflict is Thälmann's doing. But, soon after our conversation we notice a slight improvement in attitudes from the KPD.
 
@@ -115,7 +115,7 @@ Negotiations procede smoothly for the most part. The Western powers are convince
 title: The Western Allies are finally willing to pause our reparations payments!
 subtitle: Our negotiations have been successful.
 view-if: reparations_negotiation >= 3 and black_thursday_seen == 1 and reparations > -2
-on-arrival: west_relation += 1; reparations = -2; budget += 2 if hoover_memorandum_seen == 0; budget += 1 if hoover_memorandum_seen == 1; coalition_dissent -= 1; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); coup_progress -= 2 if coup_progress > 2
+on-arrival: west_relation += 1; reparations = -2; budget += 2 if hoover_memorandum_seen == 0; budget += 1 if hoover_memorandum_seen == 1; coalition_dissent -= 1; workers_jsp += 8*(1-dissent); old_middle_jsp += 5*(1-dissent); new_middle_jsp += 5*(1-dissent); rural_jsp += 5*(1-dissent); coup_progress -= 2 if coup_progress > 2
 max-visits: 1
 
 Finally, given both the economic circumstances and our continued negotiations, the Western Allies are willing to pause our reparations payments! Much of the credit must go to American president Hoover, who has been friendlier towards us than the Europeans.
@@ -153,7 +153,7 @@ The Roman Catholic Church is interested in furthering relations with the German 
 @concordat
 title: We can sign a Concordat with the Vatican!
 view-if: reichskonkordat_progress >= 4
-on-arrival: reichskonkordat = 1; z_relation += 15; catholics_spd += 8; catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front;
+on-arrival: reichskonkordat = 1; z_relation += 15; catholics_jsp += 8; catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front;
 achievement: reichskonkordat
 
 We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.
@@ -174,7 +174,7 @@ Forming a "United States of Europe" has long been part of the Social Democratic 
 @european_union_2
 title: We can sign a treaty to form a European Union!
 view-if: west_relation >= 5 and east_relation >= 4 and eu_progress >= 2
-on-arrival: eu = 1; unemployed -= 2 if unemployed >= 10; inflation += 2 if inflation <= -2; inflation -= 1 if inflation >= 4.5; workers_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); old_middle_spd += 5*(1-dissent); rural_spd += 4*(1-dissent); catholics_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); pro_republic += 5; nationalism -= 5; budget += 1
+on-arrival: eu = 1; unemployed -= 2 if unemployed >= 10; inflation += 2 if inflation <= -2; inflation -= 1 if inflation >= 4.5; workers_jsp += 5*(1-dissent); new_middle_jsp += 5*(1-dissent); old_middle_jsp += 5*(1-dissent); rural_jsp += 4*(1-dissent); catholics_jsp += 4*(1-dissent); unemployed_jsp += 4*(1-dissent); pro_republic += 5; nationalism -= 5; budget += 1
 max-visits: 1
 achievement: eu
 
