@@ -33,17 +33,7 @@ There is the other option of structural reform, championed by Saburō Eda, which
 view-if: (reconstructionist_strength + right_strength < left_strength + center_strength) or peoples_party_support < 5
 on-arrival: peoples_party_support += 1; reconstructionist_strength += 5; left_strength -= 5; left_dissent += 5; left_org_strength -= 5; left_org_dissent += 5
 
-Within our party, we are pushing forward proposals for a people's party against the Left and Center.
-
-
-
-
-
-
-
-
-
-
+Within our party, we are pushing forward proposals for a people's party against the Left and Center
 
 @support_peoples_party
 choose-if: (reconstructionist_strength + right_strength >= left_strength + center_strength + left_org_strength) and peoples_party_support >= 4
