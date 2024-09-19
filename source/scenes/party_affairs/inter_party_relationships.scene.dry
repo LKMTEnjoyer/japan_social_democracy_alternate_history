@@ -43,7 +43,7 @@ on-arrival: resources -= 1;
 go-to: lfp_unfriendly if (reconstructionist_strength + right_strength >= left_strength + center_strength); lfp_friendly if (reconstructionist_strength + right_strength < left_strength + center_strength);
 
 @lfp_unfriendly
-on-arrival: lfp_relation += 4*(1 - dissent)
+on-arrival: lfp_relation += 4*(1 - dissent) 
 
 With the right wing of our party currently dominating, improving relations with the LFP has gotten harder.
 
@@ -52,14 +52,14 @@ on-arrival: lfp_relation += 8*(1 - dissent)
 
 The left wing of our party supports cooperation with the LFP, and perhaps eventually uniting our parties.
 
-@lfp
+@lfp_merge
 subtitle: Their members will join our party. -2 resources
-view-if: lfp_relation >= 45
+view-if: lfp_relation >= 45 and lfp_united = 0
 choose-if: resources >= 2
 unavailable-subtitle: [? if resources < 2 : Not enough resources. ?][? if lfp_relation < 60 : We do not have good enough relations. ?]
-on-arrival: resources -= 2; left_strength += 15; left_dissent -= 10; left_org_strength += 10; left_org_dissent -= 5; 
+on-arrival: resources -= 2; lfp_united = 1; left_strength += 15; left_dissent -= 10; left_org_strength += 10; left_org_dissent -= 5; 
 
-We have finally merged our parties
+We have finally merged our parties.
 
 @ldp
 subtitle: This will be opposed by the left and the center. -1 resources
