@@ -1,0 +1,147 @@
+title: Reforming the Party
+new-page: true
+is-card: true
+card-image: img/poster_0.jpg
+view-if: peoples_party = 0 and structural_reform = 0 and peoples_party_timer == 0
+on-arrival: peoples_party_timer = 6
+tags: party_affairs
+max-visits: 6
+
+= Reforming the Party
+
+Contrary to orthodox Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar workers and the persistence of small farmers and the peasantry confound predictions of a working-class majority.
+
+In order to build a socialist majority, many reformists and reconstructionists are calling for our party to move beyond the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
+
+There is the other option of structural reform, championed by Saburō Eda, which expands our voter base without neglecting our support from unionized workers.
+
+- @broad_electorate: We will become a people's party, though it is likely to be strongly opposed by leftists and centrists.
+- @structural_reform: We must not neglect our core electorate, but we should still expand our voter base in a program of "Structural Reform".
+- @no_new_ideas: No, we will always be a party of the working class.
+- @root: Perhaps we can discuss this at a later time.
+- @easy_discard
+
+@broad_electorate
+
+- @support_peoples_party: Yes, we must become a people's party!
+- @build_support: We must build additional support before becoming a people's party.
+- @support_peoples_party_hard: Despite strong opposition from the Center and Left factions, we will become a people's party.
+- @root: Perhaps we can discuss this at a later time.
+- @easy_discard
+
+@build_support
+view-if: (reconstructionist_strength + right_strength < left_strength + center_strength) or peoples_party_support < 5
+on-arrival: peoples_party_support += 1; reconstructionist_strength += 5; left_strength -= 5; left_dissent += 5; left_org_strength -= 5; left_org_dissent += 5
+
+Within our party, we are pushing forward proposals for a people's party against the Left and Center.
+
+
+@support_peoples_party
+choose-if: (reconstructionist_strength + right_strength >= left_strength + center_strength + left_org_strength) and peoples_party_support >= 4
+unavailable-subtitle: The opposition is too strong.
+on-arrival: reconstructionist_strength += 15; right_strength += 15; reconstructionist_dissent -= 10; right_dissent -= 10; peoples_party = 1; workers_jsp -= 12; rural_jsp += 10; new_middle_jsp += 10; old_middle_jsp += 8; catholics_jsp += 8; left_dissent += 25; left_org_dissent += 25; center_dissent += 20; jcp_relation -= 10; jcp_coalition_dissent += 1; coalition_dissent -= 1; ldp_relation += 5*(1-dissent); other_relation += 5*(1-dissent)
+achievement: volkspartei
+
+In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the workers and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+
+Should we run a new campaign to publicize our new platform?
+
+- @campaign_workers
+- @campaign_middle
+- @campaign_rural
+- @campaign_unemployed
+- @campaign_women
+
+
+
+@support_peoples_party_hard
+subtitle: This will increase dissent.
+view-if: (reconstructionist_strength + right_strength < left_strength + center_strength) or (peoples_party_support < 4)
+on-arrival: reconstructionist_strength += 10; right_strength += 8; peoples_party = 1; workers_jsp -= 15; rural_jsp += 10; new_middle_jsp += 10; old_middle_jsp += 8; catholics_jsp += 8; left_dissent += 40; left_org_dissent += 40; center_dissent += 40; jcp_relation -= 10; jcp_coalition_dissent += 1; coalition_dissent -= 1
+achievement: volkspartei
+
+It is an arduous and contentious process, but we have pushed through the proposal to become a people's party. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+
+Should we run a new campaign to publicize our new platform?
+
+- @campaign_workers
+- @campaign_middle
+- @campaign_rural
+- @campaign_unemployed
+- @campaign_women
+- @campaign_catholics
+
+@campaign_workers
+title: Campaign among the workers, to assuage their doubts about our changes.
+on-arrival: workers_jsp += 6*(1-dissent);
+
+The workers are still a key part of our constituency, and we must not alienate them in the transformation of our party.
+
+@campaign_middle
+title: Campaign among the middle classes.
+on-arrival: old_middle_jsp += 5*(1-dissent); new_middle_jsp += 6*(1-dissent)
+
+As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
+
+@campaign_rural
+title: Campaign in rural areas.
+choose-if: rural_policy > 0
+unavailable-subtitle: We have not enacted any rural policies yet.
+on-arrival: rural_jsp += 7*(1-dissent)
+
+As a people's party, we represent farmers and rural workers as well, and they are becoming receptive to our messages.
+
+@campaign_unemployed
+title: Campaign among the unemployed.
+on-arrival: unemployed_jsp += 6*(1-dissent);
+
+As a people's party, the urban poor are still a key part of our constituency.
+
+@campaign_women
+title: Campaign among women of all classes.
+on-arrival: workers_jsp += 3*(1-dissent); new_middle_jsp += 3*(1-dissent); old_middle_jsp += 3*(1-dissent); rural_jsp += 3*(1-dissent); unemployed_jsp += 3*(1-dissent);
+
+As a people's party, we represent women of all classes.
+
+@campaign_catholics
+title: Campaign among political Catholics.
+on-arrival: catholics_jsp += 7*(1-dissent);
+
+Catholics have historically been tied to the Center Party, but there is no reason why our party cannot appeal to them. The Prussian Concordat in particular is a sign of our friendship with Catholicism.
+
+
+@no_new_ideas
+on-arrival: reconstructionist_strength -= 6; reconstructionist_dissent += 5; center_strength += 8; left_strength += 6; left_org_strength += 6; peoples_party = 0; peoples_party_support -= 3; structural_reform_support -= 3
+
+The Socialist Party has been and will always be a party of the working class.
+
+@structural_reform
+
+We will pursue a policy of structural reform. Saburō Eda is the primary supporter of this policy. This will increase our support from other classes without alienating our core voter base. The Center and Left factions do not oppose this as strongly as they oppose the concept of a people's party, but they still dislike it.
+
+- @support_structural_reform: With enough support, we can start implementing the policy of structural reform.
+- @build_structural_reform: We will campaign for this policy in our party.
+- @root: Perhaps we can discuss this at a later time.
+- @easy_discard
+
+@build_structural_reform
+view-if: structural_reform_support < 5
+on-arrival: structural_reform_support += 1; reconstructionist_strength += 5; right_strength += 2; left_strength -= 2; left_dissent += 2; left_org_strength -= 5; left_org_dissent += 5
+
+Within our party, we are pushing forward proposals for a policy of structural reform.
+
+
+@support_structural_reform
+choose-if: (reconstructionist_strength + right_strength >= (left_strength + center_strength + left_org_strength)*0.5) and structural_reform >= 3
+unavailable-subtitle: The opposition is too strong.
+on-arrival: reconstructionist_strength += 10; right_strength += 10; reconstructionist_dissent -= 10; right_dissent -= 10; structural_reform = 1; workers_jsp -= 6; rural_jsp += 6; new_middle_jsp += 6; old_middle_jsp += 5; catholics_jsp += 5; left_dissent += 15; left_org_dissent += 15; center_dissent += 10; jcp_relation -= 5; coalition_dissent -= 1; ldp_relation += 3*(1-dissent); other_relation += 3*(1-dissent)
+
+In an emergency conference, we have decided to reform our party so that it represents people from all walks of life, without neglecting our core voter base.
+
+Should we run a new campaign to publicize our new platform?
+
+- @campaign_workers
+- @campaign_middle
+- @campaign_rural
+- @campaign_unemployed
+- @campaign_women
