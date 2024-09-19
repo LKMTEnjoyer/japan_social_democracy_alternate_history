@@ -25,19 +25,6 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1;
 go-to: jcp_1 if jcp_coalition_success = 0; jcp_2 if jcp_coalition_success = 1
 
-@jcp_1
-on-arrival: jcp_relation += 6*(1 - dissent);
-
-The JCP is one of our allies, and they have consistently agreed to withdraw their candidates to avoid splitting the socialist vote.
-
-@jcp_2
-on-arrival: jcp_relation += 8*(1 - dissent);
-
-The JCP is one of our allies, and they have consistently agreed to withdraw their candidates to avoid splitting the socialist vote. After the formation of the first socialist coalition in Japan, they are much more amenable to us.
-
-
-
-
 @labour_farmer
 subtitle: We may be able to merge with the LFP if we have good enough relations. -1 resources
 choose-if: resources >= 1
