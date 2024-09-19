@@ -35,13 +35,13 @@ on-arrival: jcp_relation += 8*(1 - dissent);
 
 The JCP is one of our allies, and they have consistently agreed to withdraw their candidates to avoid splitting the socialist vote. After the formation of the first socialist coalition in Japan, they are much more amenable to us.
 
-@labour_farmer
+
 title: Strengthen our bonds with the Laborer-Farmer Party.
 subtitle: We may be able to merge with the LFP if we have good enough relations. -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1;
-go-to: lfp_unfriendly if (reconstructionist_strength + right_strength >= left_strength + center_strength); lfp_friendly if (reconstructionist_strength + right_strength < left_strength + center_strength);
+go-to: lfp_unfriendly if (reconstructionist_strength + right_strength >= left_strength + center_strength); lfp_friendly if (reconstructionist_strength + right_strength < left_strength + center_strength)
 
 @lfp_unfriendly
 on-arrival: lfp_relation += 4*(1 - dissent) 
