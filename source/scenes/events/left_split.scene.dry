@@ -3,8 +3,24 @@ new-page: true
 subtitle: The Left's disagreements with our policies have grown too severe.
 tags: event
 view-if: left_dissent >= 60
-on-arrival: sapd_formed = 1; lfp_united = 0; left_strength = left_strength/2; workers_jsp -= 5; unemployed_jsp -= 5; workers_lfp += 5; workers_jcp += 3; rb_strength -= 300; jcp_relation -= 5;
+on-arrival: 
+{!
+Q.sapd_formed = 1; 
+Q.lfp_united = 0; 
+Q.left_strength = Q.left_strength/2; 
+Q.workers_jsp -= 5; 
+Q.unemployed_jsp -= 5; 
+Q.workers_lfp += 5; 
+Q.workers_jcp += 3; 
+Q.rb_strength -= 300; 
+Q.jcp_relation -= 5;
 
+for (var c of Q.classes) {
+    Q[c+'_jsp'] -= Q[c+'_lfp_given'];
+    Q[c+'_lfp'] += Q[c+'_lfp_given'];
+    Q[c+'_lfp_given'] = 0;
+}
+!}
 = Left-wing members split
 
-Our policy choices have greatly offended the left, and many of their leaders have split to form a new party, the SAPD, or Socialist Worker's Party. They do not count a huge section of our membership, so this should be survivable.
+Our policy choices have greatly offended the left, and many of their leaders have reformed the LFP.
