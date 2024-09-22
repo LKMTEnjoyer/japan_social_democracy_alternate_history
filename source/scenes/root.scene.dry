@@ -163,6 +163,13 @@ Q.parties = ['ldp', 'lfp', 'jcp', 'jsp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
+Q.workers_lfp_given = 0;
+Q.old_middle_lfp_given = 0;
+Q.new_middle_lfp_given = 0;
+Q.rural_lfp_given = 0;
+Q.unemployed_lfp_given = 0;
+Q.catholics_lfp_given = 0;
+
 Q.workers_jsp = 60;
 Q.workers_jcp = 20;
 Q.workers_ldp = 10;
