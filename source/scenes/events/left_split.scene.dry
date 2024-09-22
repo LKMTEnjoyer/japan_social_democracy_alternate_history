@@ -5,6 +5,7 @@ tags: event
 view-if: left_dissent >= 60
 on-arrival: 
 {!
+
 Q.sapd_formed = 1; 
 Q.lfp_united = 0; 
 Q.left_strength = Q.left_strength/2; 
@@ -20,6 +21,7 @@ for (var c of Q.classes) {
     Q[c+'_lfp'] += Q[c+'_lfp_given'];
     Q[c+'_lfp_given'] = 0;
 }
+
 !}
 
 = Left-wing members split
