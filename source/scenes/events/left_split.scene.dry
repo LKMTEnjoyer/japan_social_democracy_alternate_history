@@ -2,6 +2,7 @@ title: Left-wing Split
 new-page: true 
 subtitle: The Left's disagreements with our policies have grown too severe.
 view-if: left_dissent >= 60
+max-visits: 1
 on-arrival: {!
 Q.sapd_formed = 1; 
 Q.lfp_united = 0; 
