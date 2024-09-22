@@ -21,6 +21,7 @@ for (var c of Q.classes) {
     Q[c+'_lfp_given'] = 0;
 }
 !}
+
 = Left-wing members split
 
 Our policy choices have greatly offended the left, and many of their leaders have reformed the LFP.
