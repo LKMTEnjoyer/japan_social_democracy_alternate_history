@@ -1,7 +1,6 @@
 title: Left-wing Split
 new-page: true 
 subtitle: The Left's disagreements with our policies have grown too severe.
-tags: event
 view-if: left_dissent >= 60
 on-arrival: 
 {!
@@ -23,6 +22,7 @@ for (var c of Q.classes) {
 }
 
 !}
+tags: event
 
 = Left-wing members split
 
