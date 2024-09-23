@@ -97,24 +97,23 @@ North Korea: [+ north_korea_relation : relationships +]
 
 @paramilitaries
 
-= Mass Organizations
+<span title="Mass organizations increase or decrease strength of factions within the JSP and the effectiveness of campaigning in some demographics, based on their strength and loyalty. Loyalty determines whether the organization increases or decreases support, while strength determines how much support is given.">Mass Organizations</span><br>
 
-Mass organizations increase or decrease strength of factions within the JSP and the effectiveness of campaigning in some demographics, based on their strength and loyalty. Loyalty determines whether the organization increases or decreases support, while strength determines how much support is given. 
-<br>Hover over the text for more information.
+Hover over the text or the title for more information.
 
-**Sōhyō** - <span title="The General Council of Trade Unions is a confederation of trade unions that is aligned to the left.">Nihon Rōdōkumiai Sōhyōgikai</span><br>
+**Sōhyō**<br><span title="The General Council of Trade Unions is a confederation of trade unions that is aligned to the left.">Nihon Rōdōkumiai Sōhyōgikai</span><br>
 strength: [+ sohyo_strength : strength +], loyalty: [+ sohyo_loyalty : loyalty +]
 
-**Zenrō** - <span title="The All-Japan Trade Union Congress is a federation of right-leaning trade unions who support the right and the reconstructionists.">Zennihon Rōdō Kumiai Kaigi</span><br>
+**Zenrō**<br><span title="The All-Japan Trade Union Congress is a federation of right-leaning trade unions who support the right and the reconstructionists.">Zennihon Rōdō Kumiai Kaigi</span><br>
 strength: [+ zenro_strength : strength +], loyalty: [+ zenro_loyalty : loyalty +]
 
-**Shaseidō** - <span title="The Japan Socialist Youth League.">Nihon Shakaishugi Seinen Dо̄mei</span><br>
+**Shaseidō**<br><span title="The Japan Socialist Youth League.">Nihon Shakaishugi Seinen Dо̄mei</span><br>
 strength: [+ youth_strength : strength +], loyalty: [+ youth_loyalty : loyalty +]
 
-**Gensuikyō** - <span title="The Japan Council against Atomic and Hydrogen Bombs.">Gensuibaku Kinshi Nihon Kyōgikai</span><br>
+**Gensuikyō**<br><span title="The Japan Council against Atomic and Hydrogen Bombs.">Gensuibaku Kinshi Nihon Kyōgikai</span><br>
 strength: [+ gensuikyo_strength : strength +], loyalty: [+ gensuikyo_loyalty : loyalty +]
 
-**Nichinō** - <span title="The Japan Farmers Union.">Nihon Nōmin Kumiai</span><br>
+**Nichinō**<br><span title="The Japan Farmers Union.">Nihon Nōmin Kumiai</span><br>
 strength: [+ farmer_strength : strength +], loyalty: [+ farmer_loyalty : loyalty +]
 
 = Official military
