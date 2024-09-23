@@ -113,7 +113,7 @@ strength: [+ youth_strength : strength +], loyalty: [+ youth_loyalty : loyalty +
 strength: [+ gensuikyo_strength : strength +], loyalty: [+ gensuikyo_loyalty : loyalty +]
 
 **Nichinō**<br><span title="The Japan Farmers Union.">Nihon Nōmin Kumiai</span><br>
-strength: [+ farmer_strength : strength +], loyalty: [+ farmer_loyalty : loyalty +]
+strength: [+ farmers_strength : strength +], loyalty: [+ farmers_loyalty : loyalty +]
 
 = Official military
 
