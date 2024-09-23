@@ -102,7 +102,7 @@ North Korea: [+ north_korea_relation : relationships +]
 Hover over the text for more information.
 
 **Sohyo** - <span title="The General Council of Trade Unions is a confederation of trade unions that is aligned to the left.">総評</span><br>
-strength: [+ sohyo_strength : strength +], loyalty: [+ sohyo_loyalty : dissent +]
+strength: [+ sohyo_strength : strength +], loyalty: [+ sohyo_loyalty : loyalty +]
 
 = Official military/paramilitaries
 
