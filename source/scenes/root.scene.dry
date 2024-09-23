@@ -99,6 +99,10 @@ Q.gensuikyo_loyalty = 50;
 Q.farmers_strength = 50;
 Q.farmers_loyalty = 50;
 
+Q.army_strength = 50;
+Q.army_loyalty = 50;
+Q.police_strength = 50;
+Q.police_loyalty = 50;
 // inter-party relations
 Q.ldp_relation = 25;
 Q.lfp_relation = 50;
