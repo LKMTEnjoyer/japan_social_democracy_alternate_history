@@ -7,25 +7,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 @start_menu
 new-page: true
 go-to: start_menu_2
-
-= JSP: An Alternate History
-
-@start_menu_2
-
-- @start: Start game
-- @game_over.achievements
-
-
-@start
 on-arrival: {!
-Q.started = 1;
-// time elapsed (in months)
-Q.time = 1;
-Q.year = 1955;
-Q.month = 11;
-// how many actions have been taken this month?
-Q.month_actions = 0;
-
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
 Q.historical_mode = 0;
@@ -429,8 +411,25 @@ Q.mosaburo_advisor = 1; // Otto Wels
 Q.jotaro_advisor = 1; // Hermann Müller
 Q.inejiro_advisor = 1;
 
+!}
+
+= JSP: An Alternate History
+
+@start_menu_2
+
+- @start: Start game
+- @game_over.achievements
 
 
+@start
+on-arrival: {!
+Q.started = 1;
+// time elapsed (in months)
+Q.time = 1;
+Q.year = 1955;
+Q.month = 11;
+// how many actions have been taken this month?
+Q.month_actions = 0;
 !}
 set-bg: img/map_2.jpg
 new-page: true
