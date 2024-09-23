@@ -117,7 +117,7 @@ strength: [+ gensuikyo_strength : strength +], loyalty: [+ gensuikyo_loyalty : l
 **Nichinō** - <span title="The Japan Farmers Union.">Nihon Nōmin Kumiai</span><br>
 strength: [+ farmer_strength : strength +], loyalty: [+ farmer_loyalty : loyalty +]
 
-= Official military/paramilitaries
+= Official military
 
 Japanese Self-Defense Forces: [+ army_strength +] thousand troops.
 
