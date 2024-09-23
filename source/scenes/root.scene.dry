@@ -88,6 +88,17 @@ Q.moderate_plan_adopted = 0;
 
 // organizations
 
+Q.sohyo_strength = 50;
+Q.sohyo_loyalty = 50;
+Q.zenro_strength = 50;
+Q.zenro_loyalty = 50;
+Q.youth_strength = 50;
+Q.youth_loyalty = 50;
+Q.gensuikyo_strength = 50;
+Q.gensuikyo_loyalty = 50;
+Q.farmers_strength = 50;
+Q.farmers_loyalty = 50;
+
 // inter-party relations
 Q.ldp_relation = 25;
 Q.lfp_relation = 50;
