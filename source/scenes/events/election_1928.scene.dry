@@ -226,6 +226,7 @@ subtitle: JSP + JCP + LFP ([+ broad_left_coalition +]%)
 unavailable-subtitle: JSP + JCP + LFP ([+ broad_left_coalition +]%). [? if jcp_relation < 40 : We do not have adequate relations with the JCP. ?]
 #view-if: broad_left_coalition >= 50 and lfp_united == 0
 choose-if: jcp_relation >= 40
+on-arrival: in_broad_left_front = 1
 go-to: left_coalition_success
 
 There are enough votes for a JSP + JCP + LFP coalition government. 
@@ -235,13 +236,14 @@ title: We will form a coalition with the JCP!
 subtitle: JSP + JCP ([+ left_coalition +]%)
 unavailable-subtitle: JSP + JCP ([+ left_coalition +]%). [? if jcp_relation < 40 : We do not have adequate relations with the JCP. ?]
 #view-if: left_coalition >= 50 and lfp_united == 1
+on-arrival: in_left_front = 1 
 choose-if: jcp_relation >= 40
 go-to: left_coalition_success
 
 There are enough votes for a JSP + JCP coalition government. 
 
 @left_coalition_success
-on-arrival: jsp_in_government = 1; foreign_minister_party = "JSP"; interior_minister_party = "JSP"; justice_minister_party = "JSP"; labor_minister_party = "JSP"; army_minister_party = "JSP"; economic_minister_party = "JSP"; finance_minister_party = "JSP"; agriculture_minister_party = "JSP"; army_loyalty -= 0.05; in_left_front = 1; chancellor = jsp_leader ; chancellor_party  = "JSP"; capital_strike_progress += 2; jcp_relation += 10
+on-arrival: jsp_in_government = 1; foreign_minister_party = "JSP"; interior_minister_party = "JSP"; justice_minister_party = "JSP"; labor_minister_party = "JSP"; army_minister_party = "JSP"; economic_minister_party = "JSP"; finance_minister_party = "JSP"; agriculture_minister_party = "JSP"; army_loyalty -= 0.05; chancellor = jsp_leader ; chancellor_party  = "JSP"; capital_strike_progress += 2; jcp_relation += 10
 go-to: ministries
 
 The coalition is successfully formed. 
@@ -252,6 +254,7 @@ subtitle: JSP + LFP ([+ lfp_coalition +]%)
 unavailable-subtitle: JSP + LFP ([+ lfp_coalition +]%). [? if lfp_relation < 40 : We do not have adequate relations with the LFP. ?]
 #view-if: lfp_coalition >= 50 and lfp_united == 0
 choose-if: lfp_relation >= 40
+on-arrival: in_lfp_coalition = 1
 go-to: left_coalition_success
 
 There are enough votes for a JSP + LFP coalition government. 
@@ -282,11 +285,11 @@ achievement: majority_party
 Finally, the JSP can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
 @ldp_coalition
-title: Is a coalition with the LDP tolerable?
+title: Is a coalition with the LDP tolerable, or even possible?
 subtitle: JSP + LDP ([+ ldp_coalition +]%). This will be strongly opposed by the left in our party.
 unavailable-subtitle: Not enough resources (need 2). [? if (reconstructionist_strength + right_strength < left_strength + center_strength) : This coalition is strongly opposed by most members of our party. ?][? if ldp_relation <= 50 : We do not have good enough relations with the LDP. ?]
 view-if: ldp_coalition >= 50
-choose-if: (reconstructionist_strength + right_strength >= left_strength + center_strength) and ldp_relation >= 50
+choose-if: ldp_r < 50 and jsp_r > ldp_r and (reconstructionist_strength + right_strength >= left_strength + center_strength) and ldp_relation >= 50
 on-arrival: workers_jsp -= 5; unemployed_jsp -= 5; chancellor = jsp_leader; chancellor_party = "JSP"; leverage = 10; in_ldp_coalition = 1; jsp_in_government = 1; in_popular_front = 0; in_left_front = 0; left_org_dissent += 30; left_dissent += 30; center_dissent += 20; reformist_dissent -= 10; reconstructionist_dissent -= 10;
 achievement: compromise
 go-to: ministries
