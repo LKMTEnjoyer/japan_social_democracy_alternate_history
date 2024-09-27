@@ -65,7 +65,7 @@ We have finally merged our parties.
 @ldp
 subtitle: This will be opposed by the left and the center. -1 resources
 choose-if: resources >= 1 and (reconstructionist_strength + right_strength >= left_strength + center_strength)
-unavailable-subtitle: [? if resources < 1 : Not enough resources. ?][? if (reconstructionist_strength + right_strength < left_strength + center_strength) : The opposition is too strong. ?]
+unavailable-subtitle: [? if resources < 1 : Not enough resources. ?][? if (reconstructionist_strength + right_strength < left_strength + center_strength) : This policy is strongly opposed by most members of our party. ?]
 on-arrival: resources -= 1; ldp_relation += 5*(1 - dissent); left_dissent += 5; left_org_dissent += 5; center_dissent += 5; reconstructionist_strength += 5; reconstructionist_dissent -= 5;
 
 Improving relations with the LDP is very controversial in our party, given that they are our main opposition and a staunchly conservative and capitalist party. On the other hand, it is popular with the Reconstructionist wing of our party.
