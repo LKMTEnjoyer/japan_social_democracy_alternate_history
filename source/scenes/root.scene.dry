@@ -94,6 +94,7 @@ Q.lfp_relation = 50;
 Q.other_relation = 35;
 Q.jcp_relation = 55;
 
+Q.jsp_leader = "Mosaburō";
 Q.ldp_leader = "Hatoyama";
 Q.jcp_leader = "Nosaka";
 
