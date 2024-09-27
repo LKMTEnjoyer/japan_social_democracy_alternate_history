@@ -123,9 +123,7 @@ if (Q.month_actions >= 1) {
     // TODO: append to historical party support records
     var party_support_results = {'date': new Date(Q.year, Q.month - 1)};
     for (var party of Q.parties) {
-        if (party != 'lfp' && Q.lfp_united == 1) {
         party_support_results[party] = Q[party + '_normalized']*100;
-        }
     }
     Q.party_support_records.push(party_support_results);
     Q.economic_records.push({'date': new Date(Q.year, Q.month - 1),
