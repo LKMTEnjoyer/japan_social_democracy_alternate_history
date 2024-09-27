@@ -13,7 +13,7 @@ Herein contains relevant information about the government and politics of the Ge
 - @demographics: Demographics
 - @parties: Parties
 - @public_opinion: Public opinion (and projected election results)
-- @paramilitaries: Paramilitary groups
+- @mass_orgs: Mass organizations
 - @factions: Internal factions
 - @figures: Figures and charts
 - @backSpecialScene: Exit library.
@@ -113,51 +113,42 @@ Current relations: [+ lfp_relation : relationships +]
 Current relations: [+ other_relation : relationships +]
 
 
-@paramilitaries
-on-arrival: {!
-Q.rb_strength = Math.round(Q.rb_strength);
-Q.sh_strength = Math.round(Q.sh_strength);
-Q.sa_strength = Math.round(Q.sa_strength); 
-!}
+@mass_orgs
 go-to: menu
 
-**Paramilitary groups:**
+**Mass Organizations:**
 
-**Reichsbanner Schwarz-Rot-Gold**: The Reichsbanner is an organization affiliated with all of the democratic parties - the SPD, Z, and DDP, but primarily with the SPD. Historically, this has been an unarmed organization.
+Mass organizations increase or decrease strength of factions within the JSP and the effectiveness of campaigning in some demographics, based on their strength and loyalty. Loyalty determines whether the organization increases or decreases support, while strength determines how much support is given.
 
-Strength: [+ rb_strength +] thousand
+**Sōhyō** - *Nihon Rōdōkumiai Sōhyōgikai* - The General Council of Trade Unions is a confederation of trade unions that is aligned to the left.<br>
+Strength: [+ sohyo_strength : strength +]<br>
+Loyalty: [+ sohyo_loyalty : loyalty +]
 
-Militarization: [+ rb_militancy : militancy +]
+**Zenrō** - *Zennihon Rōdō Kumiai Kaigi* - The All-Japan Trade Union Congress is a federation of right-leaning trade unions who support the right and the reconstructionists.<br>
+Strength: [+ zenro_strength : strength +]<br>
+Loyalty: [+ zenro_loyalty : loyalty +]
 
-**Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the KPD.
+**Shaseidō** - *Nihon Shakaishugi Seinen Dо̄mei* - The Japan Socialist Youth League.<br>
+Strength: [+ youth_strength : strength +]<br>
+Loyalty: [+ youth_loyalty : loyalty +]
 
-Strength: [+ rfb_strength +] thousand
+**Gensuikyō** *Gensuibaku Kinshi Nihon Kyōgikai* - The Japan Council against Atomic and Hydrogen Bombs.<br>
+Strength: [+ gensuikyo_strength : strength +]<br>
+Loyalty: [+ gensuikyo_loyalty : loyalty +]
 
-Militarization: [+ rfb_militancy : militancy +]
+**Nichinō** - *Nihon Nōmin Kumiai* - The Japan Farmers Union.<br>
+Strength: [+ farmers_strength : strength +]<br>
+Loyalty: [+ farmers_loyalty : loyalty +]
 
-**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the DNVP.
+**Official military:**
 
-Strength: [+ sh_strength +] thousand
+Japanese Self-Defense Forces: [+ army_strength +] thousand troops.
 
-Militarization: [+ sh_militancy : militancy +]
+Japanese Self-Defense Forces Loyalty: [+ army_loyalty : loyalty +]
 
-**Sturmabteilung (SA)**: This is the nazi paramilitary group.
+Police: [+ police_strength +] thousand members.
 
-Strength: [+ sa_strength +] thousand
-
-Militarization: [+ sa_militancy : militancy +]
-
-**Official military/paramilitary groups:**
-
-**Reichswehr**: [+ reichswehr_strength +] thousand troops. This is Germany's military.
-
-Loyalty: [+ reichswehr_loyalty : loyalty +]
-
-**Prussian police**: [+ prussian_police_strength +] thousand members.
-
-Loyalty: [+ prussian_police_loyalty : loyalty +]
-
-
+Police loyalty: [+ police_loyalty : loyalty +]
 
 @factions
 
