@@ -120,24 +120,39 @@ go-to: menu
 
 Mass organizations increase or decrease strength of factions within the JSP and the effectiveness of campaigning in some demographics, based on their strength and loyalty. Loyalty determines whether the organization increases or decreases support, while strength determines how much support is given.
 
-**Sōhyō** - *Nihon Rōdōkumiai Sōhyōgikai* - The General Council of Trade Unions is a confederation of trade unions that is aligned to the left.<br>
-Strength: [+ sohyo_strength : strength +]<br>
+**Sōhyō** - *Nihon Rōdōkumiai Sōhyōgikai*:<br>
+The General Council of Trade Unions is a confederation of trade unions that is aligned to the left.
+
+Strength: [+ sohyo_strength : strength +]
+
 Loyalty: [+ sohyo_loyalty : loyalty +]
 
-**Zenrō** - *Zennihon Rōdō Kumiai Kaigi* - The All-Japan Trade Union Congress is a federation of right-leaning trade unions who support the right and the reconstructionists.<br>
-Strength: [+ zenro_strength : strength +]<br>
+**Zenrō** - *Zennihon Rōdō Kumiai Kaigi*:<br>
+The All-Japan Trade Union Congress is a federation of right-leaning trade unions who support the right and the reconstructionists.
+
+Strength: [+ zenro_strength : strength +]
+
 Loyalty: [+ zenro_loyalty : loyalty +]
 
-**Shaseidō** - *Nihon Shakaishugi Seinen Dо̄mei* - The Japan Socialist Youth League.<br>
-Strength: [+ youth_strength : strength +]<br>
+**Shaseidō** - *Nihon Shakaishugi Seinen Dо̄mei*:<br>
+The Japan Socialist Youth League.
+
+Strength: [+ youth_strength : strength +]
+
 Loyalty: [+ youth_loyalty : loyalty +]
 
-**Gensuikyō** *Gensuibaku Kinshi Nihon Kyōgikai* - The Japan Council against Atomic and Hydrogen Bombs.<br>
-Strength: [+ gensuikyo_strength : strength +]<br>
+**Gensuikyō** *Gensuibaku Kinshi Nihon Kyōgikai*:<br>
+The Japan Council against Atomic and Hydrogen Bombs.
+
+Strength: [+ gensuikyo_strength : strength +]
+
 Loyalty: [+ gensuikyo_loyalty : loyalty +]
 
-**Nichinō** - *Nihon Nōmin Kumiai* - The Japan Farmers Union.<br>
-Strength: [+ farmers_strength : strength +]<br>
+**Nichinō** - *Nihon Nōmin Kumiai*:<br>
+The Japan Farmers Union.
+
+Strength: [+ farmers_strength : strength +]
+
 Loyalty: [+ farmers_loyalty : loyalty +]
 
 **Official military:**
