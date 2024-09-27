@@ -69,7 +69,7 @@ go-to: menu
 
 JSP: [+ jsp_votes +]%
 
-LDP: [+ ldp_votes +]%
+[? if lfp_united == 0 : LDP: [+ ldp_votes +]% ?]
 
 JCP: [+ jcp_votes +]%
 
@@ -106,7 +106,9 @@ Current relations: [+ jcp_relation : relationships +]
 
 **LFP** - *労働者農民党* (Laborers and Farmers Party) - friendly to the left
 
-Current relations: [+ lfp_relation : relationships +]
+[? if lfp_united == 1 : The LFP has united with us. ?]
+
+[? if lfp_united == 0 : Current relations: [+ lfp_relation : relationships +] ?]
 
 **Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and DNVP. 
 
@@ -216,6 +218,7 @@ Dissent: [+ reconstructionist_dissent : dissent +]
 title: Figures and Charts
 go-to: menu
 on-display: {!
+if (Q.lfp_united == 0) {
 data = [
     {
         "id": "jcp",
@@ -236,7 +239,7 @@ data = [
         "seats": Math.round(Q.lfp_r*5),
     },
     {
-        "id": "ldp",
+        "id": "LDP",
         "legend": "LDP",
         "name": "LDP",
         "seats": Math.round(Q.ldp_r*5),
@@ -248,6 +251,35 @@ data = [
         "seats": Math.round(Q.other_r*5),
     },
 ];
+}
+if (Q.lfp_united == 1) {
+data = [
+    {
+        "id": "jcp",
+        "legend": "JCP",
+        "name": "JCP",
+        "seats": Math.round(Q.jcp_r*5),
+    },
+    {
+        "id": "jsp",
+        "legend": "JSP",
+        "name": "JSP",
+        "seats": Math.round(Q.jsp_r*5),
+    },
+    {
+        "id": "LDP",
+        "legend": "LDP",
+        "name": "LDP",
+        "seats": Math.round(Q.ldp_r*5),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r*5),
+    },
+];
+}
 if (d3 && window) {
     // get screen width
     var width = 500;
@@ -299,7 +331,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#DB001C'> </div> !}JCP: {!</td><td>!} [+ jcp_r +]% {!</td><td>!} [+ str_change_jcp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FE7580'> </div> !} LFP: {!</td><td>!} [+ lfp_r +]% {!</td><td>!} [+ str_change_lfp +] {!</td></tr>!}
+[? if lfp_united == 0 : {!<tr><td><div class="box" style='background-color:#FE7580'> </div> !} LFP: {!</td><td>!} [+ lfp_r +]% {!</td><td>!} [+ str_change_lfp +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#3CA324'> </div> !} LDP: {!</td><td>!} [+ ldp_r +]% {!</td><td>!} [+ str_change_ldp +] {!</td></tr>!}
 
