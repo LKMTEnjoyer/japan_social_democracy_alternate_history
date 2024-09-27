@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Representatives Elections
 new-page: true
 tags: event
 priority: -1
@@ -10,7 +10,7 @@ set-jump: post_election_1928
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+The elections are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
@@ -148,6 +148,7 @@ Q.election_records.push(election_result);
 !}
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
+if (Q.lfp_united == 0) {
 data = [
     {
         "id": "jcp",
@@ -180,6 +181,35 @@ data = [
         "seats": Math.round(Q.other_r*5),
     },
 ];
+}
+if (Q.lfp_united == 1) {
+data = [
+    {
+        "id": "jcp",
+        "legend": "JCP",
+        "name": "JCP",
+        "seats": Math.round(Q.jcp_r*5),
+    },
+    {
+        "id": "jsp",
+        "legend": "JSP",
+        "name": "JSP",
+        "seats": Math.round(Q.jsp_r*5),
+    },
+    {
+        "id": "LDP",
+        "legend": "LDP",
+        "name": "LDP",
+        "seats": Math.round(Q.ldp_r*5),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r*5),
+    },
+];
+}
 if (window && d3) {
     var width = 500; 
     var height = 500;
@@ -210,7 +240,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#DB001C'> </div> !}JCP: {!</td><td>!} [+ jcp_r +]% {!</td><td>!} [+ str_change_jcp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FE7580'> </div> !} LFP: {!</td><td>!} [+ lfp_r +]% {!</td><td>!} [+ str_change_lfp +] {!</td></tr>!}
+[? if lfp_united == 0 : {!<tr><td><div class="box" style='background-color:#FE7580'> </div> !} LFP: {!</td><td>!} [+ lfp_r +]% {!</td><td>!} [+ str_change_lfp +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#3CA324'> </div> !} LDP: {!</td><td>!} [+ ldp_r +]% {!</td><td>!} [+ str_change_ldp +] {!</td></tr>!}
 
@@ -227,10 +257,6 @@ Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]%
 Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]%
 
 Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
-
-[? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
-
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
