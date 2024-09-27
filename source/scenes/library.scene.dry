@@ -79,17 +79,17 @@ Others: [+ others_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_jsp_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, DDP: [+ workers_ddp_normalized +]%, DVP: [+ workers_dvp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: JSP: [+ workers_jsp_normalized +]%, LDP: [+ workers_ldp_normalized +]%, JCP: [+ workers_jcp_normalized +]%, [? if lfp_united == 0 : LFP: [+ workers_lfp_normalized +]%, ?]Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_jsp_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, DDP: [+ new_middle_ddp_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
+New Middle Class: JSP: [+ new_middle_jsp_normalized +]%, LDP: [+ new_middle_ldp_normalized +]%, JCP: [+ new_middle_jcp_normalized +]%, [? if lfp_united == 0 : LFP: [+ new_middle_lfp_normalized +]%, ?]Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_jsp_normalized +]%, Z: [+ old_middle_z_normalized +]%, KPD: [+ old_middle_kpd_normalized +]%, DDP: [+ old_middle_ddp_normalized +]%, DVP: [+ old_middle_dvp_normalized +]%; DNVP: [+ old_middle_dnvp_normalized +]%, NSDAP: [+ old_middle_nsdap_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Old Middle Class: JSP: [+ old_middle_jsp_normalized +]%, LDP: [+ old_middle_ldp_normalized +]%, JCP: [+ old_middle_jcp_normalized +]%, [? if lfp_united == 0 : LFP: [+ old_middle_lfp_normalized +]%, ?]Others: [+ old_middle_other_normalized +]%
 
-Rural: SPD: [+ rural_jsp_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_jcp_normalized +]%, DDP: [+ rural_ddp_normalized +]%, DVP: [+ rural_dvp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: JSP: [+ rural_jsp_normalized +]%, LDP: [+ rural_ldp_normalized +]%, JCP: [+ rural_jcp_normalized +]%, [? if lfp_united == 0 : LFP: [+ rural_lfp_normalized +]%, ?]Others: [+ rural_other_normalized +]%
 
-Unemployed: SPD: [+ unemployed_jsp_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, DDP: [+ unemployed_ddp_normalized +]%, DVP: [+ unemployed_dvp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: JSP: [+ unemployed_jsp_normalized +]%, LDP: [+ unemployed_ldp_normalized +]%, JCP: [+ unemployed_jcp_normalized +]%, [? if lfp_united == 0 : LFP: [+ unemployed_lfp_normalized +]%, ?]Others: [+ unemployed_other_normalized +]%
 
-Catholics: SPD: [+ catholics_jsp_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, DDP: [+ catholics_ddp_normalized +]%, DVP: [+ catholics_dvp_normalized +]%; DNVP: [+ catholics_dnvp_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: JSP: [+ catholics_jsp_normalized +]%, LDP: [+ catholics_ldp_normalized +]%, JCP: [+ catholics_jcp_normalized +]%, [? if lfp_united == 0 : LFP: [+ catholics_lfp_normalized +]%, ?]Others: [+ catholics_other_normalized +]%
 
 @parties
 go-to: menu
