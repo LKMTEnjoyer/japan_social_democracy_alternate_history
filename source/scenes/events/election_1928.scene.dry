@@ -205,13 +205,14 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **JSP:** {!</td><td>!} **[+ jsp_r +]%** {!</td><td>!} **[+ str_change_jsp +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}JCP: {!</td><td>!} [+ jcp_r +]% {!</td><td>!} [+ str_change_jcp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#084195; outline: 2px; outline-style: solid;'> </div> !} **JSP:** {!</td><td>!} **[+ jsp_r +]%** {!</td><td>!} **[+ str_change_jsp +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} LFP: {!</td><td>!} [+ lfp_r +]% {!</td><td>!} [+ str_change_lfp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DB001C'> </div> !}JCP: {!</td><td>!} [+ jcp_r +]% {!</td><td>!} [+ str_change_jcp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} LDP: {!</td><td>!} [+ ldp_r +]% {!</td><td>!} [+ str_change_ldp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FE7580'> </div> !} LFP: {!</td><td>!} [+ lfp_r +]% {!</td><td>!} [+ str_change_lfp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#3CA324'> </div> !} LDP: {!</td><td>!} [+ ldp_r +]% {!</td><td>!} [+ str_change_ldp +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
