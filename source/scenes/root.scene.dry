@@ -75,17 +75,21 @@ Q.moderate_plan_adopted = 0;
 
 Q.mass_orgs = ['sohyo', 'zenro', 'youth', 'gensuikyo', 'farmers'];
 
-
 Q.sohyo_strength = 50;
 Q.sohyo_loyalty = 50;
+Q.sohyo_effects = 0;
 Q.zenro_strength = 50;
 Q.zenro_loyalty = 50;
+Q.zenro_effects = 0;
 Q.youth_strength = 50;
 Q.youth_loyalty = 50;
+Q.youth_effects = 0;
 Q.gensuikyo_strength = 50;
 Q.gensuikyo_loyalty = 50;
+Q.gensuikyo_effects = 0;
 Q.farmers_strength = 50;
 Q.farmers_loyalty = 50;
+Q.farmers_effects = 0;
 
 Q.army_strength = 50;
 Q.army_loyalty = 50;

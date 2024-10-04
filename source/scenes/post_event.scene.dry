@@ -9,6 +9,20 @@ for (var c of Q.classes) {
         }
     }
 }
+for (var c of Q.mass_orgs) {
+    if (Q[c+'_'+strength] < 0) {
+        Q[c+'_'+strength] = 0;   
+    }
+    if (Q[c+'_'+loyalty] > 1) {
+        Q[c+'_'+loyalty] = 1;
+    }
+    if (Q[c+'_'+loyalty] < 0) {
+        Q[c+'_'+loyalty] = 0;
+    }
+}
+for (var c of Q.mass_orgs) {
+    Q[c+'_'+strength] = Math.round(((Q[c+'_'+loyalty]-50)*0.02*Q[c+'_'+strength])**0.5)/100;   
+}
 if (Q.lfp_united == 1) {
     for (var c of Q.classes) {
         if (Q[c+'_lfp'] > 0) {

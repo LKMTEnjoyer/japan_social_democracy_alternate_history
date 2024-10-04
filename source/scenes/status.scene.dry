@@ -101,19 +101,19 @@ North Korea: [+ north_korea_relation : relationships +]
 Hover over the organization names or the title for more information.
 
 **Sōhyō**<br><span title="The General Council of Trade Unions is a confederation of trade unions that is aligned to the left.">Nihon Rōdōkumiai Sōhyōgikai</span><br>
-strength: [+ sohyo_strength : strength +], loyalty: [+ sohyo_loyalty : loyalty +]
+strength: [+ sohyo_strength : strength +], loyalty: [+ sohyo_loyalty : loyalty +], effects: [+ sohyo_effects +]
 
 **Zenrō**<br><span title="The All-Japan Trade Union Congress is a federation of right-leaning trade unions who support the right and the reconstructionists.">Zennihon Rōdō Kumiai Kaigi</span><br>
-strength: [+ zenro_strength : strength +], loyalty: [+ zenro_loyalty : loyalty +]
+strength: [+ zenro_strength : strength +], loyalty: [+ zenro_loyalty : loyalty +], effects: [+ zenro_effects +]
 
 **Shaseidō**<br><span title="The Japan Socialist Youth League.">Nihon Shakaishugi Seinen Dо̄mei</span><br>
-strength: [+ youth_strength : strength +], loyalty: [+ youth_loyalty : loyalty +]
+strength: [+ youth_strength : strength +], loyalty: [+ youth_loyalty : loyalty +], effects: [+ youth_effects +]
 
 **Gensuikyō**<br><span title="The Japan Council against Atomic and Hydrogen Bombs.">Gensuibaku Kinshi Nihon Kyōgikai</span><br>
-strength: [+ gensuikyo_strength : strength +], loyalty: [+ gensuikyo_loyalty : loyalty +]
+strength: [+ gensuikyo_strength : strength +], loyalty: [+ gensuikyo_loyalty : loyalty +], effects: [+ gensuikyo_effects +]
 
 **Nichinō**<br><span title="The Japan Farmers Union.">Nihon Nōmin Kumiai</span><br>
-strength: [+ farmers_strength : strength +], loyalty: [+ farmers_loyalty : loyalty +]
+strength: [+ farmers_strength : strength +], loyalty: [+ farmers_loyalty : loyalty +], effects: [+ farmers_effects +]
 
 = Official military
 
