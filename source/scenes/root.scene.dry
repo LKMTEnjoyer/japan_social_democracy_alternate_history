@@ -71,7 +71,10 @@ Q.nationalization_adopted = 0;
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 
-// organizations
+// mass organizations
+
+Q.mass_orgs = ['sohyo', 'zenro', 'youth', 'gensuikyo', 'farmers'];
+
 
 Q.sohyo_strength = 50;
 Q.sohyo_loyalty = 50;
