@@ -291,6 +291,12 @@ Q.finance_minister = 'Ichimada';
 Q.finance_minister_party = 'LDP';
 Q.agriculture_minister = 'Kōno';
 Q.agriculture_minister_party = 'LDP';
+Q.education_minister = 'Kiyose';
+Q.education_minister_party = 'LDP';
+Q.cabinet_minister = 'Nemoto';
+Q.cabinet_minister_party = 'LDP';
+Q.home_minister = 'Masataka';
+Q.home_minister_party = 'LDP';
 
 // Events: what has occurred?
 

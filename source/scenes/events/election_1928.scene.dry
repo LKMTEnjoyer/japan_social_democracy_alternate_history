@@ -333,7 +333,7 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 
 @labor
 title: Ministry of Labor
-subtitle: Taking the Labor Ministry is expected of us.
+subtitle: This ministry is responsible for the welfare and employment of workers. It was created by the Socialist-led coalition government in 1947.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
@@ -345,7 +345,7 @@ placeholder
 
 @interior
 title: Chair of the NPSC
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: The National Public Safety Commission controls the National Police Agency, which is responsible for supervising and coordinating the activities of prefectural police departments.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "JSP"
@@ -356,7 +356,7 @@ has been appointed Chair of the National Public Safety Commission.
 
 @finance
 title: Minister of Finance
-subtitle: The Finance Ministry controls the government budget and taxes.
+subtitle: This ministry is responsible for matters related to the national budget, taxation, the currency system, government bonds, state assets and the Bank of Japan. It is traditionally regarded as Japan's most powerful ministry.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -368,7 +368,7 @@ go-to: ministries
 
 @economic
 title: Ministry of International Trade and Industry
-subtitle: idk really
+subtitle: This ministry is responsible for policies relating to industry, trade, natural resources, energy, economic investment, research and development, business regulation and foreign exchange.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -380,7 +380,7 @@ has been appointed Minister of International Trade and Industry.
 
 @justice
 title: Minister of Justice
-subtitle: The Justice Ministry controls the courts.
+subtitle: This ministry is responsible for the legal system, courts, prisons and immigration.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10 
@@ -392,7 +392,7 @@ go-to: ministries
 
 @foreign
 title: Minister of Foreign Affairs
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: This ministry is responsible for all aspects of the country's foreign relations.
 tags: mins_1928
 choose-if: leverage >= 10 
 view-if: foreign_minister_party != "JSP"
@@ -403,7 +403,7 @@ has been appointed Foreign Minister.
 
 @agriculture
 title: Minister of Agriculture, Forestry and Fisheries
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: This ministry is responsible for the stable supply of food, development of agriculture, forestry and fisheries, and conservation of forest resources.
 choose-if: leverage >= 10 
 view-if: agriculture_minister_party != "JSP"
 on-arrival: leverage -= 10; agriculture_minister_party = "JSP"; agriculture_minister = " "
@@ -414,26 +414,48 @@ has been appointed Agriculture Minister.
 
 @army
 title: Director of the Defence Agency 
-subtitle: The agency responsible for the self-defense forces is not typically our domain.
+subtitle: The Defence Agency is responsible for administration and command of the Japan Self-Defence Forces. Our party is vehemently opposed to a resurrection of militarism, so this is not an agency we're likely to make use of.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 15 
+choose-if: leverage >= 20
 view-if: army_minister_party != "JSP"
-on-arrival: leverage -= 15; army_minister_party = "JSP"; army_minister = " "
+on-arrival: leverage -= 20; army_minister_party = "JSP"; army_minister = " "
 go-to: ministries
 
  has been appointed Director of the Defence Agency .
 
 @education
 title: Minister of Education
-unavailable-subtitle: We do not have enough leverage.
+unavailable-subtitle: This ministry is responsible for education, academic, culture and sports policy. The Japanese education system is notoriously conservative and needs to shed its nationalist and militarist apologia.
 tags: mins_1928
-choose-if: leverage >= 15 
+choose-if: leverage >= 10
 view-if: education_minister_party != "JSP"
-on-arrival: leverage -= 15; education_minister_party = "JSP"; education_minister = " "
+on-arrival: leverage -= 10; education_minister_party = "JSP"; education_minister = " "
 go-to: ministries
 
  has been appointed Education Minister.
+
+@home
+title: Director of the Home Affairs Agency
+unavailable-subtitle: The Home Affairs Agency is responsible for local administration and the electoral process.
+tags: mins_1928
+choose-if: leverage >= 10
+view-if: home_minister_party != "JSP"
+on-arrival: leverage -= 10; home_minister_party = "JSP"; home_minister = " "
+go-to: ministries
+
+ has been appointed Director of the Home Affairs Agency.
+
+@cabinet
+title: Chief Cabinet Secretary
+unavailable-subtitle: The Cabinet Secretariat is responsible for the coordination of the ministries and agencies that comprise the Cabinet, public relations and organising various miscellaneous tasks. Through the office of Chief Cabinet Secretary we can conduct far-reaching reforms to Japan's civil service and bureaucracy. 
+tags: mins_1928
+choose-if: leverage >= 10
+view-if: cabinet_minister_party != "JSP"
+on-arrival: leverage -= 10; cabinet_minister_party = "JSP"; cabinet_minister = " "
+go-to: ministries
+
+ has been appointed Chief Cabinet Secretary.
 
 @no_more
 title: No more ministries.
