@@ -5,58 +5,67 @@ tags: party_affairs
 view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 12;
 card-image: img/international.jpg
-max-visits: 3
+max-visits: 8
 
-At the Labor and Socialist International, we can forge contacts with our fraternal socialistparties in Europe and across the world.
+We can send delegations to make connections with other countries and socialist parties around the world.
 
-- @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
-- @austria: Learn organization and street fighting from the Austrian socialists.
-- @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
-- @comintern: Forget the second international - embed a spy in the Comintern's conference.
-- @america: Contact the Socialist party of America.
+- @europe: Send delegations to Europe to meet our comrades from the Socialist International and observe their governing practices.
+- @italy: Forget the social democrats. Send a delegation to Italy to learn from the Italian Communists and Togliatti's "structural reform".
+- @soviet: Send a delegation to the Soviet Union, Khrushchev has begun moving the USSR away from Stalinist deviation. We may learn from his adjustments to "actually existing socialism", and his new policy of "peaceful coexistence".
+- @china: Send a delegation to the People's Republic of China. The LDP's stubborn refusal to recognise Communist China as the legitimate Chinese government means we are also acting as an unofficial diplomatic mission.
+- @america: Send a delegation to the United States. They may be imperialists who continue to occupy our country, but we must cultivate relations with them if we wish to govern.
+- @nonaligned: Send delegations to the neutral countries - especially India and Socialist Yugoslavia. Our own policy is one of unarmed neutrality, so we must cultivate positive relations with countries already picking a path of non-alignment, as well as emphasise our own pacifist and independent line to the Japanese people.
 - @return: We do not need international contacts at the moment.
-- @easy_discard
+- @easy_discard 
 
-@fr_uk
+@europe
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifism += 1; moderate_plan_support += 1
+on-arrival: resources -= 1; peoples_party_support += 1; right_strength += 5; reconstructionist_strength += 5; democratization += 1; 
 
-The socialists of France and Britain can influence their governments to be friendlier towards Germany. Hopefully they will reduce our reparations burden.
+We can meet with the social democratic parties of Europe, with the most prominent ones being the Labour Party in the United Kingdom, the Parti Socialiste in France, and the SPD in Germany. Despite the fact that we all all in the Socialist International, they are very much less radical than us. 
 
-@austria
+@italy
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-audio: shuffle music/communist/workers_of_vienna_normalized.mp3
-on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1
+on-arrival: left_strength += 5; structural_reform_support += 1; center_strength += 5; resources -= 1
 
-Our Reichsbanner can learn much in paramilitary organization and training from the Austrian Republican Protection Units.
+Togliatti's idea of "structural reform" can be useful for expanding the electorate of our party. Some of our prominent leaders are starting to warm up to it.
 
-@scandi
+@soviet
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: reformist_strength += 8; wtb_support += 1; resources -= 1; moderate_plan_support += 1
+on-arrival: left_org_strength += 8; soviet_relation += 6; resources -= 1; pacifism += 1
 
-The programs of the Nordic socialists involve active government intervention in the economy. We can learn from their economic strategies, and how they moved beyond their working-class base to attract a broader set of constituents.
+Though we were not friendly to Stalinism in the Soviet Union before, Khrushchev can be helpful to our party, and we can learn from his policy of "peaceful coexistence". It may help to build up our own vision of unarmed neutrality for Japan.
 
-@comintern
+@china
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; jcp_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
+on-arrival: resources -= 1; left_org_strength += 8; left_strength += 8; china_relation += 6; china_visit += 1; nationalism -= 5;
 
-The Stalinists of the KPD insists on calling us "social fascists", suggesting that we social democrats are as bad or worse than actual fascists. Needless to say, this is not good for our relationship with the Communists. By observing the Comintern, we can develop strategies to counter Stalinist rhetoric, at least on a local level.
+The LDP follows America in its refusal to recognize the PRC. We will send an unofficial delegation to China to improve mutual relations.
 
 @america
 subtitle: -1 resources
+view-if: asanuma_statement = 0
+choose-if: resources >= 1 and (reconstructionist_strength + right_strength >= left_strength + center_strength + left_org_strength)
+unavailable-subtitle: [? if resources < 1 : Not enough resources. ?][? if (reconstructionist_strength + right_strength < left_org_strength + left_strength + center_strength) : This policy is strongly opposed by most members of our party. ?]
+on-arrival: resources -= 1; us_relation += 6; us_negotiation += 1; right_strength += 8; reconstructionist_strength += 10; right_dissent -= 8; reconstructionist_dissent -= 10; left_dissent += 8; center_dissent += 8; left_org_dissent += 10; nationalism += 10;
+
+Though the USA opposes even the idea of our party taking power, maybe making more overtures to their government may lessen that. Of course, the left-leaning factions in our party oppose any reconciliation with imperialists, and many anti-imperialist members are disappointed.
+
+@nonaligned
+subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1
+on-arrival: resources -= 1; center_strength += 10; pacifism += 1; nationalism -= 3
 
-The Socialist Party of America is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+Visiting the non-aligned countries in the Cold War obviously strengthens our rhetoric of pacifism. 
 
 @reduce
 
