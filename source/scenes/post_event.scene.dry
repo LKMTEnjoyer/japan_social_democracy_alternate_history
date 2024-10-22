@@ -2,7 +2,7 @@ title: Post Event
 new-page: true
 on-arrival: {!
 // make sure no stat is below 0.
-Q.resources += 1;
+
 for (var c of Q.classes) {
     for (var party of Q.parties) {
         if (Q[c+'_'+party] < 0) {
@@ -24,6 +24,7 @@ for (var c of Q.mass_orgs) {
 if (Q.lfp_united == 1) {
     for (var c of Q.classes) {
         if (Q[c+'_lfp'] > 0) {
+                Q.resources += 1;
                 Q[c+'_jsp'] += Q[c+'_lfp'];
                 Q[c+'_lfp_given'] += Q[c+'_lfp'];
                 Q[c+'_lfp'] = 0;
