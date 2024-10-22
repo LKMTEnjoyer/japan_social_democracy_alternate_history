@@ -2,6 +2,7 @@ title: Post Event
 new-page: true
 on-arrival: {!
 // make sure no stat is below 0.
+Q.resources += 1;
 for (var c of Q.classes) {
     for (var party of Q.parties) {
         if (Q[c+'_'+party] < 0) {
