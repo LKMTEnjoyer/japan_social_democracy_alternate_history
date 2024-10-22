@@ -20,9 +20,6 @@ for (var c of Q.mass_orgs) {
         Q[c+'_'+loyalty] = 0;
     }
 }
-for (var c of Q.mass_orgs) {
-    Q[c+'_'+effects] = 50;   
-}
 if (Q.lfp_united == 1) {
     for (var c of Q.classes) {
         if (Q[c+'_lfp'] > 0) {
