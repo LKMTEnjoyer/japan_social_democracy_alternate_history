@@ -9,12 +9,12 @@ max-visits: 8
 
 We can send delegations to make connections with other countries and socialist parties around the world.
 
-- @europe: Send delegations to Europe to meet our comrades from the Socialist International and observe their governing practices.
+- @europe: Send delegations to Europe to meet our comrades from the Socialist International.
 - @italy: Forget the social democrats. Send a delegation to Italy to learn from the Italian Communists and Togliatti's "structural reform".
-- @soviet: Send a delegation to the Soviet Union, Khrushchev has begun moving the USSR away from Stalinist deviation. We may learn from his adjustments to "actually existing socialism", and his new policy of "peaceful coexistence".
-- @china: Send a delegation to the People's Republic of China. The LDP's stubborn refusal to recognise Communist China as the legitimate Chinese government means we are also acting as an unofficial diplomatic mission.
+- @soviet: Send a delegation to the Soviet Union, Khrushchev has begun moving the USSR away from Stalinist deviation. 
+- @china: Send a delegation to the People's Republic of China, though we will be acting as an unofficial delegation. 
 - @america: Send a delegation to the United States. They may be imperialists who continue to occupy our country, but we must cultivate relations with them if we wish to govern.
-- @nonaligned: Send delegations to the neutral countries - especially India and Socialist Yugoslavia. Our own policy is one of unarmed neutrality, so we must cultivate positive relations with countries already picking a path of non-alignment, as well as emphasise our own pacifist and independent line to the Japanese people.
+- @nonaligned: Send delegations to the neutral countries - especially India and Socialist Yugoslavia. 
 - @return: We do not need international contacts at the moment.
 - @easy_discard 
 
@@ -24,7 +24,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; peoples_party_support += 1; right_strength += 5; reconstructionist_strength += 5; democratization += 1; 
 
-We can meet with the social democratic parties of Europe, with the most prominent ones being the Labour Party in the United Kingdom, the Parti Socialiste in France, and the SPD in Germany. Despite the fact that we all all in the Socialist International, they are very much less radical than us. 
+We can meet with the social democratic parties of Europe, with the most prominent ones being the Labour Party in the United Kingdom, the Parti Socialiste in France, and the SPD in Germany. Meeting with them lets us observe their governing practices, since most European social democratic parties have had decades of experience governing. Despite the fact that we all all in the Socialist International, they are very much less radical than us. 
 
 @italy
 subtitle: -1 resources
@@ -40,7 +40,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: left_org_strength += 8; soviet_relation += 6; resources -= 1; pacifism += 1
 
-Though we were not friendly to Stalinism in the Soviet Union before, Khrushchev can be helpful to our party, and we can learn from his policy of "peaceful coexistence". It may help to build up our own vision of unarmed neutrality for Japan.
+Though we were not friendly to Stalinism in the Soviet Union before, Khrushchev can be helpful to our party, and we can learn from his policy of "peaceful coexistence". It may help to build up our own vision of unarmed neutrality for Japan. We may also learn from his adjustments to "actually existing socialism".
 
 @china
 subtitle: -1 resources
@@ -48,7 +48,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; left_org_strength += 8; left_strength += 8; china_relation += 6; china_visit += 1; nationalism -= 5;
 
-The LDP follows America in its refusal to recognize the PRC. We will send an unofficial delegation to China to improve mutual relations.
+The LDP follows America in its refusal to recognize the PRC. The LDP's stubborn refusal to recognise Communist China as the legitimate Chinese government means we are also acting as an unofficial diplomatic mission. We will send an unofficial delegation to China to improve mutual relations.
 
 @america
 subtitle: -1 resources
@@ -65,7 +65,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; center_strength += 10; pacifism += 1; nationalism -= 3
 
-Visiting the non-aligned countries in the Cold War obviously strengthens our rhetoric of pacifism. 
+The JSP's line on foreign policy is one of unarmed neutrality, so we must cultivate positive relations with countries already picking a path of non-alignment, as well as emphasise our own pacifist and independent line to the Japanese people. Visiting the non-aligned countries in the Cold War obviously strengthens our rhetoric of pacifism. 
 
 @reduce
 
