@@ -22,6 +22,7 @@ for (var c of Q.mass_orgs) {
     }
 }
 if (Q.lfp_united == 1) {
+    Q.resources += 1;
     for (var c of Q.classes) {
         if (Q[c+'_lfp'] > 0) {
                 Q.resources += 1;
