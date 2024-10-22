@@ -60,7 +60,7 @@ JCP: [+ ldp_relation : relationships +]
 
 LDP: [+ jcp_relation : relationships +]
 
-LFP: [+ lfp_relation : relationships +]
+[? if lfp_united == 0 : LFP: [+ lfp_relation : relationships +] ?]
 
 Others: [+ other_relation : relationships +]
 
@@ -137,7 +137,7 @@ LDP: [+ ldp_votes +]%
 
 JCP: [+ jcp_votes +]%
 
-LFP: [+ lfp_votes +]%
+[? if lfp_united == 0 : LFP: [+ lfp_votes +]% ?]
 
 Others: [+ others_votes +]%
 
