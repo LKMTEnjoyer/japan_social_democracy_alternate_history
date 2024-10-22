@@ -21,7 +21,7 @@ for (var c of Q.mass_orgs) {
     }
 }
 for (var c of Q.mass_orgs) {
-    Q[c+'_'+effects] = ((Q[c+'_'+loyalty]-50)*0.02*Q[c+'_'+strength])/100;   
+    Q[c+'_'+effects] = Q[c+'_'+loyalty]-50;   
 }
 if (Q.lfp_united == 1) {
     for (var c of Q.classes) {
