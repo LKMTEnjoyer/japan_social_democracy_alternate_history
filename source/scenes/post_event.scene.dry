@@ -21,7 +21,21 @@ if (Q.lfp_united == 1) {
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.nationalism = Math.round(Q.nationalism);
 Q.socialism = Math.round(Q.socialism);
-
+for (var c of Q.mass_orgs) {
+    if (Q[c+'_strength'] < 0) {
+        Q[c+'_strength'] = 0;   
+    }
+    if (Q[c+'_loyalty'] > 100) {
+        Q[c+'_loyalty'] = 100;
+    }
+    if (Q[c+'_loyalty'] < 0) {
+        Q[c+'_loyalty'] = 0;
+    }
+}
+for (var c of Q.mass_orgs) {
+    Q[c+'_effects'] = ((Q[c+'_loyalty']-50)*0.02*Q[c+'_strength'])/100;   
+    Q[c+'_effects'] = Q[c+'_loyalty']-50;   
+}
 if (Q.pro_republic < 0) {
     Q.pro_republic = 0;
 }
