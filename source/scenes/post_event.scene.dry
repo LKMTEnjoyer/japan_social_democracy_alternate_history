@@ -33,8 +33,7 @@ for (var c of Q.mass_orgs) {
     }
 }
 for (var c of Q.mass_orgs) {
-    Q[c+'_effects'] = ((Q[c+'_loyalty']-50)*0.02*Q[c+'_strength'])/100;   
-    Q[c+'_effects'] = Q[c+'_loyalty']-50;   
+    Q[c+'_effects'] = ((Q[c+'_loyalty']-50)*0.02*Q[c+'_strength'])/100;     
 }
 if (Q.pro_republic < 0) {
     Q.pro_republic = 0;
