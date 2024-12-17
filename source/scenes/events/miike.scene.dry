@@ -1,0 +1,49 @@
+title: The Miike Struggle
+subtitle: Mass layoffs in the Miike mine are causing labour unrest.
+view-if: year = 1960 and month = 1
+max-visits: 1
+new-page: true
+tags: event
+
+= The Miike Struggle
+
+The Miike mine has always been an important mine for the Mitsui corporation in Japan. However, the struggling coal industry and the shift towards oil production has lead to layoffs across the country, but especially in the Miike mine, which would see 1462 layoffs in the current plan.
+
+The Miike miners union is one of the strongest and most militant unions in Sohyo, and immediately responded with protests by the more than 30,000 miners in the union. Both the labour and business see this as a decisive turning point in the constant struggles between unions and corporations.
+
+Any kind of decisive defeat in this struggle could be disastrous for both Sohyo and the local labour union. Accordingly, we have to make every effort to consolidate our resources and put our strength behind the Miike miners.
+
+How will we start to deal with the struggle?
+
+- @support_labor: Use our control of the Labour ministry to favour the workers.
+- @pressure: Pressure our coalition partners to favour the workers with the Labour ministry.
+- @fight: Support the miners with all our available resources!
+- @give_up: We must wait for a more favourable moment.
+
+@support_labor
+view-if: jsp_in_government = 1 and labor_minister_party = "JSP"
+subtitle: This will alienate the bourgeoisie.
+on-arrival: miike_ending = 1; labor_strength += 5; labor_dissent -= 5; left_dissent -= 5; workers_spd += 6*(1-dissent); coalition_dissent += 1; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1
+
+Supporting labor is always popular in the SPD, although many of our coalition partners represent employers, and they are less enthused.
+
+@pressure
+view-if: jsp_in_government = 1 and not labor_minister_party = "JSP"
+subtitle: This will slightly decrease relations with our coalition partners.
+on-arrival: miike_ending = 1; labor_strength += 5; labor_dissent -= 5; left_dissent -= 5; workers_spd += 6*(1-dissent); coalition_dissent += 1; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1
+
+Supporting labor is always popular in the SPD, although many of our coalition partners represent employers, and they are less enthused.
+
+@fight
+view-if: jsp_in_government = 0
+subtitle: No matter the outcome, we must support our fellow workers.
+on-arrival: miike_unlocked = 1; sohyo_loyalty += 0.05;
+
+*the Miike Struggle interface is unlocked. Make sure that the final decision in a year is in your favour.*
+
+@give_up
+view-if: jsp_in_government = 0
+subtitle: Sohyo will be infuriated, as they view this as a betrayal of the workers.
+on-arrival: miike_ending = 1; labor_dissent += 4; workers_spd -= 2; kpd_coalition_dissent += 1; kpd_relation -= 5; workers_kpd += 2
+
+Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces. However, this will definitely lead weaker union Japan in the long-term.
