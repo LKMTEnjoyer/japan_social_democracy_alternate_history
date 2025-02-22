@@ -1,0 +1,12 @@
+title: Ōuchi Hyōei
+is-pinned-card: true
+tags: advisor, left_org
+card-image: img/portraits/hyoei.jpg
+view-if: hyoei_advisor = 1
+new-page: true 
+
+= Ōuchi Hyōei
+
+Ōuchi Hyōei
+  
+- @root: Return to main

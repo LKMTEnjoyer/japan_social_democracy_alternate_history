@@ -1,0 +1,12 @@
+title: Hitoshi Yamakawa
+is-pinned-card: true
+tags: advisor, left_org
+card-image: img/portraits/yamakawa.jpg
+view-if: yamakawa_advisor = 1
+new-page: true 
+
+= Hitoshi Yamakawa
+
+Hitoshi Yamakawa
+  
+- @root: Return to main

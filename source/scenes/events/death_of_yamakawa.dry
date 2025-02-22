@@ -1,0 +1,8 @@
+title: The Death of Hitoshi Yamakawa
+view-if: year == 1958 and month >= 3
+frequency: 1000
+max-visits: 1
+on-arrival: yamakawa_dead = 1; n_advisors -= 1 if yamakawa_advisor == 1; yamakawa_advisor = 0
+tags: event
+
+placeholder
