@@ -1,0 +1,28 @@
+on-arrival: {!
+Q.dsp_formed = 1;
+Q.parties.push('dsp');
+
+Q.workers_dsp = 6;
+Q.workers_jsp -= 2;
+Q.new_middle_dsp = 3;
+Q.old_middle_dsp = 1;
+Q.rural_dsp = 0;
+Q.unemployed_dsp = 2;
+Q.catholics_dsp = 0;
+
+Q.workers_dsp -= 5;
+
+if (Q.unions_independent) {
+    Q.workers_dsp += 8;
+}
+
+// update all records
+Q.dsp_r = 0;
+Q.old_dsp_r = 0;
+for (var record of Q.election_records) {
+    record['dsp'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['dsp'] = 0;
+}
+!}
