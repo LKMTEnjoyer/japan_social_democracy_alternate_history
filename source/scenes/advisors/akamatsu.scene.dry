@@ -1,0 +1,12 @@
+title: Isamu Akamatsu
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/akamatsu.jpg
+view-if: akamatsu_advisor = 1
+new-page: true
+
+= Isamu Akamatsu
+
+Isamu Akamatsu
+
+- @root: Return to main

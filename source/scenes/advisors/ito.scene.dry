@@ -1,0 +1,12 @@
+title: Kodo Ito
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/ito.jpg
+view-if: ito_advisor = 1
+new-page: true
+
+= Kodo Ito
+
+Kodo Ito
+
+- @root: Return to main

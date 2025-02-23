@@ -1,0 +1,12 @@
+title: Jotaro Kawakami
+is-pinned-card: true
+tags: advisor, right
+card-image: img/portraits/kawakami.jpg
+view-if: kawakami_advisor = 1
+new-page: true
+
+= Jotaro Kawakami
+
+Jotaro Kawakami
+
+- @root: Return to main

@@ -1,0 +1,12 @@
+title: Hiroo Wada
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/wada.jpg
+view-if: wada_advisor = 1
+new-page: true
+
+= Hiroo Wada
+
+Hiroo Wada
+
+- @root: Return to main

@@ -1,0 +1,12 @@
+title: Tomomi Narita
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/narita.jpg
+view-if: narita_advisor = 1
+new-page: true
+
+= Tomomi Narita
+
+Tomomi Narita
+
+- @root: Return to main

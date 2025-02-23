@@ -1,0 +1,12 @@
+title: Saburō Eda
+is-pinned-card: true
+tags: advisor, center
+card-image: img/portraits/eda.jpg
+view-if: eda_advisor = 1
+new-page: true
+
+= Saburō Eda
+
+Saburō Eda
+
+- @root: Return to main

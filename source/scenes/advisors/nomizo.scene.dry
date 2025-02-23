@@ -1,0 +1,12 @@
+title: Masaru Nomizo
+is-pinned-card: true
+tags: advisor, center
+card-image: img/portraits/nomizo.jpg
+view-if: nomizo_advisor = 1
+new-page: true
+
+= Masaru Nomizo
+
+Masaru Nomizo
+
+- @root: Return to main
