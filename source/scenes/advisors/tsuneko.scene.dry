@@ -1,0 +1,12 @@
+title: Tsuneko Akamatsu
+is-pinned-card: true
+tags: advisor, center
+card-image: img/portraits/tsuneko.jpg
+view-if: tsuneko_advisor = 1
+new-page: true
+
+= Tsuneko Akamatsu
+
+Tsuneko Akamatsu
+
+- @root: Return to main

@@ -1,0 +1,12 @@
+title: Shidzue Katō
+is-pinned-card: true
+tags: advisor, center
+card-image: img/portraits/kato.jpg
+view-if: kato_advisor = 1
+new-page: true
+
+= Shidzue Katō
+
+Shidzue Katō
+
+- @root: Return to main

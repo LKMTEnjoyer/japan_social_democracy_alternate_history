@@ -5,13 +5,13 @@ view-if: left_dissent >= 60 or left_org_dissent >= 60
 max-visits: 1
 on-arrival: {! 
 Q.lfp_united = 0; 
+Q.left_split = 1;
 Q.left_strength = Q.left_strength/2; 
 Q.left_org_strength = Q.left_org_strength/2;
 Q.workers_jsp -= 5; 
 Q.unemployed_jsp -= 5; 
 Q.workers_lfp += 5; 
 Q.workers_jcp += 3; 
-Q.rb_strength -= 300; 
 Q.jcp_relation -= 5;
 
 for (var c of Q.classes) {

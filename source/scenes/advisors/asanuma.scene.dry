@@ -2,7 +2,7 @@ title: Inejirō Asanuma
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/inejiro.jpg
-view-if: inejiro_advisor = 1
+view-if: asanuma_advisor = 1
 new-page: true 
 
 = Inejirō Asanuma 

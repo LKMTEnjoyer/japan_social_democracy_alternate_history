@@ -1,0 +1,12 @@
+title: Kanjū Katō
+is-pinned-card: true
+tags: advisor, center
+card-image: img/portraits/kanju.jpg
+view-if: kanju_advisor = 1
+new-page: true
+
+= Kanjū Katō
+
+Kanjū Katō
+
+- @root: Return to main

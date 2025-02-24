@@ -1,0 +1,12 @@
+title: Ichiko Kamichika
+is-pinned-card: true
+tags: advisor, center
+card-image: img/portraits/kamichika.jpg
+view-if: kamichika_advisor = 1
+new-page: true
+
+= Ichiko Kamichika
+
+Ichiko Kamichika
+
+- @root: Return to main

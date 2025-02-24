@@ -1,12 +1,12 @@
-title: Jotaro Kawakami
+title: Jōtarō Kawakami
 is-pinned-card: true
-tags: advisor, right
-card-image: img/portraits/kawakami.jpg
+tags: advisor, reformist
+card-image: img/portraits/jotaro.png
 view-if: kawakami_advisor = 1
-new-page: true
+new-page: true 
 
-= Jotaro Kawakami
+= Jōtarō Kawakami 
 
-Jotaro Kawakami
-
+Jōtarō Kawakami  
+  
 - @root: Return to main

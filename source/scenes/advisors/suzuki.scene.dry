@@ -1,8 +1,8 @@
 title: Mosaburō Suzuki 
 is-pinned-card: true
-tags: advisor, reformist
+tags: advisor, left
 card-image: img/portraits/mosaburo.jpg
-view-if: mosaburo_advisor = 1
+view-if: suzuki_advisor = 1
 new-page: true 
 
 = Mosaburō Suzuki 
