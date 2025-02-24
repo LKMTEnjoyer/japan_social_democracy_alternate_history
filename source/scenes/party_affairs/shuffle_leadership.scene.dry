@@ -466,18 +466,6 @@ go-to: advisor_menu
 
 Tomomi Narita is now an advisor.
 
-@add_
-title: 
-subtitle: 
-is-card: true
-card-image: img/portraits/ .jpg
-tags: left_advisor
-view-if: severing_advisor = 0 and n_advisors < 3
-on-arrival: severing_advisor = 1; n_advisors += 1; left_strength += 5
-go-to: advisor_menu
-
-Severing is now an advisor.
-
 @add_wada
 title: Hiroo Wada
 subtitle: Hiroo Wada
