@@ -128,7 +128,7 @@ Police: [+ police_strength +] thousand members.
 Police loyalty: [+ police_loyalty : loyalty +]
 
 @polls
-on-arrival:{!
+on-display:{!
 
 var ctx = document.getElementById('percentageBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
@@ -222,7 +222,7 @@ Others: [+ others_votes +]%
 
 **Detailed results for each demographic**
 
-<canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 200px; width: 1000px;" width="1000" height="200"></canvas>
+<canvas id="percentageBarChart"></canvas>
 
 Blue Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized +]%, ?] Others: [+ blue_workers_other_normalized +]%
 
