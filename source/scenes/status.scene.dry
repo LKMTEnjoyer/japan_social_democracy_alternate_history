@@ -147,7 +147,7 @@ Others: [+ others_votes +]%
 <br>
 <canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px; width: 150px;" width="150" height="50"></canvas>
 {!<script>
-console.log(Q.blue_workers);
+console.log(dendryUI.dendryEngine.state.qualities.blue_workers);
 var ctx = document.getElementById('percentageBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
     type: 'bar',
@@ -215,13 +215,13 @@ var myBarChart = new Chart(ctx, {
 });
 </script>!}
 
-Blue Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized +]%, ?] Others: [+ blue_workers_other_normalized +]%
+Blue-Collar Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized +]%, ?] Others: [+ blue_workers_other_normalized +]%
 
-White Workers: JSP: [+ white_workers_jsp_normalized +]%, JCP: [+ white_workers_jcp_normalized +]%, LDP: [+ white_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_workers_lfp_normalized +]%, ?] Others: [+ white_workers_other_normalized +]%
+White-Collar Workers: JSP: [+ white_workers_jsp_normalized +]%, JCP: [+ white_workers_jcp_normalized +]%, LDP: [+ white_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_workers_lfp_normalized +]%, ?] Others: [+ white_workers_other_normalized +]%
 
-Enterprise Workers: JSP: [+ enterprise_workers_jsp_normalized +]%, JCP: [+ enterprise_workers_jcp_normalized +]%, LDP: [+ enterprise_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ enterprise_workers_lfp_normalized +]%, ?] Others: [+ enterprise_workers_other_normalized +]%
+Small-Enterprise Workers: JSP: [+ enterprise_workers_jsp_normalized +]%, JCP: [+ enterprise_workers_jcp_normalized +]%, LDP: [+ enterprise_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ enterprise_workers_lfp_normalized +]%, ?] Others: [+ enterprise_workers_other_normalized +]%
 
-Self Employed: JSP: [+ self_employed_jsp_normalized +]%, JCP: [+ self_employed_jcp_normalized +]%, LDP: [+ self_employed_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ self_employed_lfp_normalized +]%, ?] Others: [+ self_employed_other_normalized +]%
+Self-Employed: JSP: [+ self_employed_jsp_normalized +]%, JCP: [+ self_employed_jcp_normalized +]%, LDP: [+ self_employed_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ self_employed_lfp_normalized +]%, ?] Others: [+ self_employed_other_normalized +]%
 
 Rural Workers: JSP: [+ rural_workers_jsp_normalized +]%, JCP: [+ rural_workers_jcp_normalized +]%, LDP: [+ rural_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ rural_workers_lfp_normalized +]%, ?] Others: [+ rural_workers_other_normalized +]%
 
