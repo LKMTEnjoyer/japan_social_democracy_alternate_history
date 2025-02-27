@@ -144,6 +144,7 @@ JCP: [+ jcp_votes +]%
 Others: [+ others_votes +]%
 
 **Detailed results for each demographic**
+<br>
 <canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px; width: 150px;" width="150" height="50"></canvas>
 {!<script>
 console.log(Q.blue_workers);
