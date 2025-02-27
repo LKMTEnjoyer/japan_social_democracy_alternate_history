@@ -128,10 +128,28 @@ Police: [+ police_strength +] thousand members.
 Police loyalty: [+ police_loyalty : loyalty +]
 
 @polls
-on-display:{!
 
-const ctx = document.getElementById('percentageBarChart').getContext('2d');
-const myBarChart = new Chart(ctx, {
+= Projected election results
+
+(if the election were to be held now):
+
+JSP: [+ jsp_votes +]%
+
+LDP: [+ ldp_votes +]%
+
+JCP: [+ jcp_votes +]%
+
+[? if lfp_united == 0 : LFP: [+ lfp_votes +]% ?]
+
+Others: [+ others_votes +]%
+
+**Detailed results for each demographic**
+
+<canvas id="percentageBarChart"></canvas>
+
+<script>
+var ctx = document.getElementById('percentageBarChart').getContext('2d');
+var myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Total'],
@@ -203,26 +221,7 @@ const myBarChart = new Chart(ctx, {
         }
     }
 });
-
-!}
-
-= Projected election results
-
-(if the election were to be held now):
-
-JSP: [+ jsp_votes +]%
-
-LDP: [+ ldp_votes +]%
-
-JCP: [+ jcp_votes +]%
-
-[? if lfp_united == 0 : LFP: [+ lfp_votes +]% ?]
-
-Others: [+ others_votes +]%
-
-**Detailed results for each demographic**
-
-<canvas id="percentageBarChart"></canvas>
+</script>
 
 Blue Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized +]%, ?] Others: [+ blue_workers_other_normalized +]%
 
