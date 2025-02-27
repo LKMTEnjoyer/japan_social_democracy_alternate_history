@@ -1,3 +1,17 @@
+#percentageBarChart {
+  width: 80% !important;
+  height: 300px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
 body {
   font-family: "Minion Pro", Georgia, serif;
   /*font-size: 1.125em;*/
