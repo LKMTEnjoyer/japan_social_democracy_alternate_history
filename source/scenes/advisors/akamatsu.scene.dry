@@ -1,7 +1,7 @@
 title: Isamu Akamatsu
 is-pinned-card: true
 tags: advisor, left
-card-image: img/portraits/akamatsu.jpg
+card-image: img/portraits/akamatsu.png
 view-if: akamatsu_advisor = 1
 new-page: true
 

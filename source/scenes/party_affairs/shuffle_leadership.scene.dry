@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, right_advisor, left_org_advisor, reconstructionist_advisor 
+tags: center_advisor, left_advisor, right_advisor, left_org_advisor, reconstruction_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -624,7 +624,7 @@ card-image: img/portraits/kono.jpg
 view-if: kono_advisor = 0 and n_advisors < 3 and dsp_formed = 0
 on-arrival: kono_advisor = 1; n_advisors += 1; reconstructionist_strength += 5
 go-to: advisor_menu
-tags: reconstructionist_advisor
+tags: reconstruction_advisor
 
 Mitsu Kōno is now an advisor.
 
@@ -636,7 +636,7 @@ card-image: img/portraits/nishio.jpg
 view-if: nishio_advisor = 0 and n_advisors < 3 and dsp_formed = 0
 on-arrival: nishio_advisor = 1; n_advisors += 1; reconstructionist_strength += 5
 go-to: advisor_menu
-tags: reconstructionist_advisor
+tags: reconstruction_advisor
 
 Suehiro Nishio is now an advisor.
 
@@ -648,7 +648,7 @@ card-image: img/portraits/mizutani.jpg
 view-if: mizutani_advisor = 0 and n_advisors < 3 and dsp_formed = 0
 on-arrival: mizutani_advisor = 1; n_advisors += 1; reconstructionist_strength += 5
 go-to: advisor_menu
-tags: reconstructionist_advisor
+tags: reconstruction_advisor
 
 Chōzaburō Mizutani is now an advisor.
 
@@ -660,7 +660,7 @@ card-image: img/portraits/takita.jpg
 view-if: takita_advisor = 0 and n_advisors < 3 and dsp_formed = 0
 on-arrival: takita_advisor = 1; n_advisors += 1; reconstructionist_strength += 5
 go-to: advisor_menu
-tags: reconstructionist_advisor
+tags: reconstruction_advisor
 
 Minoru Takita is now an advisor.
 
@@ -672,7 +672,7 @@ card-image: img/portraits/matsuoka.jpg
 view-if: matsuoka_advisor = 0 and n_advisors < 3 and dsp_formed = 0
 on-arrival: matsuoka_advisor = 1; n_advisors += 1; reconstructionist_strength += 5
 go-to: advisor_menu
-tags: reconstructionist_advisor
+tags: reconstruction_advisor
 
 Komakichi Matsuoka is now an advisor.
 
@@ -684,6 +684,6 @@ card-image: img/portraits/tsuneko.jpg
 view-if: tsuneko_advisor = 0 and n_advisors < 3 and dsp_formed = 0
 on-arrival: tsuneko_advisor = 1; n_advisors += 1; reconstructionist_strength += 5
 go-to: advisor_menu
-tags: reconstructionist_advisor
+tags: reconstruction_advisor
 
 Tsuneko Akamatsu is now an advisor.
