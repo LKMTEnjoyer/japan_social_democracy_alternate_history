@@ -145,20 +145,20 @@ Others: [+ others_votes +]%
 
 **Detailed results for each demographic**
 
-Blue Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized + ]%, ?] Others: [+ blue_workers_other_normalized +]%
+Blue Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized +]%, ?] Others: [+ blue_workers_other_normalized +]%
 
-White Workers: JSP: [+ white_workers_jsp_normalized +]%, JCP: [+ white_workers_jcp_normalized +]%, LDP: [+ white_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_workers_lfp_normalized + ]%, ?] Others: [+ white_workers_other_normalized +]%
+White Workers: JSP: [+ white_workers_jsp_normalized +]%, JCP: [+ white_workers_jcp_normalized +]%, LDP: [+ white_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_workers_lfp_normalized +]%, ?] Others: [+ white_workers_other_normalized +]%
 
-Enterprise Workers: JSP: [+ enterprise_workers_jsp_normalized +]%, JCP: [+ enterprise_workers_jcp_normalized +]%, LDP: [+ enterprise_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ enterprise_workers_lfp_normalized + ]%, ?] Others: [+ enterprise_workers_other_normalized +]%
+Enterprise Workers: JSP: [+ enterprise_workers_jsp_normalized +]%, JCP: [+ enterprise_workers_jcp_normalized +]%, LDP: [+ enterprise_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ enterprise_workers_lfp_normalized +]%, ?] Others: [+ enterprise_workers_other_normalized +]%
 
-Self Employed: JSP: [+ self_employed_jsp_normalized +]%, JCP: [+ self_employed_jcp_normalized +]%, LDP: [+ self_employed_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ self_employed_lfp_normalized + ]%, ?] Others: [+ self_employed_other_normalized +]%
+Self Employed: JSP: [+ self_employed_jsp_normalized +]%, JCP: [+ self_employed_jcp_normalized +]%, LDP: [+ self_employed_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ self_employed_lfp_normalized +]%, ?] Others: [+ self_employed_other_normalized +]%
 
-Rural Workers: JSP: [+ rural_workers_jsp_normalized +]%, JCP: [+ rural_workers_jcp_normalized +]%, LDP: [+ rural_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ rural_workers_lfp_normalized + ]%, ?] Others: [+ rural_workers_other_normalized +]%
+Rural Workers: JSP: [+ rural_workers_jsp_normalized +]%, JCP: [+ rural_workers_jcp_normalized +]%, LDP: [+ rural_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ rural_workers_lfp_normalized +]%, ?] Others: [+ rural_workers_other_normalized +]%
 
-Urban Migrants: JSP: [+ urban_migrants_jsp_normalized +]%, JCP: [+ urban_migrants_jcp_normalized +]%, LDP: [+ urban_migrants_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ urban_migrants_lfp_normalized + ]%, ?] Others: [+ urban_migrants_other_normalized +]%
+Urban Migrants: JSP: [+ urban_migrants_jsp_normalized +]%, JCP: [+ urban_migrants_jcp_normalized +]%, LDP: [+ urban_migrants_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ urban_migrants_lfp_normalized +]%, ?] Others: [+ urban_migrants_other_normalized +]%
 
-Unemployed: JSP: [+ unemployed_jsp_normalized +]%, JCP: [+ unemployed_jcp_normalized +]%, LDP: [+ unemployed_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ unemployed_lfp_normalized + ]%, ?] Others: [+ unemployed_other_normalized +]%
+Unemployed: JSP: [+ unemployed_jsp_normalized +]%, JCP: [+ unemployed_jcp_normalized +]%, LDP: [+ unemployed_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ unemployed_lfp_normalized +]%, ?] Others: [+ unemployed_other_normalized +]%
 
-Youth: JSP: [+ youth_jsp_normalized +]%, JCP: [+ youth_jcp_normalized +]%, LDP: [+ youth_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ youth_lfp_normalized + ]%, ?] Others: [+ youth_other_normalized +]%
+Youth: JSP: [+ youth_jsp_normalized +]%, JCP: [+ youth_jcp_normalized +]%, LDP: [+ youth_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ youth_lfp_normalized +]%, ?] Others: [+ youth_other_normalized +]%
 
 Nationalism: [+ nationalism +]%
