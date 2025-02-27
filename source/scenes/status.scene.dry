@@ -147,7 +147,7 @@ Others: [+ others_votes +]%
 
 <canvas id="percentageBarChart"></canvas>
 
-<script>
+{!<script>
 var ctx = document.getElementById('percentageBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
     type: 'bar',
@@ -221,7 +221,7 @@ var myBarChart = new Chart(ctx, {
         }
     }
 });
-</script>
+</script>!}
 
 Blue Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized +]%, ?] Others: [+ blue_workers_other_normalized +]%
 
