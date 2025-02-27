@@ -152,29 +152,53 @@ var ctx = document.getElementById('percentageBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Total'],
+        labels: ['Demographics'],
         datasets: [
             {
-                label: 'Category A',
-                data: [25],
+                label: 'Blue-collar workers',
+                data: [dendryUI.dendryEngine.state.qualities.blue_workers],
                 backgroundColor: '#FF6347',
                 stack: 'stack1'
             },
             {
-                label: 'Category B',
-                data: [35],
+                label: 'White-collar workers',
+                data: [dendryUI.dendryEngine.state.qualities.white_workers],
                 backgroundColor: '#4682B4',
                 stack: 'stack1'
             },
             {
-                label: 'Category C',
-                data: [20],
+                label: 'Small-enterprise workers',
+                data: [dendryUI.dendryEngine.state.qualities.enterprise_workers],
                 backgroundColor: '#32CD32',
                 stack: 'stack1'
             },
             {
-                label: 'Category D',
-                data: [20],
+                label: 'Self-employed',
+                data: [dendryUI.dendryEngine.state.qualities.self_employed],
+                backgroundColor: '#FFD700',
+                stack: 'stack1'
+            },
+            {
+                label: 'Rural workers',
+                data: [dendryUI.dendryEngine.state.qualities.rural_workers],
+                backgroundColor: '#FFD700',
+                stack: 'stack1'
+            },
+            {
+                label: 'Urban migrants',
+                data: [dendryUI.dendryEngine.state.qualities.urban_migrants],
+                backgroundColor: '#FFD700',
+                stack: 'stack1'
+            },
+            {
+                label: 'Unemployed',
+                data: [dendryUI.dendryEngine.state.qualities.unemployed],
+                backgroundColor: '#FFD700',
+                stack: 'stack1'
+            },
+            {
+                label: 'Youth',
+                data: [dendryUI.dendryEngine.state.qualities.youth],
                 backgroundColor: '#FFD700',
                 stack: 'stack1'
             }
