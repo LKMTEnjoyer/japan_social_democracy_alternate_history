@@ -144,9 +144,9 @@ JCP: [+ jcp_votes +]%
 Others: [+ others_votes +]%
 
 **Detailed results for each demographic**
-
-<canvas id="percentageBarChart"></canvas>
-
+<br>
+<canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px; width: 150px;" width="150" height="50"></canvas>
+<br>
 {!<script>
 var ctx = document.getElementById('percentageBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
