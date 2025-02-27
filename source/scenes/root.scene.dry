@@ -149,23 +149,32 @@ Q.budget = 5;
 
 // no info yet
 
-Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
+// urban migrants?
+
+Q.urban_migration_timer = 6;
+Q.urbanization_rate = 0;
+
+Q.growth_rate = 9.5;
+
+// all of this is basically guesswork
+
+
+Q.blue_workers = 48; 
+Q.white_workers = 13; 
+Q.enterprise_workers = 25; 
+Q.self_employed = 1;
+Q.rural_workers = 30;
+Q.urban_migrants = 0;
 Q.unemployed = 2.5;
-Q.catholics = 30;
+Q.youth = 23;
+Q.catholics = 0;
 
 
 // income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 2.9;
-Q.growth = 9.5;
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
@@ -174,7 +183,7 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['blue_workers', 'white_workers', 'enterprise_workers', 'self_employed', 'rural_workers', 'urban_migrants', 'unemployed', 'youth'];
 Q.parties = ['jsp', 'jcp', 'ldp', 'lfp', 'other'];
 
 // Support for party by social group
@@ -186,35 +195,53 @@ Q.rural_lfp_given = 0;
 Q.unemployed_lfp_given = 0;
 Q.catholics_lfp_given = 0;
 
-Q.workers_jsp = 60;
-Q.workers_jcp = 20;
-Q.workers_ldp = 10;
-Q.workers_lfp = 10;
-Q.workers_other = 10;
+Q.blue_workers_jsp = 43.6;
+Q.blue_workers_jcp = 10;
+Q.blue_workers_ldp = 26.1;
+Q.blue_workers_lfp = 5;
+Q.blue_workers_other = 10;
 
-Q.old_middle_jsp = 5;
-Q.old_middle_jcp = 0;
-Q.old_middle_ldp = 65;
-Q.old_middle_lfp = 10;
-Q.old_middle_other = 10;
+Q.white_workers_jsp = 43.6;
+Q.white_workers_jcp = 10;
+Q.white_workers_ldp = 38.0;
+Q.white_workers_lfp = 5;
+Q.white_workers_other = 10;
 
-Q.new_middle_jsp = 5;
-Q.new_middle_jcp = 1;
-Q.new_middle_ldp = 70;
-Q.new_middle_lfp = 70;
-Q.new_middle_other = 10;
+Q.enterprise_workers_jsp = 34;
+Q.enterprise_workers_jcp = 10;
+Q.enterprise_workers_ldp = 36.5;
+Q.enterprise_workers_lfp = 3;
+Q.enterprise_workers_other = 10;
 
-Q.rural_jsp = 10;
-Q.rural_jcp = 0;
-Q.rural_ldp = 70;
-Q.rural_lfp = 10;
-Q.rural_other = 10;
+Q.self_employed_jsp = 14;
+Q.self_employed_jcp = 10;
+Q.self_employed_ldp = 61;
+Q.self_employed_lfp = 1;
+Q.self_employed_other = 10;
 
-Q.unemployed_jsp = 25;
-Q.unemployed_jcp = 55;
-Q.unemployed_ldp = 6;
+Q.rural_workers_jsp = 19;
+Q.rural_workers_jcp = 10;
+Q.rural_workers_ldp = 46.3;
+Q.rural_workers_lfp = 2;
+Q.rural_workers_other = 10;
+
+Q.urban_migrants_jsp = 10;
+Q.urban_migrants_jcp = 10;
+Q.urban_migrants_ldp = 10;
+Q.urban_migrants_lfp = 10;
+Q.urban_migrants_other = 10;
+
+Q.unemployed_jsp = 10;
+Q.unemployed_jcp = 10;
+Q.unemployed_ldp = 10;
 Q.unemployed_lfp = 10;
-Q.unemployed_other = 6;
+Q.unemployed_other = 10;
+
+Q.youth_jsp = 30;
+Q.youth_jcp = 10;
+Q.youth_ldp = 30;
+Q.youth_lfp = 3;
+Q.youth_other = 10;
 
 Q.catholics_jsp = 0;
 Q.catholics_jcp = 0;
