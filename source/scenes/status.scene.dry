@@ -130,8 +130,8 @@ Police loyalty: [+ police_loyalty : loyalty +]
 @polls
 on-display:{!
 
-var ctx = document.getElementById('percentageBarChart').getContext('2d');
-var myBarChart = new Chart(ctx, {
+const ctx = document.getElementById('percentageBarChart').getContext('2d');
+const myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Total'],
