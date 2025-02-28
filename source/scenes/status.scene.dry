@@ -169,13 +169,13 @@ var myBarChart = new Chart(ctx, {
             {
                 label: 'Small-enterprise workers',
                 data: [dendryUI.dendryEngine.state.qualities.enterprise_workers],
-                backgroundColor: '#9C2A2A',
+                backgroundColor: '#fbff00',
                 stack: 'stack1'
             },
             {
                 label: 'Self-employed',
                 data: [dendryUI.dendryEngine.state.qualities.self_employed],
-                backgroundColor: '#FF8C00',
+                backgroundColor: '#fcba03',
                 stack: 'stack1'
             },
             {
