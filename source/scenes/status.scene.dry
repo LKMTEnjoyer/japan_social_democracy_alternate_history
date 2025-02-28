@@ -232,7 +232,7 @@ var myBarChart = new Chart(ctx, {
         elements: {
             bar: {
                 borderColor: 'black',
-                borderWidth: 0,
+                borderWidth: 1,
                 barThickness: 30
             }
         }
