@@ -145,7 +145,7 @@ Others: [+ others_votes +]%
 
 **Detailed results for each demographic**
 <br>
-<canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px; width: 150px;" width="150" height="50"></canvas>
+<canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px; width: 200px;" width="200" height="50"></canvas>
 {!<script>
 console.log(dendryUI.dendryEngine.state.qualities.blue_workers);
 var ctx = document.getElementById('percentageBarChart').getContext('2d');
@@ -163,7 +163,7 @@ var myBarChart = new Chart(ctx, {
             {
                 label: 'White-collar workers',
                 data: [dendryUI.dendryEngine.state.qualities.white_workers],
-                backgroundColor: '#F1F5F8',
+                backgroundColor: '#ebf5fc',
                 stack: 'stack1'
             },
             {
