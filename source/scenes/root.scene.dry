@@ -161,13 +161,13 @@ Q.growth_rate = 9.5;
 
 Q.business_influence = 4;
 
-Q.blue_workers = 48; 
-Q.white_workers = 13; 
+Q.blue_workers = 32; 
+Q.white_workers = 17; 
 Q.enterprise_workers = 25; 
 Q.self_employed = 13;
-Q.rural_workers = 30;
+Q.rural_workers = 35;
 Q.urban_migrants = 0;
-Q.unemployed = 0;      //2.5;
+Q.unemployed = 2.5;
 Q.youth = 23;
 Q.catholics = 0;
 
@@ -487,7 +487,7 @@ for (var party of Q.parties) {
 // 2. normalize support (fraction)
 for (var party of Q.parties) {
     Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*100);
+    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*1000)/10;
 }
 
 !}
