@@ -49,6 +49,8 @@ Unemployment: [+ unemployed_2 +]%
 
 Growth rate: [+ growth_rate +]%
 
+Business influence: [+ business_influence : coalition_dissent +]
+
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 

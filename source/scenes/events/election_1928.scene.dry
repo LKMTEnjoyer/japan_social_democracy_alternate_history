@@ -103,31 +103,31 @@ data = [
         "id": "jcp",
         "legend": "JCP",
         "name": "JCP",
-        "seats": Math.round(Q.jcp_r*5),
+        "seats": Math.round(Q.jcp_r*4.67),
     },
     {
         "id": "jsp",
         "legend": "JSP",
         "name": "JSP",
-        "seats": Math.round(Q.jsp_r*5),
+        "seats": Math.round(Q.jsp_r*4.67),
     },
     {
         "id": "lfp",
         "legend": "LFP",
         "name": "LFP",
-        "seats": Math.round(Q.lfp_r*5),
+        "seats": Math.round(Q.lfp_r*4.67),
     },
     {
         "id": "LDP",
         "legend": "LDP",
         "name": "LDP",
-        "seats": Math.round(Q.ldp_r*5),
+        "seats": Math.round(Q.ldp_r*4.67),
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "seats": Math.round(Q.other_r*4.67),
     },
 ];
 }
@@ -137,25 +137,25 @@ data = [
         "id": "jcp",
         "legend": "JCP",
         "name": "JCP",
-        "seats": Math.round(Q.jcp_r*5),
+        "seats": Math.round(Q.jcp_r*4.67),
     },
     {
         "id": "jsp",
         "legend": "JSP",
         "name": "JSP",
-        "seats": Math.round(Q.jsp_r*5),
+        "seats": Math.round(Q.jsp_r*4.67),
     },
     {
         "id": "LDP",
         "legend": "LDP",
         "name": "LDP",
-        "seats": Math.round(Q.ldp_r*5),
+        "seats": Math.round(Q.ldp_r*4.67),
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "seats": Math.round(Q.other_r*4.67),
     },
 ];
 }

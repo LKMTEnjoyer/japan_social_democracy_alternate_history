@@ -159,13 +159,15 @@ Q.growth_rate = 9.5;
 // all of this is basically guesswork
 
 
+Q.business_influence = 4;
+
 Q.blue_workers = 48; 
 Q.white_workers = 13; 
 Q.enterprise_workers = 25; 
 Q.self_employed = 13;
 Q.rural_workers = 30;
 Q.urban_migrants = 0;
-Q.unemployed = 2.5;
+Q.unemployed = 0;      //2.5;
 Q.youth = 23;
 Q.catholics = 0;
 
@@ -231,10 +233,10 @@ Q.unemployed_ldp = 10;
 Q.unemployed_lfp = 10;
 Q.unemployed_other = 10;
 
-Q.youth_jsp = 30;
-Q.youth_jcp = 20;
+Q.youth_jsp = 10;
+Q.youth_jcp = 10;
 Q.youth_ldp = 30;
-Q.youth_lfp = 3;
+Q.youth_lfp = 1;
 Q.youth_other = 1;
 
 Q.catholics_jsp = 0;
