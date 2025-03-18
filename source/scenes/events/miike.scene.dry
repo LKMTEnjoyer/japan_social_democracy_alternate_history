@@ -25,25 +25,19 @@ view-if: jsp_in_government = 1 and labor_minister_party = "JSP"
 subtitle: This will alienate the bourgeoisie.
 on-arrival: miike_ending = 1; labor_strength += 5; labor_dissent -= 5; left_dissent -= 5; workers_spd += 6*(1-dissent); coalition_dissent += 1; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1
 
-Supporting labor is always popular in the SPD, although many of our coalition partners represent employers, and they are less enthused.
-
 @pressure
 view-if: jsp_in_government = 1 and not labor_minister_party = "JSP"
 subtitle: This will slightly decrease relations with our coalition partners.
 on-arrival: miike_ending = 1; labor_strength += 5; labor_dissent -= 5; left_dissent -= 5; workers_spd += 6*(1-dissent); coalition_dissent += 1; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1
-
-Supporting labor is always popular in the SPD, although many of our coalition partners represent employers, and they are less enthused.
 
 @fight
 view-if: jsp_in_government = 0
 subtitle: No matter the outcome, we must support our fellow workers.
 on-arrival: miike_unlocked = 1; sohyo_loyalty += 0.05;
 
-*the Miike Struggle interface is unlocked. Make sure that the final decision in a year is in your favour.*
-
 @give_up
 view-if: jsp_in_government = 0
 subtitle: Sohyo will be infuriated, as they view this as a betrayal of the workers.
 on-arrival: miike_ending = 1; labor_dissent += 4; workers_spd -= 2; kpd_coalition_dissent += 1; kpd_relation -= 5; workers_kpd += 2
 
-Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces. However, this will definitely lead weaker union Japan in the long-term.
+Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces. This may weaken unions in Japan in the long-term.
