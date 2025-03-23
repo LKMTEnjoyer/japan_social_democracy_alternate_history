@@ -64,10 +64,10 @@ on-arrival: anpo_intensity += 1;
 
 how should we use our organizations?
 
-- @strike: Sohyo, Zenro, and our other unions should strike
-- @mass_rally: Our organizations should coordinate and rally in unison
-- @organize_anpo_committee: Organize a committee for the organization of the anpo protests 
-- @finalize_anpo_committee: Finalize the creation of the committee 
+- @strike: Sohyo, Zenro, and our other unions should strike in protest.
+- @mass_rally: Our organizations should coordinate and rally in unison.
+- @organize_anpo_council: Create a council for the coordination of the Anpo protests.
+- @finalize_anpo_council: Finalize the creation of the council.
 
 @strike
 on-arrival: anpo_opposition += (sohyo_effects + zenro_effects)*2; soyho_strength + 25; zenro_strength += 15;
@@ -79,17 +79,17 @@ on-arrival: anpo_opposition += sohyo_effects + zenro_effects + youth_effects + g
 
 we use all our organizations in protests
 
-@organize_anpo_committee
-view-if: anpo_committee_progress < 2
-on-arrival: jcp_relation += 2*(1 - dissent); jsp_relation += 1*(1 - dissent) if jsp_formed; anpo_committee_progress += 1
+@organize_anpo_council
+view-if: anpo_council_progress < 2
+on-arrival: jcp_relation += 2*(1 - dissent); jsp_relation += 1*(1 - dissent) if jsp_formed; anpo_council_progress += 1
 
 we organize the committee with other parties
 
-@finalize_anpo_committee
-view-if: anpo_committee_progress = 2 and anpo_committee = 0
-on-arrival: jcp_relation += 4*(1 - dissent); jsp_relation += 4*(1 - dissent) if jsp_formed; anpo_committee = 1; anpo_opposition += 2
+@finalize_anpo_council
+view-if: anpo_council_progress = 2 and anpo_council = 0
+on-arrival: jcp_relation += 4*(1 - dissent); jsp_relation += 4*(1 - dissent) if jsp_formed; anpo_council = 1; anpo_opposition += 2
 
-this will strengthen the opposition to the committee etc
+With the JCP, we have formed the People's Council for Preventing Revision of the Security Treaty (安保条約改定阻止国民会議, Anpo Jōyaku Kaitei Soshi Kokumin Kaigi)
 
 @miike
 view-if: miike_unlocked = 1

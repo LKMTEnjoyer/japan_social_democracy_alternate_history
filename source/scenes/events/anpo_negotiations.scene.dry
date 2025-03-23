@@ -1,0 +1,17 @@
+title: Anpo Treaty revision signed?
+new-page: true
+subtitle: Kishi has signed the revision to the Anpo treaty with Eisenhower.
+tags: event
+view-if: year = 1960 and month = 1 and chancellor = "Kishi"
+on-arrival: 
+max-visits: 1
+
+= Anpo Treaty Revision
+
+Kishi has signed the revision to the Anpo treaty with Eisenhower.
+
+- @wait: placeholder
+
+@wait
+
+placeholder

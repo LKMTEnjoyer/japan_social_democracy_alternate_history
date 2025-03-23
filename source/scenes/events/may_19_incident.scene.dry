@@ -1,0 +1,18 @@
+title: May 19th Incident
+new-page: true
+subtitle: Kishi forces the ratification of the Anpo treaty through the National Diet!
+tags: event
+view-if: year = 1960 and month = 5 and chancellor = "Kishi"
+on-arrival: 
+max-visits: 1
+
+= Anpo Protests
+
+placeholder
+
+- @fight: Against Anpo!
+
+@fight
+on-arrival: anpo_active = 1; 
+
+placeholder
