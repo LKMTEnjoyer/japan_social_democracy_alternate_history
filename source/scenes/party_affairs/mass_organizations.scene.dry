@@ -70,7 +70,7 @@ how should we use our organizations?
 - @finalize_anpo_council: Finalize the creation of the council.
 
 @strike
-on-arrival: anpo_opposition += sohyo_effects*2; anpo_opposition += zenro_effects*2; soyho_strength + 25; zenro_strength += 15;
+on-arrival: anpo_opposition += (sohyo_effects + zenro_effects)*2; soyho_strength += 25; zenro_strength += 15;
 
 our unions strike against the anpo revisions
 
