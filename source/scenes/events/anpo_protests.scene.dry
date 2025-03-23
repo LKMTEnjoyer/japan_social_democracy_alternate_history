@@ -10,7 +10,7 @@ max-visits: 1
 
 An amendment to the US-Japan Security Treaty (安保条約 or Anpo treaty) has been proposed by Kishi, and he is planning to force it through the House of Representatives despite opposition from almost every other party.
 
-- @fight: 
+- @fight: placeholder
 
 @fight
 on-arrival: anpo_active = 1; 
