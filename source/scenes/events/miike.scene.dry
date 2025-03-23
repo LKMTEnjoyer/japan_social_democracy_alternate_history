@@ -33,7 +33,7 @@ on-arrival: miike_ending = 1; labor_strength += 5; labor_dissent -= 5; left_diss
 @fight
 view-if: jsp_in_government = 0
 subtitle: No matter the outcome, we must support our fellow workers.
-on-arrival: miike_unlocked = 1; sohyo_loyalty += 0.05;
+on-arrival: miike_active = 1; sohyo_loyalty += 0.05;
 
 @give_up
 view-if: jsp_in_government = 0

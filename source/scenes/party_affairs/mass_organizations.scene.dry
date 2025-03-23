@@ -92,7 +92,7 @@ on-arrival: jcp_relation += 4*(1 - dissent); jsp_relation += 4*(1 - dissent) if 
 With the JCP, we have formed the People's Council for Preventing Revision of the Security Treaty (安保条約改定阻止国民会議, Anpo Jōyaku Kaitei Soshi Kokumin Kaigi)
 
 @miike
-view-if: miike_unlocked = 1
+view-if: miike_active = 1
 
 we can organize to help the strikers
 
