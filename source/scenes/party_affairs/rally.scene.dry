@@ -20,7 +20,7 @@ Mass rallies are a common feature of social democratic life, especially in the l
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
 
-@anpo
+@miike
 view-if: miike_unlocked = 1
 on-arrival: miike_strength += 5; miike_morale += 5; workers_jsp += 3*(1 - dissent); unemployed_jsp += 3*(1-dissent)
 
