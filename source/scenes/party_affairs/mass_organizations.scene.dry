@@ -13,14 +13,14 @@ placeholder
 
 - @newspapers: Fund more newspapers and journalists.
 - @unions: Fund Sōhyō, a labor federation that provides a large part of our support.
-- @middle_class: Fund Zenro and the other unions whose name I forgot
-- @burukamin: maybe we could start funding the burukamin liberation league?
+- @middle_class: Fund Zenro and Sōdōmei, the more moderate trade union federations.
+- @burakumin: Maybe we could start funding the Buraku Liberation League?
 - @anpo: Rally against the revision to the Anpo treaty with our affiliated organizations!
 - @miike: Rally our organizations to provide aid to the striker at Miike.
 - @culture: Fund sports leagues, educational, and cultural programs.
 - @youth: Support the radical youth organizations.
-- @farmers: Fund the farmers organization to make inroads into rural voters.
-- @gensuikyo: fund the Gensuikyo, an organization that opposes nuclear 
+- @farmers: Fund the Japan Farmers Union, Nichinō, to influence rural voters.
+- @gensuikyo: fund the Gensuikyō, an anti-nuclear organization.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
 
@@ -50,11 +50,11 @@ on-arrival: resources -= 1; zenro_strength += 50; zenro_loyalty += 0.05
 
 We increase funding to Zenro strengthening our middle class support
 
-@burukamin
+@burakumin
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; burukamin_funding += 1; rural_workers_jsp += 1*(1 - dissent); urban_migrants_jsp += 1*(1 - dissent); jcp_relation += 2*(1 - dissent);
+on-arrival: resources -= 1; buraku_funding += 1; rural_workers_jsp += 1*(1 - dissent); urban_migrants_jsp += 1*(1 - dissent); jcp_relation += 2*(1 - dissent);
 
 this is basically for flavour btw, not very strong
 
@@ -67,7 +67,7 @@ how should we use our organizations?
 - @strike: Sohyo, Zenro, and our other unions should strike
 - @mass_rally: Our organizations should coordinate and rally in unison
 - @organize_anpo_committee: Organize a committee for the organization of the anpo protests 
-- @finalize_anpo_committee: Finalize the creation of the committee whose name I forgot add this later 
+- @finalize_anpo_committee: Finalize the creation of the committee 
 
 @strike
 on-arrival: anpo_opposition += (sohyo_effects + zenro_effects)*2; soyho_strength + 25; zenro_strength += 15;
@@ -153,7 +153,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; gensuikyo_strength += 100; gensuikyo_loyalty += 0.05; jcp_relation += 3*(1 - dissent);
 
-increasing funding towards the gensuikyo increases our coordination with the jcp etc
+increasing funding towards the gensuikyo increases our coordination with the jcp 
 
 @nothing
 

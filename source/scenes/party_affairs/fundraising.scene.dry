@@ -17,7 +17,7 @@ Most of our funds come from our affiliated unions, specially Sohyo.
 
 @maintain
 subtitle: [+ dues +] resources gained.
-on-arrival: resources += dues; resources += 1 if sohyo_loyalty >= 0.75
+on-arrival: resources += dues; resources += 1 if sohyo_loyalty >= 0.75;
 
 We maintain our current dues.
 

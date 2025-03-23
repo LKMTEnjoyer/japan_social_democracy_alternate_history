@@ -1,6 +1,6 @@
 title: Anpo Protests
 new-page: true
-subtitle: A proposed amendment to the Japanese-American Security Treaty is causing mass unrest.
+subtitle: A proposed amendment to the US-Japan Security Treaty is causing mass unrest.
 tags: event
 view-if: year = 1929 and month = 5 and chancellor = "Kishi"
 on-arrival: 
@@ -8,11 +8,11 @@ max-visits: 1
 
 = Anpo Protests
 
-An amendment to the Japanese-American Security Treaty has been proposed by Kishi, and he is planning to force it through the House of Representatives despite opposition from almost every other party.
+An amendment to the US-Japan Security Treaty (安保条約 or Anpo treaty) has been proposed by Kishi, and he is planning to force it through the House of Representatives despite opposition from almost every other party.
 
 This has caused mass protests etc
 
-- @fight: placeholder until I can find a quote...
+- @fight: 
 
 @fight
 on-arrival: anpo_active = 1; 
