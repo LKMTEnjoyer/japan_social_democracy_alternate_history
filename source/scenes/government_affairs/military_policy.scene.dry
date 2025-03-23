@@ -13,6 +13,7 @@ The Reichswehr is a deeply reactionary institution that has been generally hosti
 - @increase_funding: Increase funding for the military to purchase its loyalty.
 - @decrease_funding: Reduce funding for the military so we have more for social spending.
 - @reform: Conduct a thorough reform of the ranks, reducing the influence of reactionaries and making it more hospitable to us.
+- @disband_army: Can we abolish the Self-Defense Forces entirely?
 - @root: No change to military policy.
 - @easy_discard
 
@@ -32,6 +33,11 @@ on-arrival: budget += 1; coalition_dissent += 1 if in_grand_coalition == 1; reic
 
 The military has fewer guns and fewer soldiers. There is no hint of a coup yet, but we do not know where the line will be drawn. The center-right parties are committed to the military and deeply opposed to our budget cuts.
 
+@disband_army
+choose-if: budget >= 10000000
+unavailable-subtitle: This hasn't been added yet
+
+test
 
 @reform
 subtitle: -1 budget

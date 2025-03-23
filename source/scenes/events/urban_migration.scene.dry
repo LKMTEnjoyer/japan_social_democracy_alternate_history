@@ -1,0 +1,43 @@
+title: Urban Migration
+subtitle: Japan is urbanizing.
+view-if: urban_migration_timer = 0 
+new-page: true
+on-arrival: urban_migration_timer = 9; migrants_change = rural_workers * (0.07*urbanization_speed/100); urban_migrants += migrants_change; rural_workers -= migrants_change; urbanization_speed *= (100-urban_migrants) /100
+tags: event
+
+= Urban Migration
+
+periodic urban migration
+
+- @action: Maybe the JSP could take advantage of this?
+- @nothing: Interesting.
+
+@nothing
+
+nothing EVER happens
+
+@action
+choose-if: resources >= 1
+on-arrival: resources -= 1
+unavailable-subtitle: We do not have enough resources.
+
+our party has not invested much into the growing demographic of urban migrants. maybe we could start to change this.
+
+- @organize: Maybe we could organize the new urban migrants?
+- @aid: Perhaps we could provide mutual aid? 
+- @campaign: Start campaigning with urban migrants.
+
+@organize
+on-arrival: urban_migrants_jsp += 2*(1-dissent); sohyo_strength += 50; sohyo_loyalty += 0.01
+
+increases sohyo strength etc
+
+@aid
+on-arrival: urban_migrants_jsp += 4*(1-dissent); urbanization_speed += 10*(1-dissent)
+
+makes urban migration slightly faster and increases popularity
+`
+@campaign
+on-arrival: urban_migrants_jsp += 6*(1-dissent)
+
+just increases popularity

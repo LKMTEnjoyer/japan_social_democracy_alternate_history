@@ -11,12 +11,28 @@ go-to: main_rally
 
 Mass rallies are a common feature of social democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
 
+- @miike: Rally in solidarity with the striking coal miners of Miike!
+- @anpo: Rally against Kishi's attempts to force through the amendment! 
 - @class_struggle: The class struggle of the proletariat against the bourgeoisie.
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against dictatorship and conservatism.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
+
+@anpo
+view-if: miike_unlocked = 1
+on-arrival: miike_strength += 5; miike_morale += 5; workers_jsp += 3*(1 - dissent); unemployed_jsp += 3*(1-dissent)
+
+we rally in solidarity with the strikes of miike
+
+make this scale with worker popularity
+
+@anpo
+view-if: anpo_active = 1
+on-arrival: anpo_intensity += 1; anpo_opposition += 1; nationalism -= 4*(1 - dissent); workers_jsp += 4*(1 - dissent) if pacifism >= 3; unemployed_jsp += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_jsp += 4*(1-dissent) if pacifism >= 3
+
+We attack the LDP's militarism. Hopefully this will intensify the opposition to the amendment.
 
 @class_struggle
 on-arrival: workers_jsp += 4*(1-dissent); unemployed_jsp += 3*(1-dissent) if left_strength > reformist_strength; workers_jsp += 4*(1-dissent) if nationalization_progress > 0; unemployed_jsp += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; left_org_strength += 5; left_org_dissent -= 5; old_middle_jsp -= 3; new_middle_jsp -= 2;
@@ -39,10 +55,12 @@ Our speakers defend the republican system and rail against the monarchists and a
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_jsp += 4*(1 - dissent) if pacifism >= 3; unemployed_jsp += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_jsp += 4*(1-dissent) if pacifism >= 3
 
-Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
+Our speakers denouce the militarism and nationalism of the LDP, including nationalist influence in our education system and their attempts to remove Article 9. 
 
-[? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
-[? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
+Since pacifism and opposition to militarism is one of the JSP's most important tenets, it is easier to rally against nationalism.
+
+[? if pacifism < 1 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against nationalism. ?]
+[? if pacifism >= 1 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @local
 on-arrival: workers_jsp += 3*(1-dissent); old_middle_jsp += 1*(1-dissent); new_middle_jsp += 2*(1-dissent); unemployed_jsp += 3*(1-dissent);

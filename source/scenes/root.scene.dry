@@ -152,6 +152,7 @@ Q.budget = 5;
 // urban migrants?
 
 Q.urban_migration_timer = 6;
+Q.urbanization_speed = 100;
 Q.urbanization_rate = 0;
 
 Q.growth_rate = 9.5;
@@ -274,6 +275,7 @@ Q.jsp_in_government = 0;
 Q.ldp_in_government = 1;
 Q.jcp_in_government = 0;
 Q.lfp_in_government = 0;
+Q.entered_in_government = 0; // replace this with an achievement at some point?
 Q.other_in_government = 0;
 
 // Weimar coalition = SPD + Z + DDP
@@ -393,7 +395,9 @@ Q.n_advisors = 3;
 // timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
-Q.timers = ['advisor_action', 'crisis_program',
+Q.timers = ['urban_migration',
+
+            'advisor_action', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
             'media', 'enemies',

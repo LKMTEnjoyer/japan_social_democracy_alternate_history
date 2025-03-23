@@ -67,6 +67,6 @@ on-arrival: resources -= 1; center_strength += 10; pacifism += 1; nationalism -=
 
 The JSP's line on foreign policy is one of unarmed neutrality, so we must cultivate positive relations with countries already picking a path of non-alignment, as well as emphasise our own pacifist and independent line to the Japanese people. Visiting the non-aligned countries in the Cold War obviously strengthens our rhetoric of pacifism. 
 
-@reduce
+@return
 
 We do not need the international contacts at the moment.

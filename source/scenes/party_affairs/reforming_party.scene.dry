@@ -41,6 +41,8 @@ unavailable-subtitle: The opposition is too strong.
 on-arrival: reconstructionist_strength += 15; right_strength += 15; reconstructionist_dissent -= 10; right_dissent -= 10; peoples_party = 1; workers_jsp -= 12; rural_jsp += 10; new_middle_jsp += 10; old_middle_jsp += 8; catholics_jsp += 8; left_dissent += 25; left_org_dissent += 25; center_dissent += 20; jcp_relation -= 10; jcp_coalition_dissent += 1; coalition_dissent -= 1; ldp_relation += 5*(1-dissent); other_relation += 5*(1-dissent)
 achievement: volkspartei
 
+This reduces our reliance on funds from our affiliated unions, as our party is now a mass party with mass membership, similar to the JCP's model. 
+
 In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the workers and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
 
 Should we run a new campaign to publicize our new platform?
@@ -58,6 +60,8 @@ subtitle: This will increase dissent.
 view-if: (reconstructionist_strength + right_strength < left_strength + center_strength) or (peoples_party_support < 4)
 on-arrival: reconstructionist_strength += 10; right_strength += 8; peoples_party = 1; workers_jsp -= 15; rural_jsp += 10; new_middle_jsp += 10; old_middle_jsp += 8; catholics_jsp += 8; left_dissent += 40; left_org_dissent += 40; center_dissent += 40; jcp_relation -= 10; jcp_coalition_dissent += 1; coalition_dissent -= 1
 achievement: volkspartei
+
+This reduces our reliance on funds from our affiliated unions, as our party is now a mass party with mass membership, similar to the JCP's model. 
 
 It is an arduous and contentious process, but we have pushed through the proposal to become a people's party. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
 
@@ -131,11 +135,13 @@ Within our party, we are pushing forward proposals for a policy of structural re
 
 
 @support_structural_reform
-choose-if: (reconstructionist_strength + right_strength >= (left_strength + center_strength + left_org_strength)*0.5) and structural_reform >= 3
+choose-if: (reconstructionist_strength + right_strength >= (left_strength + center_strength + left_org_strength)*0.5) and structural_reform_support >= 3
 unavailable-subtitle: The opposition is too strong.
 on-arrival: reconstructionist_strength += 10; right_strength += 10; reconstructionist_dissent -= 10; right_dissent -= 10; structural_reform = 1; workers_jsp -= 6; rural_jsp += 6; new_middle_jsp += 6; old_middle_jsp += 5; catholics_jsp += 5; left_dissent += 15; left_org_dissent += 15; center_dissent += 10; jcp_relation -= 5; coalition_dissent -= 1; ldp_relation += 3*(1-dissent); other_relation += 3*(1-dissent)
 
 In an emergency conference, we have decided to reform our party so that it represents people from all walks of life, without neglecting our core voter base.
+
+This reduces our reliance on funds from our affiliated unions, as our party is now a mass party with mass membership, similar to the JCP's model. 
 
 Should we run a new campaign to publicize our new platform?
 

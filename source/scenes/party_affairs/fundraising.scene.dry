@@ -9,7 +9,7 @@ tags: party_affairs
 
 = Fundraising
 
-For better or for worse, the party cannot exist without money.
+Most of our funds come from our affiliated unions, specially Sohyo.
 
 - @maintain: Maintain our current dues.
 - @reduce: Reduce dues.
@@ -17,23 +17,31 @@ For better or for worse, the party cannot exist without money.
 
 @maintain
 subtitle: [+ dues +] resources gained.
-on-arrival: resources += dues;
+on-arrival: resources += dues; resources += 1 if sohyo_loyalty >= 0.75
 
 We maintain our current dues.
+
+[? if sohyo_loyalty >= 0.75 : Because of how loyal Sohyo is, our fundraising efforts are more successful ?]
 
 @reduce
 subtitle: [+ dues - 1 +] resources gained.
 choose-if: dues > 1
-on-arrival: dues -= 1; resources += dues; left_dissent -= 8; center_dissent -= 8; right_dissent -= 8; left_org_dissent -= 8; reconstructionist_dissent -= 8;
+on-arrival: dues -= 1; resources += dues; resources += 1 if sohyo_loyalty >= 0.75; left_dissent -= 8; center_dissent -= 8; right_dissent -= 8; left_org_dissent -= 8; reconstructionist_dissent -= 8; soyho_loyalty += 0.08;
 
 Our current members appreciate this, but no one decides to join a party because of the low dues.
 
+The membership of Sohyo don't have to pay as much money and are happier
+
+[? if sohyo_loyalty >= 0.75 : Because of how loyal Sohyo is, our fundraising efforts are more successful ?]
+
 @increase
 subtitle: [+ dues + 1 +] resources gained. [? if unemployed >= 15 : Given the present economic situation, this may be painful. ?][? if dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]
-on-arrival: dues += 1; resources += dues; workers_jsp -= 3; unemployed_jsp -= 3; workers_jsp -= 10 if unemployed >= 15; unemployed_jsp -= 10 if unemployed >= 15; workers_jsp -= 3*dues if dues >= 5; unemployed_jsp -= 3*dues if dues >= 5
+on-arrival: dues += 1; resources += dues; resources += 1 if sohyo_loyalty >= 0.75; workers_jsp -= 3; unemployed_jsp -= 3; sohyo_loyalty -= 0.05; sohyo_loyalty -= 0.15 if unemployed >= 15; sohyo_loyalty -= 0.1 if dues == 4; workers_jsp -= 10 if unemployed >= 15; unemployed_jsp -= 10 if unemployed >= 15; workers_jsp -= 3*dues if dues >= 5; unemployed_jsp -= 3*dues if dues >= 5
 view-if: dues <= 4
 
 Our members grumble at this, and some of the less committed members leave. But now, we have access to additional resources. 
+
+Sohyo is a bit unhappy. [? if sohyo_loyalty >= 0.75 : Because of how loyal Sohyo is, our fundraising efforts are more successful ?]
 
 [? if unemployed >= 15 : Because of the presently high unemployment, our members are feeling the extra burden hard. ?]
 

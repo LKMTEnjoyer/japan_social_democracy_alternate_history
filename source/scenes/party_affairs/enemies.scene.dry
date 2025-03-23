@@ -5,7 +5,9 @@ on-arrival: month_actions += 1; enemies_timer = 18
 max-visits: 3
 is-card: true
 card-image: img/poster_1.png
-tags: party_affairs
+#tags: party_affairs
+# ngl I don't see the point of this atp?
+#l
 
 = Choosing our enemies
 
