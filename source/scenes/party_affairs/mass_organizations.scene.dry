@@ -115,7 +115,7 @@ todo: make this scale with sohyo and zenro effects
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; miike_morale  10
+on-arrival: resources -= 1; miike_morale += 10
 
 we publicize this injustice across japan
 
