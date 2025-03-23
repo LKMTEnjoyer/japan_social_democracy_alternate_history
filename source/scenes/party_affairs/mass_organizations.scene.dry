@@ -99,7 +99,7 @@ we can organize to help the strikers
 todo: make these give a bit of popularity?
 
 - @fund: Sohyo will raise funds to help the strikers.
-- @propagands: We will publicize the strike across Japan.
+- @propaganda: We will publicize the strike across Japan.
 
 @fund
 choose-if: resources > 0
