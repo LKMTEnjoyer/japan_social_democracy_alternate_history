@@ -16,6 +16,8 @@ if (Q.inflation) {
 
 Resources available: [+ resources +]
 
+Party membership: [+ party_membership +] thousand
+
 JSP position: [? if jsp_toleration : toleration ?][? if jsp_in_government : in government ?][? if jsp_toleration == 0 and jsp_in_government == 0 and jsp_caretaker == 0 : opposition ?][? if jsp_caretaker : caretaker government ?]
 
 [? if jsp_in_government : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]

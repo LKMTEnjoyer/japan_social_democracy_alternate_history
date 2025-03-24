@@ -9,6 +9,8 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 on-arrival: {!
+
+Q.party_membership = 50;
 Q.workers_bonus = 0;
 Q.rural_bonus = 0;
 Q.new_middle_bonus = 0;
