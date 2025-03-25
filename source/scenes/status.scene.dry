@@ -55,9 +55,6 @@ Business influence: [+ business_influence : coalition_dissent +]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
-
-# = Public Opinion
-
 @politics
 
 = Inter-party Relations
@@ -263,3 +260,46 @@ Unemployed: JSP: [+ unemployed_jsp_normalized +]%, JCP: [+ unemployed_jcp_normal
 Youth: JSP: [+ youth_jsp_normalized +]%, JCP: [+ youth_jcp_normalized +]%, LDP: [+ youth_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ youth_lfp_normalized +]%, ?] Others: [+ youth_other_normalized +]%
 
 Nationalism: [+ nationalism +]%
+
+@statistics
+on-arrival:{!
+Q.pro_republic2 = Math.round(Q.pro_republic);
+Q.nationalism2 = Math.round(Q.nationalism);
+Q.socialism2 = Math.round(Q.socialism);
+!}
+
+= Public Opinion
+
+Support for the Republic: [+ pro_republic2 +]%
+
+Support for Socialism: [+ socialism2 +]%
+
+Support for Nationalism: [+ nationalism2 +]%
+
+{!<span class="tooltip-text" title="High levels of Pacifism boosts choices that decrease nationalism in Germany. It also gives better options in events concerning reparations.">Pacifism</span>!}: [+ pacifism : coalition_dissent +]
+
+{!<span class="tooltip-text" title="High levels of Democratization boosts choices that increase Support for the Republic, such as pro-democracy rallies, and choices that remove reactionaries within the judiciary and police.">Democratization</span>!}: [+ democratization : coalition_dissent +]
+
+{!<span class="tooltip-text" title="Judicial Reform is required for unique options in several cards. It also allows the government to take more decisive action in certain events.">Judicial Reform</span>!}: [+ judicial_reform : judicial_reform +]
+
+= Paramilitary Statistics
+
+[? if strife > 0 : Strife: [+ strife : coalition_dissent +] ?]
+
+Reichsbanner Power: [+ rb_power +]
+
+Sturmabteilung Power: [+ sa_power +]
+
+Stahlhelm Power: [+ sh_power +]
+
+RFB Power: [+ rfb_power +]
+
+[? if rw_power > 0 : Reichswehr Power: [+ rw_power +] ?]
+
+[? if spd_prussia > 0 : Police Power: [+ police_power +] ?]
+
+= Party Affairs
+
+Ideology: [? if not ideology : Centrist ?][? if ideology : [+ ideology +]?]
+
+Radicalism: [+ radicalization : coalition_dissent +]
