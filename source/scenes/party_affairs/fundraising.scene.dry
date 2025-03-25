@@ -4,8 +4,8 @@ view-if: fundraising_timer <= 0 and (not historical_mode)
 on-arrival: {!
 Q.fundraising_timer = 6;
 Q.month_actions += 1;
-Q.sohyo_dues = Math.round(sohyo_effects/25);
-Q.member_dues = Math.round(party_membership/25);
+Q.sohyo_dues = Math.round(Q.sohyo_effects/25);
+Q.member_dues = Math.round(Q.party_membership/25);
 !}
 frequency: 300
 is-card: true
