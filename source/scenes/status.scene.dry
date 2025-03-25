@@ -151,7 +151,6 @@ Others: [+ other_votes +]%
 <br>
 <canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px; width: 200px;" width="200" height="50"></canvas>
 {!<script>
-console.log(dendryUI.dendryEngine.state.qualities.blue_workers);
 var ctx = document.getElementById('percentageBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
     type: 'bar',
@@ -209,6 +208,9 @@ var myBarChart = new Chart(ctx, {
         ]
     },
     options: {
+        animation: {
+            duration: 0
+        }
         responsive: true,
         indexAxis: 'y',
         scales: {
