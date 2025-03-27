@@ -15,6 +15,7 @@ placeholder
 - @unions: Fund Sōhyō, a labor federation that provides a large part of our support.
 - @middle_class: Fund Zenro and Sōdōmei, the more moderate trade union federations.
 - @burakumin: Maybe we could start funding the Buraku Liberation League?
+- @membership: Invest in recruiting more members into our party.
 - @anpo: Our mass organizations should rally against the revision to the Anpo treaty.
 - @miike: Mobilize our organizations to provide aid to the strikers at Miike.
 - @culture: Fund sports leagues, educational, and cultural programs.
@@ -57,6 +58,14 @@ subtitle: -1 resources
 on-arrival: resources -= 1; buraku_funding += 1; rural_workers_jsp += 1*(1 - dissent); urban_migrants_jsp += 1*(1 - dissent); jcp_relation += 2*(1 - dissent);
 
 this is basically for flavour btw, not very strong
+
+@membership
+subtitle: Due to our party's structure, this is currenty very inefficient.
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; party_membership += 5
+
+we recruit members
 
 @anpo
 view-if: anpo_active = 1
