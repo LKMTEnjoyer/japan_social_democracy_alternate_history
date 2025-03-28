@@ -156,13 +156,13 @@ var myBarChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'Blue-collar workers',
-                data: [dendryUI.dendryEngine.state.qualities.blue_workers],
+                data: [dendryUI.dendryEngine.state.qualities.blue_collar_workers],
                 backgroundColor: '#4A6D7C',
                 stack: 'stack1'
             },
             {
                 label: 'White-collar workers',
-                data: [dendryUI.dendryEngine.state.qualities.white_workers],
+                data: [dendryUI.dendryEngine.state.qualities.white_collar_workers],
                 backgroundColor: '#ebf5fc',
                 stack: 'stack1'
             },
@@ -243,9 +243,9 @@ var myBarChart = new Chart(ctx, {
 });
 </script>!}
 
-Blue-Collar Workers: JSP: [+ blue_workers_jsp_normalized +]%, JCP: [+ blue_workers_jcp_normalized +]%, LDP: [+ blue_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_workers_lfp_normalized +]%, ?] Others: [+ blue_workers_other_normalized +]%
+Blue-Collar Workers: JSP: [+ blue_collar_workers_jsp_normalized +]%, JCP: [+ blue_collar_workers_jcp_normalized +]%, LDP: [+ blue_collar_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_collar_workers_lfp_normalized +]%, ?] Others: [+ blue_collar_workers_other_normalized +]%
 
-White-Collar Workers: JSP: [+ white_workers_jsp_normalized +]%, JCP: [+ white_workers_jcp_normalized +]%, LDP: [+ white_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_workers_lfp_normalized +]%, ?] Others: [+ white_workers_other_normalized +]%
+White-Collar Workers: JSP: [+ white_collar_workers_jsp_normalized +]%, JCP: [+ white_collar_workers_jcp_normalized +]%, LDP: [+ white_collar_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_collar_workers_lfp_normalized +]%, ?] Others: [+ white_collar_workers_other_normalized +]%
 
 Small-Enterprise Workers: JSP: [+ enterprise_workers_jsp_normalized +]%, JCP: [+ enterprise_workers_jcp_normalized +]%, LDP: [+ enterprise_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ enterprise_workers_lfp_normalized +]%, ?] Others: [+ enterprise_workers_other_normalized +]%
 
@@ -277,4 +277,5 @@ The people [+ socialism : public_opinion +] socialism.
 
 The people [+ progressive : public_opinion +] progressivism.
 
-The people [+ nationalism : public_opinion +] nationalism.
+# The people [+ nationalism : public_opinion +] nationalism.
+# removed

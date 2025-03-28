@@ -38,7 +38,7 @@ Togliatti's idea of "structural reform" can be useful for expanding the electora
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: left_org_strength += 8; soviet_relation += 6; resources -= 1; pacifism += 1
+on-arrival: left_org_strength += 8; soviet_relation += 6*(1 - dissent); resources -= 1; pacifism += 1
 
 Though we were not friendly to Stalinism in the Soviet Union before, Khrushchev can be helpful to our party, and we can learn from his policy of "peaceful coexistence". It may help to build up our own vision of unarmed neutrality for Japan. We may also learn from his adjustments to "actually existing socialism".
 
@@ -46,7 +46,7 @@ Though we were not friendly to Stalinism in the Soviet Union before, Khrushchev 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; left_org_strength += 8; left_strength += 8; china_relation += 6; china_visit += 1; nationalism -= 5;
+on-arrival: resources -= 1; left_org_strength += 8; left_strength += 8; china_relation += 6*(1 - dissent); china_visit += 1; nationalism -= 5*(1 - dissent);
 
 The LDP follows America in its refusal to recognize the PRC. The LDP's stubborn refusal to recognise Communist China as the legitimate Chinese government means we are also acting as an unofficial diplomatic mission. We will send an unofficial delegation to China to improve mutual relations.
 
@@ -55,7 +55,7 @@ subtitle: -1 resources
 view-if: asanuma_statement = 0
 choose-if: resources >= 1 and (reconstructionist_strength + right_strength >= left_strength + center_strength + left_org_strength)
 unavailable-subtitle: [? if resources < 1 : Not enough resources. ?][? if (reconstructionist_strength + right_strength < left_org_strength + left_strength + center_strength) : This policy is strongly opposed by most members of our party. ?]
-on-arrival: resources -= 1; us_relation += 6; us_negotiation += 1; right_strength += 8; reconstructionist_strength += 10; right_dissent -= 8; reconstructionist_dissent -= 10; left_dissent += 8; center_dissent += 8; left_org_dissent += 10; nationalism += 10;
+on-arrival: resources -= 1; us_relation += 6*(1 - dissent); us_negotiation += 1; right_strength += 8; reconstructionist_strength += 10; right_dissent -= 8; reconstructionist_dissent -= 10; left_dissent += 8; center_dissent += 8; left_org_dissent += 10; nationalism += 5*(1 - dissent);
 
 Though the USA opposes even the idea of our party taking power, maybe making more overtures to their government may lessen that. Of course, the left-leaning factions in our party oppose any reconciliation with imperialists, and many anti-imperialist members are disappointed.
 
@@ -63,7 +63,7 @@ Though the USA opposes even the idea of our party taking power, maybe making mor
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; center_strength += 10; pacifism += 1; nationalism -= 3
+on-arrival: resources -= 1; center_strength += 10; pacifism += 1; nationalism -= 3*(1 - dissent)
 
 The JSP's line on foreign policy is one of unarmed neutrality, so we must cultivate positive relations with countries already picking a path of non-alignment, as well as emphasise our own pacifist and independent line to the Japanese people. Visiting the non-aligned countries in the Cold War obviously strengthens our rhetoric of pacifism. 
 

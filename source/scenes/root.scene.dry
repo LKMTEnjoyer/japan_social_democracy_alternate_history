@@ -164,8 +164,8 @@ Q.growth_rate = 9.5;
 
 Q.business_influence = 4;
 
-Q.blue_workers = 32; 
-Q.white_workers = 17; 
+Q.blue_collar_workers = 32; 
+Q.white_collar_workers = 17; 
 Q.enterprise_workers = 21; 
 Q.self_employed = 16;
 Q.rural_workers = 40;
@@ -188,23 +188,23 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['blue_workers', 'white_workers', 'enterprise_workers', 'self_employed', 'rural_workers', 'urban_migrants', 'unemployed', 'youth'];
+Q.classes = ['blue_collar_workers', 'white_collar_workers', 'enterprise_workers', 'self_employed', 'rural_workers', 'urban_migrants', 'unemployed', 'youth'];
 Q.parties = ['jsp', 'jcp', 'ldp', 'lfp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
-Q.blue_workers_jsp = 43.6;
-Q.blue_workers_jcp = 2;
-Q.blue_workers_ldp = 26.1;
-Q.blue_workers_lfp = 1;
-Q.blue_workers_other = 2;
+Q.blue_collar_workers_jsp = 43.6;
+Q.blue_collar_workers_jcp = 2;
+Q.blue_collar_workers_ldp = 26.1;
+Q.blue_collar_workers_lfp = 1;
+Q.blue_collar_workers_other = 2;
 
-Q.white_workers_jsp = 43.6;
-Q.white_workers_jcp = 2;
-Q.white_workers_ldp = 38.0;
-Q.white_workers_lfp = 1;
-Q.white_workers_other = 3;
+Q.white_collar_workers_jsp = 43.6;
+Q.white_collar_workers_jcp = 2;
+Q.white_collar_workers_ldp = 38.0;
+Q.white_collar_workers_lfp = 1;
+Q.white_collar_workers_other = 3;
 
 Q.enterprise_workers_jsp = 34;
 Q.enterprise_workers_jcp = 1;

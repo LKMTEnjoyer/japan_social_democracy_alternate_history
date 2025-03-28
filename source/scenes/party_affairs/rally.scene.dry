@@ -12,10 +12,12 @@ go-to: main_rally
 Mass rallies are a common feature of social democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
 
 - @miike: Rally in solidarity with the striking coal miners of Miike!
-- @anpo: Rally against Kishi's attempts to force through the amendment! 
+- @anpo: Rally against Kishi's attempts to force through the Anpo treaty! 
 - @class_struggle: The class struggle of the proletariat against the bourgeoisie.
-- @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
-- @democracy: Expanding our nascent democracy and defending it against dictatorship and conservatism.
+- @democracy: Expanding our nascent democracy and defending it against authoritarianism.
+- @progressivism: For social progress and progressive policies.
+- @anti_imperialism: Against the imperialist wars of the United States.
+- @socialism: For the implementation of socialism and the liberation of the workers.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
@@ -35,22 +37,33 @@ on-arrival: anpo_intensity += 1; anpo_opposition += 1; nationalism -= 4*(1 - dis
 We attack the LDP's militarism. Hopefully this will intensify the opposition to the amendment.
 
 @class_struggle
-on-arrival: workers_jsp += 4*(1-dissent); unemployed_jsp += 3*(1-dissent) if left_strength > reformist_strength; workers_jsp += 4*(1-dissent) if nationalization_progress > 0; unemployed_jsp += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; left_org_strength += 5; left_org_dissent -= 5; old_middle_jsp -= 3; new_middle_jsp -= 2;
-
-Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
-
-@welfare
-on-arrival: workers_jsp += 3*(1-dissent); workers_jsp += 3*(1-dissent) if welfare > 0; unemployed_jsp += 3*(1-dissent) if welfare > 0; unemployed_jsp += 4*(1-dissent) if welfare > 1; right_strength += 3; reconstructionist_strength += 4; right_dissent -= 3; reconstructionist_dissent -= 3;
-
-The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+on-arrival: workers_jsp += 4*(1-dissent); unemployed_jsp += 3*(1-dissent) if left_strength > reformist_strength; workers_jsp += 4*(1-dissent) if radicalism >= 70; unemployed_jsp += 3*(1-dissent) if radicalism > 70; left_strength += 5; left_dissent -= 5; left_org_strength += 5; left_org_dissent -= 5; old_middle_jsp -= 3; new_middle_jsp -= 2; radicalism += 2*(1-dissent); radicalism += 2*(1-dissent) if radicalism >= 70;
+ 
+Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if radicalism > 70 : The radicalization of the workers assists our messaging. ?]
 
 @democracy
-on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_jsp += 4*(1-dissent) if democratization >= 3; unemployed_jsp += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_jsp += 4*(1-dissent) if democratization >= 3 
+on-arrival: pro_democracy += 2*(1 - dissent); workers_jsp += 4*(1-dissent) if pro_democracy >= 70; unemployed_jsp += 3*(1-dissent) if pro_democracy >= 70; pro_democracy += 4*(1 - dissent) if pro_democracy >= 70; new_middle_jsp += 4*(1-dissent) if pro_democracy >= 70
 
-Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
+Our speakers defend the freedoms of the republican system and rail against the conservatives and authoritarians who threaten it.
 
-[? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
-[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
+[? if pro_democracy < 70 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
+[? if pro_democracy >= 70 : Since public opinion is overwhelmingly in favour of democracy, the workers are enthusiastic about our message. ?]
+
+@progressivism
+on-arrival: progressivism += 2*(1 - dissent); blue_collar_workers_jsp += 2*(1 - dissent); white_collar_workers_jsp += 1*(1 - dissent); enterprise_workers_jsp += 1*(1 - dissent); youth_jsp += 2*(1 - dissent); youth_jsp += 2*(1 - dissent) if progressivism >= 70; blue_collar_workers_jsp += 1*(1 - dissent) if progressivism >= 70; white_collar_workers_jsp += 1*(1 - dissent) if progressivism >= 70; enterprise_workers_jsp += 1*(1 - dissent) if progressivism >= 70; progressivism += 4*(1 - dissent) if progressivism >= 70;
+
+placeholder
+
+@anti_imperialism
+on-arrival: anti_imperialism += 2*(1 - dissent); blue_collar_workers_jsp += 3*(1 - dissent); white_collar_workers_jsp += 1*(1 - dissent); enterprise_workers_jsp += 1*(1 - dissent); youth_jsp += 4*(1 - dissent); youth_jsp += 2*(1 - dissent) if anti_imperialism >= 70; blue_collar_workers_jsp += 1*(1 - dissent) if anti_imperialism >= 70; anti_imperialism += 4*(1 - dissent) if anti_imperialism >= 70;
+
+placeholder
+
+@socialism
+on-arrival: socialism += 2*(1 - dissent); blue_collar_workers_jsp += 4*(1 - dissent); enterprise_workers_jsp += 2*(1 - dissent); white_collar_workers += 2*(1 - dissent); enterprise_workers_jsp += 2*(1 - dissent) if socialism >= 70; white_collar_workers += 2*(1 - dissent) if socialism >= 70; socialism += 2*(1 - dissent) if socialism >= 70
+
+[? if socialism < 70 : The ideas of our party have not become mainstream yet, so rallying for socialism is less effective outside of our base. ?]
+[? if socialism >= 70 : idk...  ?]
 
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_jsp += 4*(1 - dissent) if pacifism >= 3; unemployed_jsp += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_jsp += 4*(1-dissent) if pacifism >= 3
