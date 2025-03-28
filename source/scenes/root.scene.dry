@@ -11,12 +11,14 @@ go-to: start_menu_2
 on-arrival: {!
 
 Q.party_membership = 50;
-Q.workers_bonus = 0;
-Q.rural_bonus = 0;
-Q.new_middle_bonus = 0;
-Q.old_middle_bonus = 0;
-Q.catholics_bonus = 0;
-Q.unemployed_bonus = 0;
+Q.blue_collar_workers_gain = 0; 
+Q.white_collar_workers_gain = 0; 
+Q.enterprise_workers_gain = 0; 
+Q.self_employed_gain = 0;
+Q.rural_workers_gain = 0;
+Q.urban_migrants_gain = 0;
+Q.unemployed_gain = 0;
+Q.youth_gain = 0;
 
 Q.year = 1955;
 Q.month = 11;
