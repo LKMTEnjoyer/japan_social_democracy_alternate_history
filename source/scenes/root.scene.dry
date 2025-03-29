@@ -14,7 +14,7 @@ Q.party_membership = 50;
 Q.mass_organization_effects =  ['pro_democracy_gain', 'radicalism_gain', 'progressivism_gain',
                                 'pacifism_gain', 'anti_imperialism_gain', 'socialism_gain',
                                 'blue_collar_workers_gain', 'white_collar_workers_gain',
-                                'enterprise_workers_gain', 'self_employed_gain'
+                                'enterprise_workers_gain', 'self_employed_gain',
                                 'rural_workers_gain', 'urban_migrants_gain', 
                                 'unemployed_gain', 'youth_gain'];
 Q.pro_democracy_gain = 0; 
