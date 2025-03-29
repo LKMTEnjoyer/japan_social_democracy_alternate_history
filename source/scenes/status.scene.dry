@@ -301,25 +301,25 @@ The people [+ progressive : public_opinion +] progressivism.
 = internal party opinion
 
 **Structural Reform**
-
-In Support: [+ structural_reform_opinion_support +]
-
-In Opposition: [+ structural_reform_opinion_oppose +]
+<br>
+In Support: [+ structural_reform_opinion_support +]%
+<br>
+In Opposition: [+ structural_reform_opinion_oppose +]%
 
 **Labour Party Reform**
-
-In Support: [+ labour_reform_opinion_support +]
-
-In Opposition: [+ labour_reform_opinion_oppose +]
+<br>
+In Support: [+ labour_reform_opinion_support +]%
+<br>
+In Opposition: [+ labour_reform_opinion_oppose +]%
 
 **Mass Party**
-
-In Support: [+ mass_party_opinion_support +]
-
-In Opposition: [+ mass_party_opinion_oppose +]
+<br>
+In Support: [+ mass_party_opinion_support +]%
+<br>
+In Opposition: [+ mass_party_opinion_oppose +]%
 
 **People's Party**
-
-In Support: [+ peoples_party_opinion_support +]
-
-In Opposition: [+ peoples_party_opinion_oppose +]
+<br>
+In Support: [+ peoples_party_opinion_support +]%
+<br>
+In Opposition: [+ peoples_party_opinion_oppose +]%
