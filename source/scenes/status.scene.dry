@@ -275,9 +275,9 @@ Q.peoples_party_opinion_support = Q.right_strength;
 Q.peoples_party_opinion_oppose = Q.left_org_strength + Q.left_strength;
 
 for (reform of Q.party_reforms) {
-    var Q[reform+'_opinion_total'] = Q[reform+'_opinion_support'] + Q[reform+'_opinion_oppose'];
-    Q[reform+'_opinion_support'] = Math.round(Q[reform+'_opinion_support']/Q[reform+'_opinion_total']*100);
-    Q[reform+'_opinion_oppose'] = Math.round(Q[reform+'_opinion_oppose']/Q[reform+'_opinion_total']*100);
+    let opinion_total = Q[reform+'_opinion_support'] + Q[reform+'_opinion_oppose'];
+    Q[reform+'_opinion_support'] = Math.round(Q[reform+'_opinion_support']/opinion_total*100);
+    Q[reform+'_opinion_oppose'] = Math.round(Q[reform+'_opinion_oppose']/opinion_total*100);
 }
 !}
 
