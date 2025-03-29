@@ -9,8 +9,20 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 on-arrival: {!
-
+Q.party_reforms = ['structural_reform', 'labour_reform', 'mass_party', 'peoples_party']
 Q.party_membership = 50;
+Q.mass_organization_effects =  ['pro_democracy_gain', 'radicalism_gain', 'progressivism_gain',
+                                'pacifism_gain', 'anti_imperialism_gain', 'socialism_gain',
+                                'blue_collar_workers_gain', 'white_collar_workers_gain',
+                                'enterprise_workers_gain', 'self_employed_gain'
+                                'rural_workers_gain', 'urban_migrants_gain', 
+                                'unemployed_gain', 'youth_gain'];
+Q.pro_democracy_gain = 0; 
+Q.radicalism_gain = 0; 
+Q.progressivism_gain = 0; 
+Q.pacifism_gain = 0; 
+Q.anti_imperialism_gain = 0; 
+Q.socialism_gain = 0; 
 Q.blue_collar_workers_gain = 0; 
 Q.white_collar_workers_gain = 0; 
 Q.enterprise_workers_gain = 0; 
@@ -84,7 +96,7 @@ Q.moderate_plan_adopted = 0;
 
 // mass organizations
 
-Q.mass_orgs = ['sohyo', 'zenro', 'youth', 'gensuikyo', 'farmers'];
+Q.mass_orgs = ['sohyo', 'zenro', 'youth', 'gensuikyo', 'farmers', 'constitution'];
 
 Q.sohyo_strength = 3300;
 Q.sohyo_loyalty = 100;
@@ -98,6 +110,9 @@ Q.youth_effects = 1;
 Q.gensuikyo_strength = 4500;
 Q.gensuikyo_loyalty = 100;
 Q.gensuikyo_effects = 0;
+Q.constitution_strength = 500;
+Q.constitution_loyalty = 100;
+Q.constitution_effects = 0;
 Q.farmers_strength = 240;
 Q.farmers_loyalty = 100;
 Q.farmers_effects = 0;

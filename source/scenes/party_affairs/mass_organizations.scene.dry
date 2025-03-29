@@ -9,19 +9,20 @@ max-visits: 5
 
 = Mass Organizations
 
-placeholder
+The JSP is supported by a vast array of mass organisations, ranging from trade unions to peace groups to youth organisations. These mass organisations provide funds and manpower necessary for us to contest elections, run campaigns and mobilise the masses against monopoly-capital. They are therefore essential, and we must cultivate them.
 
 - @newspapers: Fund more newspapers and journalists.
 - @unions: Fund Sōhyō, a labor federation that provides a large part of our support.
 - @middle_class: Fund Zenro and Sōdōmei, the more moderate trade union federations.
 - @burakumin: Maybe we could start funding the Buraku Liberation League?
-- @membership: Invest in recruiting more members into our party.
+- @membership: Perhaps we should strengthen our own party organisation?
 - @anpo: Our mass organizations should rally against the revision to the Anpo treaty.
 - @miike: Mobilize our organizations to provide aid to the strikers at Miike.
 - @culture: Fund sports leagues, educational, and cultural programs.
 - @youth: Support the radical youth organizations.
-- @farmers: Fund the Japan Farmers Union, Nichinō, to influence rural voters.
-- @gensuikyo: fund the Gensuikyō, an anti-nuclear organization.
+- @farmers: Fund the Japan Farmers Union, an organisation of rural supporters of the JSP.
+- @constitution: Fund the National Union for the Protection of the Constitution.
+- @gensuikyo: Fund the Japan Council against Atomic and Hydrogen Bombs.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
 
@@ -41,7 +42,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; soyho_strength += 100; sohyo_loyalty += 0.05; unemployed_jsp += 3*(1 - dissent); workers_jsp += 4*(1 - dissent); left_strength += 5; left_dissent -= 5; left_org_strength += 5; left_org_dissent -= 5;
 
-We have increased funding to the Sōhyō union confederation. Since they align to the left and the Socialist Associations, it strengthens them.
+Sōhyō is the largest trade union federation in the country, and provides us funds and activists for elections. Supporting them strengthens our influence among the blue- and white-collar workers, and helps their militant organisation of the working classes. Their previous association with the Left Socialists reinforces the left-wing factions of the party and the Socialist Association.
 
 @middle_class
 choose-if: resources > 0
@@ -49,7 +50,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; zenro_strength += 50; zenro_loyalty += 0.05
 
-We increase funding to Zenro strengthening our middle class support
+While Zenrō and Sōdōmei are much smaller than Sōhyō, they hold much stronger influence with the employees of small businesses. Zenrō and Sōdōmei have historically been less enthusiastic in their support for political action and the party, but perhaps we can change that. Their Right Socialist allies grow stronger from our support.
 
 @burakumin
 choose-if: resources > 0
@@ -57,7 +58,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; buraku_funding += 1; rural_workers_jsp += 1*(1 - dissent); urban_migrants_jsp += 1*(1 - dissent); jcp_relation += 2*(1 - dissent);
 
-this is basically for flavour btw, not very strong
+The burakumin community have been historically oppressed and stigmatised, and their members have often been forced to turn to crime and other anti-social activities as a result of discrimination. The Buraku Liberation League is committed to representing this community and fighting for their rights, and deserves our support.
 
 @membership
 subtitle: Due to our party's structure, this is currenty very inefficient.
@@ -152,9 +153,17 @@ Our new youth members flock to the left wing of the party and the Socialist Orga
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; farmers_stregth += 25; farmers_loyalty += 0.05
+on-arrival: resources -= 1; farmers_strength += 25; farmers_loyalty += 0.05
 
-placeholder
+Before the war, tenant farmers were one of the most reliable constituencies of socialism. Land reform, however, has turned the rural population into a voting bloc for the conservative parties. Much of Japan is still rural - if we wish to conquer power, we must break the farmers away from the LDP. The Nichinō is held together by a left-centrist alliance, which benefits from our support.
+
+@constitution
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; constitution_strength += 25; constitution_loyalty += 0.05
+
+Stalwart defenders of Japan's post-war constitution organise in the Gokenrengō. We must mobilise the masses behind defence of the democratic, social, and most importantly, pacifist, nature of the constitution against the attacks of the conservative and militarist elites. Our support for Gokenrengō will serve this aim.
 
 @gensuikyo
 choose-if: resources > 0
@@ -162,7 +171,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; gensuikyo_strength += 100; gensuikyo_loyalty += 0.05; jcp_relation += 3*(1 - dissent);
 
-increasing funding towards the gensuikyo increases our coordination with the jcp 
+The Gensuikyō is a mass organisation opposed to the proliferation of nuclear weapons, and in particular, the stationing of United States atomic weaponry on Japanese soil. Our support for its rallies and local organisations strengthens pacifist sentiment across the country, and helps us argue against the American alliance as a threat to Japan's peace and security.
 
 @nothing
 

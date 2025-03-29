@@ -15,13 +15,15 @@ In order to build a socialist majority, many reformists and reconstructionists a
 
 There is the other option of structural reform, championed by Saburō Eda, which expands our voter base without neglecting our support from unionized workers.
 
-- @broad_electorate: We will become a people's party, though it is likely to be strongly opposed by leftists and centrists.
+- @peoples_party: We will become a people's party, though it is likely to be strongly opposed by leftists and centrists.
 - @structural_reform: We will follow the ideology of "Structural Reform", expanding our voter base and gradually building the basis for a socialist government.
+- @mass_party: We should transform our party into a true mass party of the proletariat.
+- @labour_reform: Maybe we could emulate the Labour Party's structure?
 - @no_new_ideas: No, we will always be a party of the working class.
 - @root: Perhaps we can discuss this at a later time.
 - @easy_discard
 
-@broad_electorate
+@peoples_party
 
 - @support_peoples_party: Yes, we must become a people's party!
 - @build_support: We must build additional support before becoming a people's party.
@@ -150,3 +152,11 @@ Should we run a new campaign to publicize our new platform?
 - @campaign_rural
 - @campaign_unemployed
 - @campaign_women
+
+@mass_party
+
+Instead of expanding our base, we will seek to transform the JSP into a true mass party of the workers.
+
+@labour_reform
+
+placeholder

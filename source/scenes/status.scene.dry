@@ -101,7 +101,6 @@ North Korea: [+ north_korea_relation : relationships +]
 @paramilitaries
 
 <h1><span title="Mass organizations increase or decrease strength of factions within the JSP and the effectiveness of campaigning in some demographics, based on their strength and loyalty. Loyalty determines whether the organization increases or decreases support, while strength determines how much support is given.">Mass Organizations</span></h1>
-Hover over the organization names or the title for more information.
 
 **Sōhyō**<br><span title="The General Council of Trade Unions is a confederation of radical trade unions aligned to the left. It increases the strength of the Left and Socialist Association factions, and improves the effectiveness of campaigning with workers.">Nihon Rōdōkumiai Sōhyōgikai</span><br>
 strength: [+ sohyo_strength +] thousand, loyalty: [+ sohyo_loyalty : loyalty +], effects: [+ sohyo_effects +]
@@ -117,6 +116,9 @@ strength: [+ gensuikyo_strength +] thousand, loyalty: [+ gensuikyo_loyalty : loy
 
 **Nichinō**<br><span title="The Japan Farmers Union. It increases the strength of the Center and Right and improves the effectiveness of campaigning with rural workers.">Nihon Nōmin Kumiai</span><br>
 strength: [+ farmers_strength +] thousand, loyalty: [+ farmers_loyalty : loyalty +], effects: [+ farmers_effects +]
+
+**Gokenrengō**<br><span title="The National Union for the Protection of the Constitution. It strengthens the effects campaigning on democracy and pacifism.">Kenpō Yōgo Kokumin Rengō</span><br>
+strength: [+ constitution_strength +] thousand, loyalty: [+ constitution_loyalty : loyalty +], effects: [+ constitution_effects +]
 
 = Official military
 
@@ -262,6 +264,22 @@ Youth: JSP: [+ youth_jsp_normalized +]%, JCP: [+ youth_jcp_normalized +]%, LDP: 
 Nationalism: [+ nationalism +]%
 
 @statistics
+on-arrival:{!
+Q.structural_reform_opinion_support = Q.right_strength + Q.center_strength;
+Q.structural_reform_opinion_oppose = Q.left_org_strength;
+Q.labour_reform_opinion_support = Q.left_strength + Q.right_strength;
+Q.labour_reform_opinion_oppose = Q.center_strength + Q.left_org_strength;
+Q.mass_party_opinion_support = Q.left_org_strength + Q.left_strength;
+Q.mass_party_opinion_oppose = Q.right_strength;
+Q.peoples_party_opinion_support = Q.right_strength;
+Q.peoples_party_opinion_oppose = Q.left_org_strength + Q.left_strength;
+
+for (reform of Q.party_reforms) {
+    var Q[reform+'_opinion_total'] = Q[reform+'_opinion_support'] + Q[reform+'_opinion_oppose'];
+    Q[reform+'_opinion_support'] = Math.round(Q[reform+'_opinion_support']/Q[reform+'_opinion_total']*100);
+    Q[reform+'_opinion_oppose'] = Math.round(Q[reform+'_opinion_oppose']/Q[reform+'_opinion_total']*100);
+}
+!}
 
 = Public Opinion
 
@@ -279,3 +297,29 @@ The people [+ progressive : public_opinion +] progressivism.
 
 # The people [+ nationalism : public_opinion +] nationalism.
 # removed
+
+= internal party opinion
+
+**Structural Reform**
+
+In Support: [+ structural_reform_opinion_support +]
+
+In Opposition: [+ structural_reform_opinion_oppose +]
+
+**Labour Party Reform**
+
+In Support: [+ labour_reform_opinion_support +]
+
+In Opposition: [+ labour_reform_opinion_oppose +]
+
+**Mass Party**
+
+In Support: [+ mass_party_opinion_support +]
+
+In Opposition: [+ mass_party_opinion_oppose +]
+
+**People's Party**
+
+In Support: [+ peoples_party_opinion_support +]
+
+In Opposition: [+ peoples_party_opinion_oppose +]
