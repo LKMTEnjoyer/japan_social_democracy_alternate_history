@@ -4,7 +4,10 @@
 (06..19) very disloyal
 (19..31) generally disloyal
 (31..41) mostly disloyal
-(41..54) divided
-(54..71) mostly loyal
-(71..99) generally loyal
-(99..) completely loyal
+(41..51) divided
+(51..61) somewhat loyal
+(61..71) mostly loyal
+(71..81) very loyal
+(81..91) generally loyal
+(91..99) extremely loyal
+(99..) completly loyal
