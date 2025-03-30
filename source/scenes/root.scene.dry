@@ -11,12 +11,27 @@ go-to: start_menu_2
 on-arrival: {!
 Q.party_reforms = ['structural_reform', 'labour_reform', 'mass_party', 'peoples_party'];
 Q.party_membership = 50;
-Q.mass_organization_effects =  ['pro_democracy_gain', 'radicalism_gain', 'progressivism_gain',
-                                'pacifism_gain', 'anti_imperialism_gain', 'socialism_gain',
-                                'blue_collar_workers_gain', 'white_collar_workers_gain',
-                                'enterprise_workers_gain', 'self_employed_gain',
-                                'rural_workers_gain', 'urban_migrants_gain', 
-                                'unemployed_gain', 'youth_gain'];
+Q.mass_organization_effects =  ['pro_democracy', 'radicalism', 'progressivism',
+                                'pacifism', 'anti_imperialism', 'socialism',
+                                'blue_collar_workers_jsp', 'white_collar_workers_jsp',
+                                'enterprise_workers_jsp', 'self_employed_jsp',
+                                'rural_workers_jsp', 'urban_migrants_jsp', 
+                                'unemployed_jsp', 'youth_jsp'];
+Q.pro_democracy_multiplier = 1; 
+Q.radicalism_multiplier = 1; 
+Q.progressivism_multiplier = 1; 
+Q.pacifism_multiplier = 1; 
+Q.anti_imperialism_multiplier = 1; 
+Q.socialism_multiplier = 1; 
+Q.blue_collar_workers_jsp_multiplier = 1; 
+Q.white_collar_workers_jsp_multiplier = 1; 
+Q.enterprise_workers_jsp_multiplier = 1; 
+Q.self_employed_jsp_multiplier = 0;
+Q.rural_workers_jsp_multiplier = 0;
+Q.urban_migrants_jsp_multiplier = 0;
+Q.unemployed_jsp_multiplier = 0;
+Q.youth_jsp_multiplier = 0;
+
 Q.pro_democracy_gain = 0; 
 Q.radicalism_gain = 0; 
 Q.progressivism_gain = 0; 
@@ -99,22 +114,22 @@ Q.moderate_plan_adopted = 0;
 Q.mass_orgs = ['sohyo', 'zenro', 'youth', 'gensuikyo', 'farmers', 'constitution'];
 
 Q.sohyo_strength = 3300;
-Q.sohyo_loyalty = 100;
+Q.sohyo_loyalty = 80;
 Q.sohyo_effects = 0;
 Q.zenro_strength = 1170;
-Q.zenro_loyalty = 100;
+Q.zenro_loyalty = 65;
 Q.zenro_effects = 0;
 Q.youth_strength = 200;
-Q.youth_loyalty = 100;
+Q.youth_loyalty = 55;
 Q.youth_effects = 1;
 Q.gensuikyo_strength = 4500;
-Q.gensuikyo_loyalty = 100;
+Q.gensuikyo_loyalty = 60;
 Q.gensuikyo_effects = 0;
 Q.constitution_strength = 500;
-Q.constitution_loyalty = 100;
+Q.constitution_loyalty = 60;
 Q.constitution_effects = 0;
 Q.farmers_strength = 240;
-Q.farmers_loyalty = 100;
+Q.farmers_loyalty = 70;
 Q.farmers_effects = 0;
 
 Q.army_strength = 50;

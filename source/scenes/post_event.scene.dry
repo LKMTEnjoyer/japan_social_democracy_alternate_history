@@ -9,10 +9,34 @@ for (var c of Q.classes) {
         }
     }
 }
-for (var c of Q.classes) {
-    if (Q[c+'_gain'] > 0) {
-        Q[c+'_jsp'] += Q[c+'_gain'];
-        Q[c+'_gain'] = 0;
+for (var e of Q.mass_organization_effects) {
+    Q[e+'_multiplier'] = 1;
+}
+// Sohyo
+Q.blue_collar_workers_jsp_multiplier += Q.sohyo_effects/200;
+Q.unemployed_jsp_multiplier += Q.sohyo_effects/200;
+// Zenro
+Q.white_collar_workers_jsp_multiplier += Q.zenro_effects/150;
+Q.self_employed_jsp_multiplier += Q.zenro_effects/150;
+Q.enterprise_workers_jsp_multiplier += Q.zenro_effects/150;
+// Youth
+Q.youth_jsp_multiplier += Q.youth_effects/100;
+Q.radicalism_multiplier += Q.youth_effects/100;
+Q.progressivism_multiplier += Q.youth_effects/100;
+// Gensuikyo
+Q.pacifism_multiplier  += Q.gensuikyo_effects/200;
+Q.anti_imperialism_multiplier += Q.gensuikyo_effects/200;
+// Nichino
+Q.rural_workers_jsp_multiplier += Q.farmers_effects/100;
+// Gokenrengō
+Q.pro_democracy_multiplier += Q.constitution_effects/100;
+
+for (var e of Q.mass_organization_effects) {
+    
+    if (Q[e+'_gain'] > 0) {
+        console.log(Q[e+'_multiplier'])
+        Q[e] += Q[e+'_gain']*Q[e+'_multiplier'];
+        Q[e+'_gain'] = 0;
     }
 }
 Q.pro_republic = Math.round(Q.pro_republic);

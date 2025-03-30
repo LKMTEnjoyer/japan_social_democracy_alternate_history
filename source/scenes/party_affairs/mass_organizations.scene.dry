@@ -40,7 +40,7 @@ go-to: media
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; soyho_strength += 100; sohyo_loyalty += 0.05; unemployed_jsp += 3*(1 - dissent); workers_jsp += 4*(1 - dissent); left_strength += 5; left_dissent -= 5; left_org_strength += 5; left_org_dissent -= 5;
+on-arrival: resources -= 1; soyho_strength += 100; sohyo_loyalty += 5; unemployed_jsp += 3*(1 - dissent); workers_jsp += 4*(1 - dissent); left_strength += 5; left_dissent -= 5; left_org_strength += 5; left_org_dissent -= 5;
 
 Sōhyō is the largest trade union federation in the country, and provides us funds and activists for elections. Supporting them strengthens our influence among the blue- and white-collar workers, and helps their militant organisation of the working classes. Their previous association with the Left Socialists reinforces the left-wing factions of the party and the Socialist Association.
 
@@ -48,7 +48,7 @@ Sōhyō is the largest trade union federation in the country, and provides us fu
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; zenro_strength += 50; zenro_loyalty += 0.05
+on-arrival: resources -= 1; zenro_strength += 50; zenro_loyalty += 5
 
 While Zenrō and Sōdōmei are much smaller than Sōhyō, they hold much stronger influence with the employees of small businesses. Zenrō and Sōdōmei have historically been less enthusiastic in their support for political action and the party, but perhaps we can change that. Their Right Socialist allies grow stronger from our support.
 
@@ -145,7 +145,7 @@ It is not enough for the SPD to solely be a political party. The Worker Singer's
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; youth_strength += 25; youth_loyalty += 0.05; young_socialists += 1; left_strength += 5; left_org_strength += 5; radicalization += 1;
+on-arrival: resources -= 1; youth_strength += 25; youth_loyalty += 5; young_socialists += 1; left_strength += 5; left_org_strength += 5; radicalization += 1;
 
 Our new youth members flock to the left wing of the party and the Socialist Organization.
 
@@ -153,7 +153,7 @@ Our new youth members flock to the left wing of the party and the Socialist Orga
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; farmers_strength += 25; farmers_loyalty += 0.05
+on-arrival: resources -= 1; farmers_strength += 25; farmers_loyalty += 5
 
 Before the war, tenant farmers were one of the most reliable constituencies of socialism. Land reform, however, has turned the rural population into a voting bloc for the conservative parties. Much of Japan is still rural - if we wish to conquer power, we must break the farmers away from the LDP. The Nichinō is held together by a left-centrist alliance, which benefits from our support.
 
@@ -161,7 +161,7 @@ Before the war, tenant farmers were one of the most reliable constituencies of s
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; constitution_strength += 25; constitution_loyalty += 0.05
+on-arrival: resources -= 1; constitution_strength += 25; constitution_loyalty += 5
 
 Stalwart defenders of Japan's post-war constitution organise in the Gokenrengō. We must mobilise the masses behind defence of the democratic, social, and most importantly, pacifist, nature of the constitution against the attacks of the conservative and militarist elites. Our support for Gokenrengō will serve this aim.
 
@@ -169,7 +169,7 @@ Stalwart defenders of Japan's post-war constitution organise in the Gokenrengō.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; gensuikyo_strength += 100; gensuikyo_loyalty += 0.05; jcp_relation += 3*(1 - dissent);
+on-arrival: resources -= 1; gensuikyo_strength += 100; gensuikyo_loyalty += 5; jcp_relation += 3*(1 - dissent);
 
 The Gensuikyō is a mass organisation opposed to the proliferation of nuclear weapons, and in particular, the stationing of United States atomic weaponry on Japanese soil. Our support for its rallies and local organisations strengthens pacifist sentiment across the country, and helps us argue against the American alliance as a threat to Japan's peace and security.
 

@@ -28,7 +28,7 @@ our party has not invested much into the growing demographic of urban migrants. 
 - @campaign: Start campaigning with urban migrants.
 
 @organize
-on-arrival: urban_migrants_jsp += 2*(1-dissent); sohyo_strength += 50; sohyo_loyalty += 0.01
+on-arrival: urban_migrants_jsp += 2*(1-dissent); sohyo_strength += 50; sohyo_loyalty += 1
 
 increases sohyo strength etc
 
