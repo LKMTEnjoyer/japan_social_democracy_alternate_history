@@ -30,6 +30,16 @@ Q.anti_imperialism_multiplier += Q.gensuikyo_effects/200;
 Q.rural_workers_jsp_multiplier += Q.farmers_effects/100;
 // Gokenrengō
 Q.pro_democracy_multiplier += Q.constitution_effects/100;
+// Party membership
+Q.socialism_multiplier += Q.party_membership/500;
+Q.blue_collar_workers_jsp_multiplier += Q.party_membership/1000;
+Q.white_collar_workers_jsp_multiplier += Q.party_membership/1000;
+Q.enterprise_workers_jsp_multiplier += Q.party_membership/1000;
+Q.self_employed_jsp_multiplier += Q.party_membership/1000;
+Q.rural_workers_jsp_multiplier += Q.party_membership/1000;
+Q.urban_migrants_jsp_multiplier += Q.party_membership/1000;
+Q.unemployed_jsp_multiplier += Q.party_membership/1000;
+Q.youth_jsp_multiplier += Q.party_membership/1000;
 
 for (var e of Q.mass_organization_effects) {
     
