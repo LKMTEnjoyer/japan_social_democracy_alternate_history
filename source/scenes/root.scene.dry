@@ -285,17 +285,17 @@ Q.catholics_lfp = 10;
 Q.catholics_other = 0;
 
 // Current House of Representatives
-Q.ldp_r = 64;
-Q.jsp_r = 33;
-Q.other_r = 1;
+Q.ldp_r = 63.2;
+Q.jsp_r = 29.2;
+Q.other_r = 4.6;
 Q.lfp_r = 1;
-Q.jcp_r = 1;
+Q.jcp_r = 2;
 
 // diff from prev
-Q.old_ldp_r = 64;
-Q.old_jsp_r = 33;
-Q.old_other_r = 1;
-Q.old_jcp_r = 1;
+Q.old_ldp_r = 63.2;
+Q.old_jsp_r = 29.2;
+Q.old_other_r = 4.6;
+Q.old_jcp_r = 2;
 Q.old_lfp_r = 1;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
