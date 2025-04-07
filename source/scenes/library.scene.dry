@@ -184,9 +184,9 @@ Loyalty: [+ zenro_loyalty : loyalty +]
 **Shaseidō** - *Nihon Shakaishugi Seinen Dо̄mei*:<br>
 The Japan Socialist Youth League.
 
-Strength: [+ youth_strength : strength +]
+Strength: [+ shaseido_strength : strength +]
 
-Loyalty: [+ youth_loyalty : loyalty +]
+Loyalty: [+ shaseido_loyalty : loyalty +]
 
 **Gensuikyō** *Gensuibaku Kinshi Nihon Kyōgikai*:<br>
 The Japan Council against Atomic and Hydrogen Bombs.
@@ -198,9 +198,9 @@ Loyalty: [+ gensuikyo_loyalty : loyalty +]
 **Nichinō** - *Nihon Nōmin Kumiai*:<br>
 The Japan Farmers Union.
 
-Strength: [+ farmers_strength : strength +]
+Strength: [+ nichino_strength : strength +]
 
-Loyalty: [+ farmers_loyalty : loyalty +]
+Loyalty: [+ nichino_loyalty : loyalty +]
 
 **Official military:**
 
@@ -263,68 +263,68 @@ Dissent: [+ reconstructionist_dissent : dissent +]
 title: Figures and Charts
 go-to: menu
 on-display: {!
-if (Q.lfp_united == 0) {
 data = [
     {
         "id": "jcp",
         "legend": "JCP",
         "name": "JCP",
         "seats": Math.round(Q.jcp_r*5),
-    },
-    {
-        "id": "jsp",
-        "legend": "JSP",
-        "name": "JSP",
-        "seats": Math.round(Q.jsp_r*5),
-    },
+    }
+];
+if (Q.lfp_united == 0) {
+    data.push(
     {
         "id": "lfp",
         "legend": "LFP",
         "name": "LFP",
         "seats": Math.round(Q.lfp_r*5),
-    },
-    {
-        "id": "LDP",
-        "legend": "LDP",
-        "name": "LDP",
-        "seats": Math.round(Q.ldp_r*5),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
-    },
-];
+    }
+    );
 }
-if (Q.lfp_united == 1) {
-data = [
-    {
-        "id": "jcp",
-        "legend": "JCP",
-        "name": "JCP",
-        "seats": Math.round(Q.jcp_r*5),
-    },
+data.push(
     {
         "id": "jsp",
         "legend": "JSP",
         "name": "JSP",
         "seats": Math.round(Q.jsp_r*5),
-    },
+    }
+);
+if (Q.dsp_formed) {
+    data.push(
+        {
+            "id": "dsp",
+            "legend": "DSP",
+            "name": "DSP",
+            "seats": Math.round(Q.dsp_r*5),
+        }
+);
+}
+if (Q.komeito_formed) {
+    data.push(
+        {
+            "id": "cgp",
+            "legend": "CGP",
+            "name": "CGP",
+            "seats": Math.round(Q.cgp_r*5),
+        }
+);  
+}
+data.push(
     {
-        "id": "LDP",
+        "id": "ldp",
         "legend": "LDP",
         "name": "LDP",
         "seats": Math.round(Q.ldp_r*5),
-    },
+    }
+);
+data.push(
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
         "seats": Math.round(Q.other_r*5),
-    },
-];
-}
+    }
+);
 if (d3 && window) {
     // get screen width
     var width = 500;

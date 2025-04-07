@@ -1,6 +1,80 @@
 title: Post Event
 new-page: true
 on-arrival: {!
+
+// Radicalization
+
+if (Q.radicalism > (Q.jsp_votes + Q.jcp_votes)) {
+    if (Q.radicalism > 90) {
+        Q.blue_collar_ldp -= 5/12;
+        Q.white_collar_ldp -= 4/12;
+        Q.enterprise_workers_ldp -= 3/12;
+        Q.self_employed_ldp -= 2/12;
+        Q.rural_workers_ldp -= 3/12;
+        Q.unemployed_ldp -= 8/12;
+        Q.youth_ldp -= 8/12;
+        Q.urban_migrants_ldp -= 4/12;
+    } else if (Q.radicalism > 70) {
+        Q.blue_collar_ldp -= 3/12;
+        Q.white_collar_ldp -= 2/12;
+        Q.rural_workers_ldp -= 1/12;
+        Q.enterprise_workers_ldp -= 1/12;
+        Q.unemployed_ldp -= 4/12;
+        Q.youth_ldp -= 4/12;
+        Q.urban_migrants_ldp -= 2/12;
+    } else if (Q.radicalism > 60) {
+        Q.blue_collar_ldp -= 1/12;
+        Q.enterprise_workers_ldp -= 1/12;
+        Q.unemployed_ldp -= 1/12;
+        Q.youth_ldp -= 2/12;
+        Q.urban_migrants_ldp -= 1/12;
+    } else if (Q.radicalism > 40) {
+        Q.white_collar_other += 2/12;
+        Q.enterprise_workers_other += 2/12;
+        Q.self_employed_other += 1/12;
+        Q.rural_workers_other += 1/12;
+        Q.urban_migrants_other += 2/12;
+    
+    } else if (Q.radicalism > 20) {
+        Q.blue_collar_ldp += 1/12;
+        Q.white_collar_ldp += 1/12;
+        Q.enterprise_workers_ldp += 2/12;
+        Q.self_employed_ldp += 3/12;
+        Q.rural_workers_ldp += 3/12;
+        Q.unemployed_ldp += 1/12;
+        Q.urban_migrants_ldp += 1/12;
+    } else {
+        Q.blue_collar_ldp += 2/12;
+        Q.white_collar_ldp += 3/12;
+        Q.enterprise_workers_ldp += 3/12;
+        Q.self_employed_ldp += 5/12;
+        Q.rural_workers_ldp += 4/12;
+        Q.unemployed_ldp += 2/12;
+        Q.urban_migrants_ldp += 3/12;
+
+    }
+}
+
+
+
+
+
+
+
+Q.radicalism -= 1;
+Q.radicalism += Q.shaseido_effects/10;
+if (Q.income_doubling_plan == 1) {
+    Q.radicalism -= growth_rate/3;
+}
+if (Q.anpo_active == 1) {
+    Q.radicalism += Q.anpo_intensity;
+    Q.radicalism += Q.anpo_opposition/10;
+}
+if (Q.miike_active == 1) {
+    Q.radicalism += Q.sohyo_effects/20;
+}
+
+
 // make sure no stat is below 0.
 for (var c of Q.classes) {
     for (var party of Q.parties) {
@@ -13,27 +87,27 @@ for (var e of Q.mass_organization_effects) {
     Q[e+'_multiplier'] = 1;
 }
 // Sohyo
-Q.blue_collar_workers_jsp_multiplier += Q.sohyo_effects/200;
+Q.blue_collar_jsp_multiplier += Q.sohyo_effects/200;
 Q.unemployed_jsp_multiplier += Q.sohyo_effects/200;
 // Zenro
-Q.white_collar_workers_jsp_multiplier += Q.zenro_effects/150;
+Q.white_collar_jsp_multiplier += Q.zenro_effects/150;
 Q.self_employed_jsp_multiplier += Q.zenro_effects/150;
 Q.enterprise_workers_jsp_multiplier += Q.zenro_effects/150;
 // Youth
-Q.youth_jsp_multiplier += Q.youth_effects/100;
-Q.radicalism_multiplier += Q.youth_effects/100;
-Q.progressivism_multiplier += Q.youth_effects/100;
+Q.youth_jsp_multiplier += Q.shaseido_effects/100;
+Q.radicalism_multiplier += Q.shaseido_effects/100;
+Q.progressivism_multiplier += Q.shaseido_effects/100;
 // Gensuikyo
 Q.pacifism_multiplier  += Q.gensuikyo_effects/200;
 Q.anti_imperialism_multiplier += Q.gensuikyo_effects/200;
 // Nichino
-Q.rural_workers_jsp_multiplier += Q.farmers_effects/100;
+Q.rural_workers_jsp_multiplier += Q.nichino_effects/100;
 // Gokenrengō
-Q.pro_democracy_multiplier += Q.constitution_effects/100;
+Q.pro_democracy_multiplier += Q.gokenrengo_effects/100;
 // Party membership
 Q.socialism_multiplier += Q.party_membership/500;
-Q.blue_collar_workers_jsp_multiplier += Q.party_membership/1000;
-Q.white_collar_workers_jsp_multiplier += Q.party_membership/1000;
+Q.blue_collar_jsp_multiplier += Q.party_membership/1000;
+Q.white_collar_jsp_multiplier += Q.party_membership/1000;
 Q.enterprise_workers_jsp_multiplier += Q.party_membership/1000;
 Q.self_employed_jsp_multiplier += Q.party_membership/1000;
 Q.rural_workers_jsp_multiplier += Q.party_membership/1000;
@@ -41,8 +115,7 @@ Q.urban_migrants_jsp_multiplier += Q.party_membership/1000;
 Q.unemployed_jsp_multiplier += Q.party_membership/1000;
 Q.youth_jsp_multiplier += Q.party_membership/1000;
 
-for (var e of Q.mass_organization_effects) {
-    
+for (var e of Q.mass_organization_effects) {   
     if (Q[e+'_gain'] > 0) {
         console.log(Q[e+'_multiplier'])
         Q[e] += Q[e+'_gain']*Q[e+'_multiplier'];

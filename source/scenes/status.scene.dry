@@ -109,16 +109,16 @@ strength: [+ sohyo_strength +] thousand, loyalty: [+ sohyo_loyalty : loyalty +],
 strength: [+ zenro_strength +] thousand, loyalty: [+ zenro_loyalty : loyalty +], effects: [+ zenro_effects +]
 
 **Shaseidō**<br><span title="The Japan Socialist Youth League is a student organization associated with the JSP. It increases the strength of the Socialist Association and the Centre and improves the effectiveness of campaigning with students or on democratic issues.">Nihon Shakaishugi Seinen Dо̄mei</span><br>
-strength: [+ youth_strength +] thousand, loyalty: [+ youth_loyalty : loyalty +], effects: [+ youth_effects +]
+strength: [+ shaseido_strength +] thousand, loyalty: [+ shaseido_loyalty : loyalty +], effects: [+ shaseido_effects +]
 
 **Gensuikyō**<br><span title="The Japan Council against Atomic and Hydrogen Bombs. It increases the strength of the Left and Centre, improves relations with the JCP, and improves campaigning on pacifism.">Gensuibaku Kinshi Nihon Kyōgikai</span><br>
 strength: [+ gensuikyo_strength +] thousand, loyalty: [+ gensuikyo_loyalty : loyalty +], effects: [+ gensuikyo_effects +]
 
 **Nichinō**<br><span title="The Japan Farmers Union. It increases the strength of the Center and Right and improves the effectiveness of campaigning with rural workers.">Nihon Nōmin Kumiai</span><br>
-strength: [+ farmers_strength +] thousand, loyalty: [+ farmers_loyalty : loyalty +], effects: [+ farmers_effects +]
+strength: [+ nichino_strength +] thousand, loyalty: [+ nichino_loyalty : loyalty +], effects: [+ nichino_effects +]
 
 **Gokenrengō**<br><span title="The National Union for the Protection of the Constitution. It strengthens the effects campaigning on democracy and pacifism.">Kenpō Yōgo Kokumin Rengō</span><br>
-strength: [+ constitution_strength +] thousand, loyalty: [+ constitution_loyalty : loyalty +], effects: [+ constitution_effects +]
+strength: [+ gokenrengo_strength +] thousand, loyalty: [+ gokenrengo_loyalty : loyalty +], effects: [+ gokenrengo_effects +]
 
 = Official military
 
@@ -148,7 +148,7 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 <br>
-<canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px; width: 200px;" width="200" height="50"></canvas>
+<canvas id="percentageBarChart" style="display: block; box-sizing: border-box; height: 50px;"></canvas>
 {!<script>
 var ctx = document.getElementById('percentageBarChart').getContext('2d');
 var myBarChart = new Chart(ctx, {
@@ -158,13 +158,13 @@ var myBarChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'Blue-collar workers',
-                data: [dendryUI.dendryEngine.state.qualities.blue_collar_workers],
+                data: [dendryUI.dendryEngine.state.qualities.blue_collar],
                 backgroundColor: '#4A6D7C',
                 stack: 'stack1'
             },
             {
                 label: 'White-collar workers',
-                data: [dendryUI.dendryEngine.state.qualities.white_collar_workers],
+                data: [dendryUI.dendryEngine.state.qualities.white_collar],
                 backgroundColor: '#ebf5fc',
                 stack: 'stack1'
             },
@@ -245,9 +245,9 @@ var myBarChart = new Chart(ctx, {
 });
 </script>!}
 
-Blue-Collar Workers: JSP: [+ blue_collar_workers_jsp_normalized +]%, JCP: [+ blue_collar_workers_jcp_normalized +]%, LDP: [+ blue_collar_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_collar_workers_lfp_normalized +]%, ?] Others: [+ blue_collar_workers_other_normalized +]%
+Blue-Collar Workers: JSP: [+ blue_collar_jsp_normalized +]%, JCP: [+ blue_collar_jcp_normalized +]%, LDP: [+ blue_collar_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ blue_collar_lfp_normalized +]%, ?] Others: [+ blue_collar_other_normalized +]%
 
-White-Collar Workers: JSP: [+ white_collar_workers_jsp_normalized +]%, JCP: [+ white_collar_workers_jcp_normalized +]%, LDP: [+ white_collar_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_collar_workers_lfp_normalized +]%, ?] Others: [+ white_collar_workers_other_normalized +]%
+White-Collar Workers: JSP: [+ white_collar_jsp_normalized +]%, JCP: [+ white_collar_jcp_normalized +]%, LDP: [+ white_collar_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ white_collar_lfp_normalized +]%, ?] Others: [+ white_collar_other_normalized +]%
 
 Small-Enterprise Workers: JSP: [+ enterprise_workers_jsp_normalized +]%, JCP: [+ enterprise_workers_jcp_normalized +]%, LDP: [+ enterprise_workers_ldp_normalized +]%, [? if lfp_united == 0 : LFP: [+ enterprise_workers_lfp_normalized +]%, ?] Others: [+ enterprise_workers_other_normalized +]%
 

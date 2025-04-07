@@ -1,0 +1,10 @@
+title: Income Doubling Plan
+subtitle: An ambitious plan for economic growth by Ikeda.
+view-if: year = 1960 and month >= 8 and prime_minister = "Ikeda"
+on-arrival: income_doubling_plan = 1; 
+new-page: true
+max-visits: 1
+tags: event
+
+= Income Doubling Plan
+

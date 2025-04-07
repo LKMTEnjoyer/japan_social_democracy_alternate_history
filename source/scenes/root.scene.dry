@@ -13,7 +13,7 @@ Q.party_reforms = ['structural_reform', 'labour_reform', 'mass_party', 'peoples_
 Q.party_membership = 50;
 Q.mass_organization_effects =  ['pro_democracy', 'radicalism', 'progressivism',
                                 'pacifism', 'anti_imperialism', 'socialism',
-                                'blue_collar_workers_jsp', 'white_collar_workers_jsp',
+                                'blue_collar_jsp', 'white_collar_jsp',
                                 'enterprise_workers_jsp', 'self_employed_jsp',
                                 'rural_workers_jsp', 'urban_migrants_jsp', 
                                 'unemployed_jsp', 'youth_jsp'];
@@ -23,8 +23,8 @@ Q.progressivism_multiplier = 1;
 Q.pacifism_multiplier = 1; 
 Q.anti_imperialism_multiplier = 1; 
 Q.socialism_multiplier = 1; 
-Q.blue_collar_workers_jsp_multiplier = 1; 
-Q.white_collar_workers_jsp_multiplier = 1; 
+Q.blue_collar_jsp_multiplier = 1; 
+Q.white_collar_jsp_multiplier = 1; 
 Q.enterprise_workers_jsp_multiplier = 1; 
 Q.self_employed_jsp_multiplier = 0;
 Q.rural_workers_jsp_multiplier = 0;
@@ -38,8 +38,8 @@ Q.progressivism_gain = 0;
 Q.pacifism_gain = 0; 
 Q.anti_imperialism_gain = 0; 
 Q.socialism_gain = 0; 
-Q.blue_collar_workers_gain = 0; 
-Q.white_collar_workers_gain = 0; 
+Q.blue_collar_gain = 0; 
+Q.white_collar_gain = 0; 
 Q.enterprise_workers_gain = 0; 
 Q.self_employed_gain = 0;
 Q.rural_workers_gain = 0;
@@ -111,7 +111,7 @@ Q.moderate_plan_adopted = 0;
 
 // mass organizations
 
-Q.mass_orgs = ['sohyo', 'zenro', 'youth', 'gensuikyo', 'farmers', 'constitution'];
+Q.mass_orgs = ['sohyo', 'zenro', 'shaseido', 'gensuikyo', 'farmers', 'constitution'];
 
 Q.sohyo_strength = 3300;
 Q.sohyo_loyalty = 80;
@@ -119,18 +119,22 @@ Q.sohyo_effects = 0;
 Q.zenro_strength = 1170;
 Q.zenro_loyalty = 65;
 Q.zenro_effects = 0;
-Q.youth_strength = 200;
-Q.youth_loyalty = 55;
-Q.youth_effects = 1;
+Q.shaseido_strength = 200;
+Q.shaseido_loyalty = 55;
+Q.shaseido_effects = 1;
 Q.gensuikyo_strength = 4500;
 Q.gensuikyo_loyalty = 60;
 Q.gensuikyo_effects = 0;
-Q.constitution_strength = 500;
-Q.constitution_loyalty = 60;
-Q.constitution_effects = 0;
-Q.farmers_strength = 240;
-Q.farmers_loyalty = 70;
-Q.farmers_effects = 0;
+Q.gokenrengo_strength = 500;
+Q.gokenrengo_loyalty = 60;
+Q.gokenrengo_effects = 0;
+Q.nichino_strength = 240;
+Q.nichino_loyalty = 70;
+Q.nichino_effects = 0;
+
+for (var c of Q.mass_orgs) {
+    Q[c+'_effects'] = Math.round((Q[c+'_loyalty'])*0.02*(Q[c+'_strength']**0.5));     
+}
 
 Q.army_strength = 50;
 Q.army_loyalty = 50;
@@ -196,8 +200,8 @@ Q.growth_rate = 9.5;
 
 Q.business_influence = 4;
 
-Q.blue_collar_workers = 32; 
-Q.white_collar_workers = 17; 
+Q.blue_collar = 32; 
+Q.white_collar = 17; 
 Q.enterprise_workers = 21; 
 Q.self_employed = 16;
 Q.rural_workers = 40;
@@ -220,23 +224,23 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['blue_collar_workers', 'white_collar_workers', 'enterprise_workers', 'self_employed', 'rural_workers', 'urban_migrants', 'unemployed', 'youth'];
+Q.classes = ['blue_collar', 'white_collar', 'enterprise_workers', 'self_employed', 'rural_workers', 'urban_migrants', 'unemployed', 'youth'];
 Q.parties = ['jsp', 'jcp', 'ldp', 'lfp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
-Q.blue_collar_workers_jsp = 43.6;
-Q.blue_collar_workers_jcp = 2;
-Q.blue_collar_workers_ldp = 26.1;
-Q.blue_collar_workers_lfp = 1;
-Q.blue_collar_workers_other = 2;
+Q.blue_collar_jsp = 43.6;
+Q.blue_collar_jcp = 2;
+Q.blue_collar_ldp = 26.1;
+Q.blue_collar_lfp = 1;
+Q.blue_collar_other = 2;
 
-Q.white_collar_workers_jsp = 43.6;
-Q.white_collar_workers_jcp = 2;
-Q.white_collar_workers_ldp = 38.0;
-Q.white_collar_workers_lfp = 1;
-Q.white_collar_workers_other = 3;
+Q.white_collar_jsp = 43.6;
+Q.white_collar_jcp = 2;
+Q.white_collar_ldp = 38.0;
+Q.white_collar_lfp = 1;
+Q.white_collar_other = 3;
 
 Q.enterprise_workers_jsp = 34;
 Q.enterprise_workers_jcp = 1;
@@ -302,9 +306,8 @@ Q.party_support_records = [];
 Q.economic_records = [];
 
 
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Hatoyama";
-Q.chancellor_party = 'LDP';
+Q.prime_minister = "Hatoyama";
+Q.pm_party = 'LDP';
 Q.jsp_in_government = 0;
 Q.ldp_in_government = 1;
 Q.jcp_in_government = 0;

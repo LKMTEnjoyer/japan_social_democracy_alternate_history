@@ -85,7 +85,7 @@ on-arrival: anpo_opposition += (sohyo_effects + zenro_effects)*2; soyho_strength
 our unions strike against the anpo revisions
 
 @mass_rally 
-on-arrival: anpo_opposition += sohyo_effects + zenro_effects + youth_effects + gensuikyo_effects + youth_effects; youth_strength += 25; gensuikyo_strength += 10; farmers_strength += 10
+on-arrival: anpo_opposition += sohyo_effects + zenro_effects + shaseido_effects + gensuikyo_effects + shaseido_effects; shaseido_strength += 25; gensuikyo_strength += 10; nichino_strength += 10
 
 we use all our organizations in protests
 
@@ -145,7 +145,7 @@ It is not enough for the SPD to solely be a political party. The Worker Singer's
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; youth_strength += 25; youth_loyalty += 5; young_socialists += 1; left_strength += 5; left_org_strength += 5; radicalization += 1;
+on-arrival: resources -= 1; shaseido_strength += 25; shaseido_loyalty += 5; young_socialists += 1; left_strength += 5; left_org_strength += 5; radicalization += 1;
 
 Our new youth members flock to the left wing of the party and the Socialist Organization.
 
@@ -153,7 +153,7 @@ Our new youth members flock to the left wing of the party and the Socialist Orga
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; farmers_strength += 25; farmers_loyalty += 5
+on-arrival: resources -= 1; nichino_strength += 25; nichino_loyalty += 5
 
 Before the war, tenant farmers were one of the most reliable constituencies of socialism. Land reform, however, has turned the rural population into a voting bloc for the conservative parties. Much of Japan is still rural - if we wish to conquer power, we must break the farmers away from the LDP. The Nichinō is held together by a left-centrist alliance, which benefits from our support.
 
@@ -161,7 +161,7 @@ Before the war, tenant farmers were one of the most reliable constituencies of s
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; constitution_strength += 25; constitution_loyalty += 5
+on-arrival: resources -= 1; gokenrengo_strength += 25; gokenrengo_loyalty += 5
 
 Stalwart defenders of Japan's post-war constitution organise in the Gokenrengō. We must mobilise the masses behind defence of the democratic, social, and most importantly, pacifist, nature of the constitution against the attacks of the conservative and militarist elites. Our support for Gokenrengō will serve this aim.
 
