@@ -1,7 +1,109 @@
 title: Root Scene
 new-page: true
 set-bg: img/map_2.jpg
+on-display: {!
+
+if (Q.lfp_united == 0) {
+data = [
+    {
+        "id": "jcp",
+        "legend": "JCP",
+        "name": "JCP",
+        "seats": Math.round(Q.jcp_r*4.67),
+    },
+    {
+        "id": "jsp",
+        "legend": "JSP",
+        "name": "JSP",
+        "seats": Math.round(Q.jsp_r*4.67),
+    },
+    {
+        "id": "lfp",
+        "legend": "LFP",
+        "name": "LFP",
+        "seats": Math.round(Q.lfp_r*4.67),
+    },
+    {
+        "id": "LDP",
+        "legend": "LDP",
+        "name": "LDP",
+        "seats": Math.round(Q.ldp_r*4.67),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r*4.67),
+    },
+];
+}
+if (Q.lfp_united == 1) {
+data = [
+    {
+        "id": "jcp",
+        "legend": "JCP",
+        "name": "JCP",
+        "seats": Math.round(Q.jcp_r*4.67),
+    },
+    {
+        "id": "jsp",
+        "legend": "JSP",
+        "name": "JSP",
+        "seats": Math.round(Q.jsp_r*4.67),
+    },
+    {
+        "id": "LDP",
+        "legend": "LDP",
+        "name": "LDP",
+        "seats": Math.round(Q.ldp_r*4.67),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r*4.67),
+    },
+];
+}
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
 go-to: post_event if started = 1; start_menu if started = 0
+
+
+**Election results:**
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#084195; outline: 2px; outline-style: solid;'> </div> !} **JSP:** {!</td><td>!} **[+ jsp_r +]%** {!</td><td>!} **[+ str_change_jsp +]** {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#DB001C'> </div> !}JCP: {!</td><td>!} [+ jcp_r +]% {!</td><td>!} [+ str_change_jcp +] {!</td></tr>!}
+
+[? if lfp_united == 0 : {!<tr><td><div class="box" style='background-color:#FE7580'> </div> !} LFP: {!</td><td>!} [+ lfp_r +]% {!</td><td>!} [+ str_change_lfp +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#3CA324'> </div> !} LDP: {!</td><td>!} [+ ldp_r +]% {!</td><td>!} [+ str_change_ldp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+
+{!</table>!}
 
 # TODO: do that thing that we did before...
 
