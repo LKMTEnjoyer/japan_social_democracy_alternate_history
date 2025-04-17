@@ -1,0 +1,10 @@
+title: The Income Doubling Plan fails...
+subtitle: placeholder
+view-if: ldp_in_government and income_doubling_plan and income_doubling_plan_time <= time and gdp < income_doubling_plan_gdp
+on-arrival: self_employed_ldp -= 4; enterprise_workers_ldp -= 4; white_collar_ldp -= 5; rural_ldp -= 5; blue_collar_ldp -= 6; youth_ldp -= 6; urban_migrants_ldp -= 5; unemployed_ldp -= 6; radicalism += 10;
+new-page: true
+max-visits: 1
+tags: event
+
+= The Income Doubling Plan Fails
+

@@ -1,0 +1,10 @@
+title: End of the 1955 System?
+subtitle: The LDP's long
+view-if: ldp_r < 50 and jsp_r > 30 
+on-arrival: 1955_system = 0; ldp_decline = 12;
+new-page: true
+max-visits: 1
+tags: event
+
+= End of the 1955 System
+

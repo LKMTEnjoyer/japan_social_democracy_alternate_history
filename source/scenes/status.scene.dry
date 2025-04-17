@@ -49,7 +49,9 @@ Inflation: [+ inflation_2 +]%
 
 Unemployment: [+ unemployed_2 +]% 
 
-Growth rate: [+ growth_rate +]%
+Growth rate: [+ economic_growth +]%
+
+<span title="Nominal">GDP</span>: [+ gdp +] billion USD
 
 Business influence: [+ business_influence : coalition_dissent +]
 

@@ -1,0 +1,10 @@
+title: The Income Doubling Plan succeeds!
+subtitle: placeholder
+view-if: ldp_in_government and income_doubling_plan and gdp > income_doubling_plan_gdp and income_doubling_plan_time > time
+on-arrival: self_employed_ldp += 10; enterprise_workers_ldp += 8; white_collar_ldp += 8; rural_ldp += 6; blue_collar_ldp += 6; youth_ldp += 5; urban_migrants_ldp += 7; unemployed_ldp += 8; radicalism -= 10;
+new-page: true
+max-visits: 1
+tags: event
+
+= The Income Doubling Plan Succeeds
+
