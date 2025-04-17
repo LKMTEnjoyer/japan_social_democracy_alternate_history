@@ -12,7 +12,7 @@ for (var c of Q.classes) {
 }
 for (var e of Q.mass_organization_effects) {
     Q[e+'_multiplier'] = 1;
-    if (Q.1955_system) {
+    if (Q.system_1955) {
         Q[e+'_multiplier'] -= 1/3;
     }
 }

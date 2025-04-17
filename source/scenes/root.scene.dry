@@ -9,7 +9,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 on-arrival: {!
-Q.1955_system = 1;
+Q.system_1955 = 1;
 
 Q.population = 90076; // thousand
 Q.gdp = 396.7; // billion usd source: https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023

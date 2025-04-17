@@ -1,7 +1,7 @@
 title: End of the 1955 System?
-subtitle: The LDP's long
+subtitle: The LDP's political dominance has come to an end.
 view-if: ldp_r < 50 and jsp_r > 30 
-on-arrival: 1955_system = 0; ldp_decline = 12;
+on-arrival: system_1955 = 0; ldp_decline = 12;
 new-page: true
 max-visits: 1
 tags: event
