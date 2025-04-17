@@ -12,7 +12,9 @@ for (var c of Q.classes) {
 }
 for (var e of Q.mass_organization_effects) {
     Q[e+'_multiplier'] = 1;
-    if (Q.1955_system) Q[e+'_multiplier'] -= 1/3;
+    if (Q.1955_system) {
+        Q[e+'_multiplier'] -= 1/3;
+    }
 }
 // Sohyo
 Q.blue_collar_jsp_multiplier += Q.sohyo_effects/200;
@@ -26,7 +28,7 @@ Q.youth_jsp_multiplier += Q.shaseido_effects/100;
 Q.radicalism_multiplier += Q.shaseido_effects/100;
 Q.progressivism_multiplier += Q.shaseido_effects/100;
 // Gensuikyo
-Q.pacifism_multiplier  += Q.gensuikyo_effects/200;
+Q.pacifism_multiplier += Q.gensuikyo_effects/200;
 Q.anti_imperialism_multiplier += Q.gensuikyo_effects/200;
 // Nichino
 Q.rural_workers_jsp_multiplier += Q.nichino_effects/100;
@@ -408,7 +410,7 @@ if (Q.month_actions >= 1) {
     
 }
 Q.has_event = 0;
-// check if there are any cards in #event, && then go to main if not.
+// check if there are any cards in #event, an​d then go to main if not.
 var scene = this.game.scenes['post_event.events_choice'];
 var choices = this._compileChoices(scene);
 if (choices && choices[0].title != "Continue...") {
