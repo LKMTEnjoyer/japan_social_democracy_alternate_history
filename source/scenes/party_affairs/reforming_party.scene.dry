@@ -50,7 +50,7 @@ Should we run a new campaign to publicize our new platform?
 - @campaign_workers
 - @campaign_middle
 - @campaign_rural
-- @campaign_unemployed
+- @campaign_urban_migrants
 - @campaign_women
 
 @support_peoples_party_hard
@@ -93,7 +93,7 @@ Should we run a new campaign to publicize our new platform?
 - @campaign_workers
 - @campaign_middle
 - @campaign_rural
-- @campaign_unemployed
+- @campaign_urban_migrants
 - @campaign_women
 
 @mass_party
@@ -115,7 +115,7 @@ Should we run a new campaign to publicize our new platform?
 - @campaign_workers
 - @campaign_middle
 - @campaign_rural
-- @campaign_unemployed
+- @campaign_urban_migrants
 - @campaign_women
 
 @campaign_workers
