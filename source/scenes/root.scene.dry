@@ -9,6 +9,10 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 on-arrival: {!
+Q.jsp_convention_number = 12;
+
+Q.jcp_reformed = 0;
+
 Q.system_1955 = 1;
 
 Q.population = 90076; // thousand
@@ -43,14 +47,14 @@ Q.progressivism_gain = 0;
 Q.pacifism_gain = 0; 
 Q.anti_imperialism_gain = 0; 
 Q.socialism_gain = 0; 
-Q.blue_collar_gain = 0; 
-Q.white_collar_gain = 0; 
-Q.enterprise_workers_gain = 0; 
-Q.self_employed_gain = 0;
-Q.rural_workers_gain = 0;
-Q.urban_migrants_gain = 0;
-Q.unemployed_gain = 0;
-Q.youth_gain = 0;
+Q.blue_collar_jsp_gain = 0; 
+Q.white_collar_jsp_gain = 0; 
+Q.enterprise_workers_jsp_gain = 0; 
+Q.self_employed_jsp_gain = 0;
+Q.rural_workers_jsp_gain = 0;
+Q.urban_migrants_jsp_gain = 0;
+Q.unemployed_jsp_gain = 0;
+Q.youth_jsp_gain = 0;
 
 Q.year = 1955;
 Q.month = 11;
@@ -146,6 +150,8 @@ Q.army_loyalty = 50;
 Q.police_strength = 50;
 Q.police_loyalty = 50;
 // inter-party relations
+Q.cgp_relation = 40;
+Q.dsp_relation = 40;
 Q.ldp_relation = 25;
 Q.lfp_relation = 50;
 Q.other_relation = 35;
@@ -205,10 +211,10 @@ Q.economic_growth = 9.5;
 
 Q.business_influence = 4;
 
-Q.blue_collar = 32; 
-Q.white_collar = 17; 
-Q.enterprise_workers = 21; 
-Q.self_employed = 16;
+Q.blue_collar = 30; 
+Q.white_collar = 15; 
+Q.enterprise_workers = 20; 
+Q.self_employed = 15;
 Q.rural_workers = 40;
 Q.urban_migrants = 0;
 Q.unemployed = 2.5;

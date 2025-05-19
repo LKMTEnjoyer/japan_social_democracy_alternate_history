@@ -298,7 +298,7 @@ if (Q.month_actions >= 1) {
 
     // Radicalization
 
-    if (Q.radicalism > (Q.jsp_votes + Q.jcp_votes)) {
+    if (Q.radicalism >= (Q.jsp_votes + Q.jcp_votes)) {
         if (Q.radicalism > 90) {
             Q.blue_collar_ldp -= 5/12;
             Q.white_collar_ldp -= 4/12;
@@ -308,6 +308,23 @@ if (Q.month_actions >= 1) {
             Q.unemployed_ldp -= 8/12;
             Q.youth_ldp -= 8/12;
             Q.urban_migrants_ldp -= 4/12;
+
+            Q.youth_jcp += 4/12;
+            Q.unemployed_jcp += 3/12;
+            Q.blue_collar_jcp += 3/12;
+            Q.white_collar_jcp += 2/12;
+            Q.urban_migrants_jcp += 1/12;
+            if (Q.jcp_reformed) {
+                Q.unemployed_jcp += 2/12;
+                Q.youth_jcp += 1/12;
+                Q.blue_collar_jcp += 1/12;
+                Q.white_collar_jcp += 1/12;
+                Q.urban_migrants_jcp += 2/12;
+                Q.enterprise_workers_jcp += 1/12;
+                Q.rural_workers_jcp += 1/12;
+            }
+
+            
         } else if (Q.radicalism > 70) {
             Q.blue_collar_ldp -= 3/12;
             Q.white_collar_ldp -= 2/12;
@@ -366,6 +383,10 @@ if (Q.month_actions >= 1) {
         Q.radicalism += Q.sohyo_effects/20;
         Q.radicalism += Q.zenro_effects/20*(100-Q.right_dissent)/100;
     }
+
+    // Pro-democracy
+
+
 
     // Income Doubling Plan
 

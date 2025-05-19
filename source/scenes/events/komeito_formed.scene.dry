@@ -2,13 +2,14 @@ on-arrival: {!
 Q.komeito_formed = 1;
 Q.parties.push('cgp');
 
-Q.blue_collar_cpg = 2
-Q.white_collar_cpg = 3
-Q.self_employed_cpg = 3
-Q.enterprise_workers_cpg = 2
-Q.rural_workers_cpg = 1
-Q.youth_cpg = 1
-Q.urban_migrants_cpg = 3
+Q.cgp_relation = 40;
+Q.blue_collar_cpg = 2;
+Q.white_collar_cpg = 3;
+Q.self_employed_cpg = 3;
+Q.enterprise_workers_cpg = 2;
+Q.rural_workers_cpg = 1;
+Q.youth_cpg = 1;
+Q.urban_migrants_cpg = 3;
 Q.unemployed_cpg = 1;
 
 Q.cgp_r = 0;

@@ -1,0 +1,5 @@
+title: [+ jsp_convention_number +][? if jsp_convention_number < 21 and jsp_convention_number > 23 : th ?][? if jsp_convention_number = 21 : st ?][? if jsp_convention_number = 22 : nd ?][? if jsp_convention_number = 23 : rd ?] JSP Party Congress
+view-if: (year = 1957 and month = 1) or (year = 1958 and month = 2) or (year = 1959 and month = 1) or (year = 1959 and month = 9) or (year = 1960 and month = 3) or (year = 1960 and month = 6) or (year = 1960 and month = 10) or (year = 1961 and month = 3) or (year = 1962 and month = 1) or (year = 1962 and month = 11) or (year = 1964 and month = 2) or (year = 1964 and month = 12) or (year = 1965 and month = 5) or (year = 1965 and month = 8) or (year = 1966 and month = 1) or (year = 1966 and month = 12)
+on-arrival: jsp_convention_number += 1
+
+placeholder 

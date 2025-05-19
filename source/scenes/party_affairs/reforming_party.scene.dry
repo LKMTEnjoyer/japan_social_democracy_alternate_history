@@ -11,7 +11,7 @@ max-visits: 6
 
 The JSP's 1955 platform declares the party to be a "class-based mass party", that is a party of the broad working masses, but with the proletariat at its core. In reality, the JSP is nothing but a husk with no mass membership that struggles to spread its message outside of the associated mass organisations. If we wish to turn the JSP into a true mass party, like our European socialist friends, we must pursue a thoroughgoing reform of our party organisation to realise this ideal.
 
-- @peoples_party: We will become a people's party, though it is likely to be strongly opposed by leftists and centrists.
+- @peoples_party: We should broaden our appeal beyond the working class and become a true people's party!
 - @structural_reform: We should support the doctrine of 'structural reform', inspired by the Italian Communists!
 - @mass_party: We should realise what our platform and constitution declare - we must become a class-based mass party in action, as well as words!
 - @labour_reform: Perhaps a good compromise would be to become a party based on affiliate organisations, like the British Labour Party?
@@ -32,16 +32,14 @@ The Left, and especially the Socialist Association, are naturally incensed by th
 - @easy_discard
 
 @build_support
-view-if: (reconstructionist_strength + right_strength < left_strength + center_strength) or peoples_party_support < 5
-on-arrival: peoples_party_support += 1; reconstructionist_strength += 5; left_strength -= 5; left_dissent += 5; left_org_strength -= 5; left_org_dissent += 5
+on-arrival: peoples_party_support += 1; reconstructionist_strength += 3; right_strength += 3; reconstructionist_dissent -= 3; right_dissent -= 3; left_strength -= 5; left_dissent += 5; left_org_dissent += 12
 
 Within our party, we are pushing forward proposals for a people's party against the Left and Center
 
 @support_peoples_party
 choose-if: (reconstructionist_strength + right_strength >= left_strength + center_strength + left_org_strength) and peoples_party_support >= 4
 unavailable-subtitle: The opposition is too strong.
-on-arrival: reconstructionist_strength += 15; right_strength += 15; reconstructionist_dissent -= 10; right_dissent -= 10; peoples_party = 1; workers_jsp -= 12; rural_jsp += 10; new_middle_jsp += 10; old_middle_jsp += 8; catholics_jsp += 8; left_dissent += 25; left_org_dissent += 25; center_dissent += 20; jcp_relation -= 10; jcp_coalition_dissent += 1; coalition_dissent -= 1; ldp_relation += 5*(1-dissent); other_relation += 5*(1-dissent)
-achievement: volkspartei
+on-arrival: reconstructionist_strength += 15; right_strength += 15; reconstructionist_dissent -= 10; right_dissent -= 10; peoples_party = 1; workers_jsp -= 12; rural_jsp += 10; new_middle_jsp += 10; enterprise_workers_jsp_gain += 8; left_dissent += 40; left_org_dissent += 50; center_dissent += 35; jcp_relation -= 15; jcp_coalition_dissent += 2; coalition_dissent -= 1; ldp_relation += 5*(1-dissent); other_relation += 5*(1-dissent); cgp_relation += 5*(1-dissent); dsp_relation += 4*(1-dissent); 
 
 This reduces our reliance on funds from our affiliated unions, as our party is now a mass party with mass membership, similar to the JCP's model. 
 
@@ -64,51 +62,6 @@ achievement: volkspartei
 This reduces our reliance on funds from our affiliated unions, as our party is now a mass party with mass membership, similar to the JCP's model. 
 
 It is an arduous and contentious process, but we have pushed through the proposal to become a people's party. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
-
-Should we run a new campaign to publicize our new platform?
-
-- @campaign_workers
-- @campaign_middle
-- @campaign_rural
-- @campaign_unemployed
-- @campaign_women
-
-@campaign_workers
-title: Campaign among the workers, to assuage their doubts about our changes.
-on-arrival: workers_jsp += 6*(1-dissent);
-
-The workers are still a key part of our constituency, and we must not alienate them in the transformation of our party.
-
-@campaign_middle
-title: Campaign among the middle classes.
-on-arrival: old_middle_jsp += 5*(1-dissent); new_middle_jsp += 6*(1-dissent)
-
-As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
-
-@campaign_rural
-title: Campaign in rural areas.
-choose-if: rural_policy > 0
-unavailable-subtitle: We have not enacted any rural policies yet.
-on-arrival: rural_jsp += 7*(1-dissent)
-
-As a people's party, we represent farmers and rural workers as well, and they are becoming receptive to our messages.
-
-@campaign_unemployed
-title: Campaign among the unemployed.
-on-arrival: unemployed_jsp += 6*(1-dissent);
-
-As a people's party, the urban poor are still a key part of our constituency.
-
-@campaign_women
-title: Campaign among women of all classes.
-on-arrival: workers_jsp += 3*(1-dissent); new_middle_jsp += 3*(1-dissent); old_middle_jsp += 3*(1-dissent); rural_jsp += 3*(1-dissent); unemployed_jsp += 3*(1-dissent);
-
-As a people's party, we represent women of all classes.
-
-@no_new_ideas
-on-arrival: reconstructionist_strength -= 6; reconstructionist_dissent += 5; center_strength += 8; left_strength += 6; left_org_strength += 6; peoples_party = 0; peoples_party_support -= 3; structural_reform_support -= 3
-
-The Socialist Party has been and will always be a party of the working class.
 
 @structural_reform
 
@@ -154,3 +107,35 @@ This is essentially a declaration of war against the Right, who will oppose our 
 The party has always held admiration for the mass character of the British Labour Party, achieved via affiliation by unions and other organisations. Perhaps we can broach the Left-Right divide by emulating this vision - emphasising the workers via trade unions, but also attracting mass organisations of other classes.
 
 Both the Socialist Association and the Centre oppose this move however, as it merely circumvents the JSP's structural weaknesses, instead of turning it into a true mass party with a permanent staff.
+
+@platform_campaign
+
+Should we run a new campaign to publicize our new platform?
+
+- @campaign_workers
+- @campaign_middle
+- @campaign_rural
+- @campaign_unemployed
+- @campaign_women
+
+@campaign_workers
+title: Campaign among the workers.
+on-arrival: blue_collar_jsp_gain += 4*(1-dissent); white_collar_jsp_gain += 2*(1-dissent); enterprise_workers_jsp_gain += 2*(1-dissent)
+
+@campaign_middle
+title: Campaign among the middle classes.
+on-arrival: old_middle_jsp_gain += 5*(1-dissent); new_middle_jsp_gain += 6*(1-dissent)
+
+@campaign_rural
+title: Campaign in rural areas.
+choose-if: rural_policy > 0
+unavailable-subtitle: We have not enacted any rural policies yet.
+on-arrival: rural_workers_jsp_gain += 7*(1-dissent);
+
+@campaign_urban_migrants
+title: Campaign among urban migrants.
+on-arrival: urban_migrants_jsp_gain += 6*(1-dissent);
+
+@campaign_women
+title: Campaign among women.
+on-arrival: workers_jsp_gain += 3*(1-dissent); new_middle_jsp_gain += 3*(1-dissent); old_middle_jsp_gain += 3*(1-dissent); rural_jsp_gain += 3*(1-dissent); unemployed_jsp_gain += 3*(1-dissent);
