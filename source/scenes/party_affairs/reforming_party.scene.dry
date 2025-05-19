@@ -16,7 +16,6 @@ The JSP's 1955 platform declares the party to be a "class-based mass party", tha
 - @mass_party: We should realise what our platform and constitution declare - we must become a class-based mass party in action, as well as words!
 - @labour_reform: Perhaps a good compromise would be to become a party based on affiliate organisations, like the British Labour Party?
 - @no_new_ideas: No, we will maintain the current organization.
-- @root: Perhaps we can discuss this at a later time.
 - @easy_discard
 
 @peoples_party
@@ -139,3 +138,8 @@ on-arrival: urban_migrants_jsp_gain += 6*(1-dissent);
 @campaign_women
 title: Campaign among women.
 on-arrival: workers_jsp_gain += 3*(1-dissent); new_middle_jsp_gain += 3*(1-dissent); old_middle_jsp_gain += 3*(1-dissent); rural_jsp_gain += 3*(1-dissent); unemployed_jsp_gain += 3*(1-dissent);
+
+@no_new_ideas
+on-arrival: left_org_dissent -= 1; left_dissent -= 1; center_dissent -= 1; right_dissent -= 1; reconstructionist_dissent -= 1
+
+We do not make any changes to our party organization.
