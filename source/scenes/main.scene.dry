@@ -48,9 +48,17 @@ is-deck: true
 
 - #party_affairs
 
+@act
+title: Direct Action
+view-if: anpo_active = 1 or miike_active = 1
+card-image: img/protest.jpg
+is-deck: true
+
+- #protest_action
+
 @govt
 title: Government Affairs
-view-if: time >= 6
+view-if: jsp_in_government = 1
 card-image: img/reichstag_2.jpg
 is-deck: true
 

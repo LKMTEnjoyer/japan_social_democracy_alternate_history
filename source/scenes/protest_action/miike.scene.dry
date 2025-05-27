@@ -1,0 +1,32 @@
+title: Miike Struggle
+new-page: true
+is-card: true
+tags: protest_action
+view-if: miike_action_timer <= 0 and miike_active = 1
+on-arrival: month_actions += 1; miike_action_timer = 6;
+card-image: img/miike.jpg
+
+yeah
+
+- @fund: Sohyo will raise funds to help the strikers.
+- @propaganda: We will publicize the strike across Japan.
+
+@fund
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; miike_strength += 10
+
+we use union dues from sohyo to fund the strike at miike...
+
+todo: make this scale with sohyo and zenro effects
+
+@propaganda
+choose-if: resources > 0
+unavailable-subtitle: Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; miike_morale += 10
+
+we publicize this injustice across japan
+
+todo: make this scale with media

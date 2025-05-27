@@ -296,11 +296,11 @@ Q.catholics_lfp = 10;
 Q.catholics_other = 0;
 
 // Current House of Representatives
-Q.ldp_r = 63.2;
-Q.jsp_r = 29.2;
-Q.other_r = 4.6;
-Q.lfp_r = 1;
-Q.jcp_r = 2;
+Q.ldp_r = 63.6;
+Q.jsp_r = 33.4;
+Q.other_r = 1.7;
+Q.lfp_r = 0.9;
+Q.jcp_r = 0.4;
 
 // diff from prev
 Q.old_ldp_r = 63.2;

@@ -58,7 +58,7 @@ subtitle: Their members will join our party. -2 resources
 view-if: lfp_relation >= 45 and lfp_united = 0
 choose-if: resources >= 2
 unavailable-subtitle: [? if resources < 2 : Not enough resources. ?][? if lfp_relation < 60 : We do not have good enough relations. ?]
-on-arrival: resources -= 2; lfp_united = 1; left_strength += 15; left_dissent -= 10; left_org_strength += 10; left_org_dissent -= 5; 
+on-arrival: resources -= 2; lfp_united = 1; left_strength += 15; left_dissent -= 10; left_org_strength += 10; left_org_dissent -= 5; jsp_r += lfp_r; lfp_r = 0
 
 We have finally merged our parties.
 
