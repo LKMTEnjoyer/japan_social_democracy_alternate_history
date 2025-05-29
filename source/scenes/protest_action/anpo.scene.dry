@@ -15,6 +15,10 @@ yeah
 - @finalize_anpo_council: Finalize the creation of the council.
 - @nothing: We will not make any actions.
 
+@membership
+
+test
+
 @strike
 on-arrival: anpo_opposition += (sohyo_effects + zenro_effects)*2; soyho_strength += 25; zenro_strength += 15;
 
