@@ -265,63 +265,6 @@ Youth: JSP: [+ youth_jsp_normalized +]%, JCP: [+ youth_jcp_normalized +]%, LDP: 
 
 Nationalism: [+ nationalism +]%
 
-@statistics
-on-arrival:{!
-Q.structural_reform_opinion_support = Q.right_strength + Q.center_strength;
-Q.structural_reform_opinion_oppose = Q.left_org_strength;
-Q.labour_reform_opinion_support = Q.left_strength + Q.right_strength;
-Q.labour_reform_opinion_oppose = Q.center_strength + Q.left_org_strength;
-Q.mass_party_opinion_support = Q.left_org_strength + Q.left_strength;
-Q.mass_party_opinion_oppose = Q.right_strength;
-Q.peoples_party_opinion_support = Q.right_strength;
-Q.peoples_party_opinion_oppose = Q.left_org_strength + Q.left_strength;
+@struggles
 
-for (reform of Q.party_reforms) {
-    let opinion_total = Q[reform+'_opinion_support'] + Q[reform+'_opinion_oppose'];
-    Q[reform+'_opinion_support'] = Math.round(Q[reform+'_opinion_support']/opinion_total*100);
-    Q[reform+'_opinion_oppose'] = Math.round(Q[reform+'_opinion_oppose']/opinion_total*100);
-}
-!}
-
-= Public Opinion
-
-[+ radicalism : radicalization +].
-
-The people [+ pro_democracy : public_opinion +] democracy.
-
-The people [+ pacifism : public_opinion +] pacifism.
-
-The people [+ anti_imperialism : public_opinion +] anti-imperialism.
-
-The people [+ socialism : public_opinion +] socialism.
-
-The people [+ progressive : public_opinion +] progressivism.
-
-# The people [+ nationalism : public_opinion +] nationalism.
-# removed
-
-= internal party opinion
-
-**Structural Reform**
-<br>
-In Support: [+ structural_reform_opinion_support +]%
-<br>
-In Opposition: [+ structural_reform_opinion_oppose +]%
-
-**Labour Party Reform**
-<br>
-In Support: [+ labour_reform_opinion_support +]%
-<br>
-In Opposition: [+ labour_reform_opinion_oppose +]%
-
-**Mass Party**
-<br>
-In Support: [+ mass_party_opinion_support +]%
-<br>
-In Opposition: [+ mass_party_opinion_oppose +]%
-
-**People's Party**
-<br>
-In Support: [+ peoples_party_opinion_support +]%
-<br>
-In Opposition: [+ peoples_party_opinion_oppose +]%
+test
