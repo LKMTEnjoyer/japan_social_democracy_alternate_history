@@ -37,6 +37,10 @@ for (var e of Q.support_multipliers) {
 }
 Q.socialism_multiplier += Q.party_membership/1000;
 
+for (var e of Q.support_multipliers) {  
+    console.log(e+'_multiplier'+': '+Q[e+'_multiplier']);
+}
+
 for (var e of Q.support_multipliers) {
     if (Q.system_1955) {
         Q[e+'_multiplier'] *= 2/3;
@@ -143,7 +147,7 @@ if (Q.month_actions >= 1) {
     }
     Q.party_support_records.push(party_support_results);
     Q.economic_records.push({'date': new Date(Q.year, Q.month - 1),
-                             'inflation': Q.inflation,
+                             'd': Q.inflation,
                              'unemployment': Q.unemployed});
     // change economic stats...
     // we're basically implicity drawing a Philips curve

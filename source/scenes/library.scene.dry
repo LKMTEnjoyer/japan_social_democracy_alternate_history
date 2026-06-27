@@ -307,6 +307,7 @@ Dissent: [+ reconstructionist_dissent : dissent +]
 title: Figures and Charts
 go-to: menu
 on-display: {!
+
 data = [
     {
         "id": "jcp",
@@ -369,6 +370,7 @@ data.push(
         "seats": Math.round(Q.other_r*5),
     }
 );
+
 if (d3 && window) {
     // get screen width
     var width = 500;
@@ -385,10 +387,43 @@ if (d3 && window) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
 
-    var lines = d3.linegraph(false, false, 
-        ['jsp', 'jcp', 'ldp', 'lfp', 'other'],
+    var lines = d3.linegraph(false, false,
+        Q.parties,
         {'jsp': '#084195', 'jcp': '#DB001C', 'lfp': '#FE7580', 'ldp': '#3CA324', 'other': '#a0a0a0'},
         {'jsp': 'JSP', 'jcp': 'JCP', 'lfp': 'LFP', 'ldp': 'LDP', 'other': 'Others'}
+    );
+    lines.width(width).height(400);
+    //var svg = lines(Q.election_records);
+    if (Q.election_records.length > 0) {
+        d3.select("#election_history").datum(Q.election_records).call(lines);
+    }
+    //document.getElementById('election_history').innerHTML = svg.outerHTML;
+
+    // party support records should not have so many ticks
+    if (!Q.historical_mode || Q.game_over) {
+        var lines_2 = d3.linegraph(true, true,
+            Q.parties,
+            {'jsp': '#084195', 'jcp': '#DB001C', 'lfp': '#FE7580', 'ldp': '#3CA324', 'other': '#a0a0a0'},
+            {'jsp': 'JSP', 'jcp': 'JCP', 'lfp': 'LFP', 'ldp': 'LDP', 'other': 'Others'}
+        );
+        lines_2.width(width).height(400);
+        d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
+    }
+
+    // economic stats
+    var minInflation = d3.min(Q.economic_records, d => d.inflation);
+    var maxUnemployment = d3.max(Q.economic_records, d => d.unemployment);
+    var lines_3 = d3.linegraph(true, true, ['inflation', 'unemployment'],
+            {'inflation': '#0000FF', 'unemployment': '#FF0000'},
+            {'inflation': 'Inflation', 'unemployment': 'Unemployment'},
+            maxUnemployment + 5, minInflation - 5, 21);
+    lines_3.width(width).height(300);
+    d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
+}
+!}
+
+    var lines = d3.linegraph(false, false, 
+    
     );
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
