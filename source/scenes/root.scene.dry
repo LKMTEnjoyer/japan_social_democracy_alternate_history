@@ -311,6 +311,7 @@ Q.old_lfp_r = 1;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
+Q.election_records_length = 0;
 // party support records for every month
 Q.party_support_records = [];
 // inflation and unemployment records

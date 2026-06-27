@@ -398,6 +398,7 @@ if (d3 && window) {
     if (Q.election_records.length > 0) {
         d3.select("#election_history").datum(Q.election_records).call(lines);
     }
+    Q.election_records_length = Q.election_records.length;
     //document.getElementById('election_history').innerHTML = svg.outerHTML;
 
     // party support records should not have so many ticks
@@ -445,7 +446,7 @@ if (d3 && window) {
 
 = Election history
 
-[? if not election_records = [] : {!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!} ?]
+[? if election_records_length != 0 : {!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!} ?]
 
 = Party support history
 
