@@ -37,7 +37,7 @@ for (var e of Q.support_multipliers) {
 }
 Q.socialism_multiplier += Q.party_membership/1000;
 
-for (var e of Q.mass_organization_effects) {
+for (var e of Q.support_multipliers) {
     if (Q.system_1955) {
         Q[e+'_multiplier'] *= 2/3;
     }
