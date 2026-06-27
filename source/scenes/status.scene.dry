@@ -240,7 +240,7 @@ var myBarChart = new Chart(ctx, {
             bar: {
                 borderColor: 'black',
                 borderWidth: 1,
-                barThickness: 30
+                barThickness: 10
             }
         }
     }

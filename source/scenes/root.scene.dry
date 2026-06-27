@@ -20,7 +20,7 @@ Q.gdp = 396.7; // billion usd source: https://www.rug.nl/ggdc/historicaldevelopm
 
 Q.party_reforms = ['structural_reform', 'labour_reform', 'mass_party', 'peoples_party'];
 Q.party_membership = 50;
-Q.mass_organization_effects =  ['pro_democracy', 'radicalism', 'progressivism',
+Q.support_multipliers =  ['pro_democracy', 'radicalism', 'progressivism',
                                 'pacifism', 'anti_imperialism', 'socialism',
                                 'blue_collar_jsp', 'white_collar_jsp',
                                 'enterprise_workers_jsp', 'self_employed_jsp',
