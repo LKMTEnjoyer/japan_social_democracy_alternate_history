@@ -37,13 +37,23 @@ for (var e of Q.support_multipliers) {
 }
 Q.socialism_multiplier += Q.party_membership/1000;
 
+for (var e of Q.mass_organization_effects) {
+    if (Q.system_1955) {
+        Q[e+'_multiplier'] *= 2/3;
+    }
+}
+
 for (var e of Q.support_multipliers) {   
     if (Q[e+'_gain'] > 0) {
-        console.log(Q[e+'_multiplier']);
         Q[e] += Q[e+'_gain']*Q[e+'_multiplier'];
         Q[e+'_gain'] = 0;
     }
 }
+
+for (var e of Q.support_multipliers) {  
+    console.log(e+'_multiplier'+': '+Q[e+'_multiplier']);
+}
+
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.nationalism = Math.round(Q.nationalism);
 Q.socialism = Math.round(Q.socialism);
