@@ -120,7 +120,7 @@ Q.moderate_plan_adopted = 0;
 
 // mass organizations
 
-Q.mass_orgs = ['sohyo', 'zenro', 'shaseido', 'gensuikyo', 'farmers', 'constitution'];
+Q.mass_orgs = ['sohyo', 'zenro', 'shaseido', 'gensuikyo', 'nichino', 'gokenrengo'];
 
 Q.sohyo_strength = 3300;
 Q.sohyo_loyalty = 80;
