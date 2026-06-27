@@ -445,7 +445,7 @@ if (d3 && window) {
 
 = Election history
 
-[? if election_records != [] : {!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!} ?]
+[? if not election_records = [] : {!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!} ?]
 
 = Party support history
 
